@@ -15,7 +15,7 @@ Links:
 *  <a href=http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/ title="FAQ">oQey Gallery FAQ page</a> 
 *  For more details, skins and examples and custom flash gallery, please visit www.oqeysites.com
 
-Features:
+	Features:
 	*	Simple and intuitive gallery management
 	*	Built-in flash slideshow with a simple music player
 	*	Skinnable flash slideshow
@@ -29,10 +29,12 @@ Features:
 	*	iPhone / iPad detection
 	*	Fullscreen support
 	*	Advanced SEO tools for indexing photos
-	*	Multiple play control - if you press play another instance of a slideshow in the 
-                same page,the started slideshow will stop playing
+	*	Multiple play control - if you press play another instance of a slideshow in a page, 
+                the started slideshow will stop playing
 	*	Custom logo support - commercial skins
-	*	Flash Watermark support
+	*	Flash Watermark support        
+        *       Easy to use
+
 
 
 == Installation ==
