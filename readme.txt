@@ -2,7 +2,7 @@
 Plugin Name: oQey Gallery
 Version: 0.1
 Contributors:  oQeySites.com
-Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image,oqey-gallery, custom flash, oqey gallery, wp custom slideshow
+Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
 Requires at least: 3.0.0
 Tested up to: 3.0.0
 Stable tag: 0.1
