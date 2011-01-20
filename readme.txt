@@ -2,7 +2,7 @@
 Plugin Name: oQey Gallery
 Version: 0.1
 Contributors:  oQeySites.com
-Tags:  photos,flash,slideshow,images,gallery, photo,media, oqey  gallery,post,photo-albums,picture, pictures,image,oqey-gallery
+Tags:  photos,flash,slideshow,images,gallery, photo,media, oqey  gallery,gallery in post,photo-albums,picture, pictures,image,oqey-gallery
 Requires at least: 3.0.0
 Tested up to: 3.0.0
 Stable tag: 0.1
