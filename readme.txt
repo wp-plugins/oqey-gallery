@@ -26,8 +26,8 @@ Features:
 	*	iPhone / iPad detection
 	*	Fullscreen support
 	*	Advanced SEO tools for indexing photos
-	*	Multiple play control - if you press play another instance of a 
-                slideshow in a page, the started slideshow will stop playing
+	*	Multiple play control - if you press play another instance of a slideshow in the 
+                same page,the started slideshow will stop playing
 	*	Custom logo support - commercial skins
 	*	Flash Watermark support
 
@@ -38,11 +38,11 @@ Features:
 
 == Screenshots ==
 
-1. oQey Gallery Edit
-2. oQey Gallery Settings
-3. oQey Gallery Music management
-4. oQey Gallery Flash Preview
-5. oQey Gallery Skin management
+1. oQey Gallery Edit page
+2. oQey Gallery Settings page
+3. oQey Gallery Music management page
+4. oQey Gallery Flash Preview page
+5. oQey Gallery Skin management page
 
 
 
