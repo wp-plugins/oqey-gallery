@@ -48,7 +48,7 @@ For more details, skins and examples, please visit www.oqeysites.com
 2. oQey Gallery Settings
 3. oQey Gallery Music management
 4. oQey Gallery Flash Preview
-4. oQey Gallery Skin management
+5. oQey Gallery Skin management
 
 
 
