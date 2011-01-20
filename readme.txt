@@ -44,10 +44,11 @@ For more details, skins and examples, please visit www.oqeysites.com
 
 == Screenshots ==
 
-1. oQey Gallery edit
-2. oQey Gallery settings
-3. oQey Gallery music management
+1. oQey Gallery Edit
+2. oQey Gallery Settings
+3. oQey Gallery Music management
 4. oQey Gallery Flash Preview
+4. oQey Gallery Skin management
 
 
 
