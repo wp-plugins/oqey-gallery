@@ -30,7 +30,7 @@ For more details, skins and examples, please visit www.oqeysites.com
 	*	Fullscreen support
 	*	Advanced SEO tools for indexing photos
 	*	Multiple play control - if you press play another instance of a slideshow in a page,
-                <br/> the started slideshow will stop playing
+                the started slideshow will stop playing
 	*	Custom logo support - commercial skins
 	*	Flash Watermark support
 
