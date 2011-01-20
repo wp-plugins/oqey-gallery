@@ -41,11 +41,13 @@ For more details, skins and examples and custom flash gallery or custom noflash 
 
 == Screenshots ==
 
-1. oQey Gallery Edit page
-2. oQey Gallery Settings page
-3. oQey Gallery Music management page
-4. oQey Gallery Flash Preview page
-5. oQey Gallery Skin management page
+1. oQey Gallery Edit
+2. oQey Gallery Settings
+3. oQey Gallery Music management
+4. oQey Gallery Flash Preview
+5. oQey Gallery Skin management
+6. oQey Gallery Insert Button
+7. oQey Gallery Gallery List
 
 
 
