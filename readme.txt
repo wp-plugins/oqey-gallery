@@ -2,7 +2,7 @@
 Plugin Name: oQey Gallery
 Version: 0.1
 Contributors:  oQeySites.com
-Tags:  photos,flash,slideshow,images,gallery, photo,media, oqey  gallery,gallery in post,photo-albums,picture, pictures,image,oqey-gallery, custom flash, custom slideshow, custom gallery
+Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image,oqey-gallery, custom flash, oqey gallery
 Requires at least: 3.0.0
 Tested up to: 3.0.0
 Stable tag: 0.1
@@ -11,11 +11,11 @@ Stable tag: 0.1
 oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version supports music and skins, so users can change the way it looks with a few simple clicks. Customizable, commercial skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system. Multiple galleries are supported.
 
 Links:
-*         <a href=" http://oqeysites.com/oqey-flash-gallery-plugin/" title="Demo gallery">Demo Gallery</a>
-*         <a href=http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/ title="FAQ">oQey Gallery FAQ</a>
+* <a href=" http://oqeysites.com/oqey-flash-gallery-plugin/" title="Demo gallery">Demo Gallery</a>
+*  <a href=http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/ title="FAQ">oQey Gallery FAQ</a>
 For more details, skins and examples, please visit www.oqeysites.com
 
-	Features:
+Features:
 	*	Simple and intuitive gallery management
 	*	Built-in flash slideshow with a simple music player
 	*	Skinnable flash slideshow
@@ -35,10 +35,7 @@ For more details, skins and examples, please visit www.oqeysites.com
 	*	Flash Watermark support
 
 
-
-
 == Installation ==
-
 1. Unzip the plugin archive and put oqey-gallery  folder into your plugins directory (wp-content/plugins/)
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
