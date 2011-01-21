@@ -45,6 +45,16 @@ oQey Gallery Features:
 1. Unzip the plugin archive and put oqey-gallery  folder into your plugins directory (wp-content/plugins/)
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
+== Frequently Asked Questions ==
+
+= oQey Gallery plugin need a special setup? =
+NO.
+
+= How is must be set safe_mode? =
+Off.  Please contact you server administrator to switch safe_mode to off, if is on.
+
+
+
 == Screenshots ==
 
 1. oQey Gallery Edit
