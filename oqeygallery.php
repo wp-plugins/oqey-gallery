@@ -13,7 +13,7 @@
 /*
 Plugin Name: oQey-Gallery
 Version: 0.1
-Description: The oQey-Gallery plugin is the best photo gallery / slideshow solution for your custom blog. It has a built-in skinnable slideshow and supports music also.
+Description: oQey-Gallery plugin is the best photo gallery / slideshow solution for your custom blog. It has a built-in skinnable slideshow and supports music also.
 Author: oqeysites.com
 Author URI: http://oqeysites.com/
 */
