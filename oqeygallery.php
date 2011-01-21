@@ -1,5 +1,5 @@
 <?php
-// oQey-Gallery
+// oQey Gallery
 // Copyright (c) 2011 oqeysites.com
 // This is an add-on for WordPress
 // http://wordpress.org/
