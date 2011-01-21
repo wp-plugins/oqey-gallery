@@ -21,24 +21,25 @@ For more details, skins and examples and custom flash gallery, please visit
 www.oqeysites.com 
 
 
-oQey Gallery Features:
-*	Simple and intuitive gallery management
-*	Built-in flash slideshow with a simple music player
-*	Skinnable flash slideshow
-*	Free skins available and many more coming up
-*	Batch media upload
-*	Works with any wp theme
-*	Customizable slideshow size
-*	Drag & drop to sort images
-*	Custom skins on demand
-*	Insert in posts / pages with a single click
-*	iPhone / iPad detection
-*	Fullscreen support
-*	Advanced SEO tools for indexing photos
-*	Multiple play control - if you press play another instance of a slideshow in a page, 
-        the started slideshow will stop playing
-*	Custom logo support - commercial skins
-*	Flash Watermark support  
+Features:
+
+* Simple and intuitive gallery management
+* Built-in flash slideshow with a simple music player
+* Skinnable flash slideshow
+* Free skins available and many more coming up
+* Batch media upload
+* Works with any wp theme
+* Customizable slideshow size
+* Drag & drop to sort images
+* Custom skins on demand
+* Insert in posts / pages with a single click
+* iPhone / iPad detection
+* Fullscreen support
+* Advanced SEO tools for indexing photos
+* Multiple play control - if you press play another instance of a slideshow in a page, 
+  the started slideshow will stop playing
+* Custom logo support - commercial skins
+* Flash Watermark support  
 
 
 == Installation ==
