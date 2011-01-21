@@ -21,7 +21,7 @@ For more details, skins and examples and custom flash gallery, please visit
 www.oqeysites.com 
 
 
-Features:
+oQey Gallery Features:
 
 * Simple and intuitive gallery management
 * Built-in flash slideshow with a simple music player
