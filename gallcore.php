@@ -465,7 +465,7 @@ print <<< SWF
 					 GalleryID:"{$id}",
 					 FirstRun:"{$skin->firstrun}"
 					 };
-	var params{$counter} = {bgcolor:"{$oqey_bgcolor}", allowFullScreen:"true"};
+	var params{$counter} = {bgcolor:"{$oqey_bgcolor}", allowFullScreen:"true", wmode:"transparent"};
 	var attributes{$counter} = {id: "oqeygallery{$counter}"};
 	swfobject.embedSWF("{$plugin_url_qu}/skins/{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$counter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$counter}, params{$counter}, attributes{$counter});
 </script> 
