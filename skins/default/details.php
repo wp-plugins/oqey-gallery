@@ -1,0 +1,6 @@
+[Name: default]
+[Version: 0.1]
+[Author: oqeysites.com]
+[Description: That's the default gray skin that comes with the free oQey Galleries pack]
+[Commercial: no]
+[Skinid: 0001]
