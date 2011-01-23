@@ -1,6 +1,0 @@
-[Name: Dark Theme Skin]
-[Version: 0.1]
-[Author: oqeysites.com]
-[Description: Just another free skin for dark wordpress themes]
-[Commercial: no]
-[Skinid: 0002]
