@@ -4,11 +4,8 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'insert_in_post.php' == basename($_SE
 
    $oqey_galls = $wpdb->prefix . "oqey_gallery";
    $oqey_images = $wpdb->prefix . "oqey_images";
-   $oqey_music = $wpdb->prefix . "oqey_music";
-   $oqey_music_rel = $wpdb->prefix . "oqey_music_rel";
-   $oqey_skins = $wpdb->prefix . "oqey_skins";
 
-	  	 $list = $wpdb->get_results(" SELECT * FROM $oqey_galls WHERE status!=2 ORDER BY id DESC  ");
+   $list = $wpdb->get_results(" SELECT * FROM $oqey_galls WHERE status!=2 ORDER BY id DESC  ");
 ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="5" style="font-family:'Century Gothic'; font-size:12px;" class="tablesorter">
 <thead>
@@ -20,7 +17,8 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'insert_in_post.php' == basename($_SE
 </thead>
 <tbody>
 <?php 
-   $j=0;										
+   $j=0;	
+   if(count($list)>0){
    foreach ($list as $i){   // $list->qgal_id $list->title  
    
    if($i->splash_img!=0){
@@ -42,7 +40,14 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'insert_in_post.php' == basename($_SE
 			  </td>
           </tr>';
 		  $j++;
-	}										
+	}
+   }else{
+	echo '<tr>	
+	          <td>
+		      <div alighn="left">There is no galleries found. Please create a gallery first.</div>
+			  </td>
+          </tr>';
+   }
 ?>
 </tbody>
 </table>
