@@ -49,11 +49,14 @@ Features:
 == Frequently Asked Questions ==
 
 = oQey Gallery plugin need a special setup? =
-NO.
+No.
 
 = How is must be set safe_mode? =
-Off.  Please contact you server administrator to switch safe_mode to off, if is on.
-
+oQey Gallery plugin works fine with safe_mode=Off only. Please contact you server administrator 
+in order to switch safe_mode to “off”, if it is “on”.
+ 
+= How can I change the image size for the no flash version of my gallery? =
+Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Screenshots ==
