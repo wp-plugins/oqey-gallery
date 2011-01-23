@@ -53,7 +53,7 @@ No.
 
 = How is must be set safe_mode? =
 oQey Gallery plugin works fine with safe_mode=Off only. Please contact you server administrator 
-in order to switch safe_mode to “off”, if it is “on”.
+in order to switch safe_mode to 'off', if it is 'on'.
  
 = How can I change the image size for the no flash version of my gallery? =
 Just edit css/oqeystyle.css and make all changes that you need.
