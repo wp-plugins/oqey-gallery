@@ -73,16 +73,16 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Changelog ==
 = 0.2=
-* This version fixes few bugs. 
+* This version just fixes a few minor bugs. 
 
 
 = 0.1=
-* First stable version.
+* The first stable version.
 
 
 == Upgrade Notice ==
 = 0.2=
-* This version fixes few bugs. 
+* This version just fixes a few minor bugs. 
 
 = 0.1=
-* First stable version.
+* The first stable version.
