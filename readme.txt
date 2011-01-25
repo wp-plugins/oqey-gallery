@@ -72,6 +72,9 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Changelog ==
+= 0.31=
+* This version just fixes a few minor bugs.
+
 = 0.3=
 * This version just fixes a few minor bugs.
 * Flash slideshow size limits lifted
@@ -88,6 +91,9 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Upgrade Notice ==
+= 0.31=
+* This version just fixes a few minor bugs.
+
 = 0.3=
 * This version just fixes a few minor bugs.
 * Flash slideshow size limits lifted
