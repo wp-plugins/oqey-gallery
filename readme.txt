@@ -3,7 +3,7 @@ Plugin Name: oQey Gallery
 Version: 0.3
 Contributors:  oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
+Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image, skinnable gallery,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
 Requires at least: 3.0.0
 Tested up to: 3.0.0
 Stable tag: 0.3
@@ -49,11 +49,14 @@ Features:
 == Frequently Asked Questions ==
 
 = oQey Gallery plugin need a special setup? =
-NO.
+No.
 
 = How is must be set safe_mode? =
-Off.  Please contact you server administrator to switch safe_mode to off, if is on.
-
+oQey Gallery plugin works fine with safe_mode=Off only. Please contact you server administrator 
+in order to switch safe_mode to 'off', if it is 'on'.
+ 
+= How can I change the image size for the no flash version of my gallery? =
+Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Screenshots ==
@@ -69,11 +72,31 @@ Off.  Please contact you server administrator to switch safe_mode to off, if is 
 
 
 == Changelog ==
+= 0.3=
+* This version just fixes a few minor bugs.
+* Flash slideshow size limits lifted
+* Flash thumbnails auto-hide function added
+* Flash photo resizing issues fixed
+* Thumbnails hide option added to gallery settings
+
+= 0.2=
+* This version just fixes a few minor bugs. 
+
 
 = 0.1=
-* First stable version.
+* The first stable version.
 
 
 == Upgrade Notice ==
+= 0.3=
+* This version just fixes a few minor bugs.
+* Flash slideshow size limits lifted
+* Flash thumbnails auto-hide function added
+* Flash photo resizing issues fixed
+* Thumbnails hide option added to gallery settings
+
+= 0.2=
+* This version just fixes a few minor bugs. 
+
 = 0.1=
-* First stable version.
+* The first stable version.
