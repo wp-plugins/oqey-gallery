@@ -24,7 +24,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'oqeygallery.php' == basename($_SERVE
 include("oqey-functions.php");
 
 	global $oqey_db_version;
-           $oqey_db_version = "0.3";
+           $oqey_db_version = "0.31";
  
 function oqey_db_install() {
    global $wpdb;
