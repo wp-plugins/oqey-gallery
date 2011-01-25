@@ -18,13 +18,7 @@ $check = $wpdb->get_var("SELECT post_type
 	return $check;
 }
 
-function getUserNow($userAgent) {
-    $crawlers = 'Google|msnbot|Rambler|Yahoo|AbachoBOT|accoona|' .
-    'AcioRobot|ASPSeek|CocoCrawler|Dumbot|FAST-WebCrawler|' .
-    'GeonaBot|Gigabot|Lycos|MSRBOT|Scooter|AltaVista|IDBot|eStyle|Scrubby|yandex';
-    $isCrawler = (preg_match("/$crawlers/i", $userAgent) > 0);
-    return $isCrawler;
-}
+
    
 function uploadSize(){
 	$upload_size_unit = $max_upload_size =  wp_max_upload_size();
