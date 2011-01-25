@@ -1,6 +1,6 @@
 === Plugin Name ===
 Plugin Name: oQey Gallery
-Version: 0.4
+Version: 0.3
 Contributors:  oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
 Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image, skinnable gallery,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
