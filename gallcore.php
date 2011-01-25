@@ -341,6 +341,14 @@ $content = " [See the post to view the galleries] ";
 return $content;
 }
 
+function getUserNow($userAgent) {
+    $crawlers = 'Google|msnbot|Rambler|Yahoo|AbachoBOT|accoona|' .
+    'AcioRobot|ASPSeek|CocoCrawler|Dumbot|FAST-WebCrawler|' .
+    'GeonaBot|Gigabot|Lycos|MSRBOT|Scooter|AltaVista|IDBot|eStyle|Scrubby|yandex';
+    $isCrawler = (preg_match("/$crawlers/i", $userAgent) > 0);
+    return $isCrawler;
+}
+
 add_shortcode( 'oqeygallery', 'add_gallery' );
 
 function add_gallery($atts){// insert flash gallery in content
