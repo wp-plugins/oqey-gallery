@@ -77,7 +77,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 * quick core bug fix
 
 =0.3=
-* This version just fixes a few minor bugs.
+
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
 * Flash photo resizing issues fixed
@@ -98,7 +98,6 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.3=
 
-* This version just fixes a few minor bugs.
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
 * Flash photo resizing issues fixed
