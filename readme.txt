@@ -3,21 +3,13 @@ Plugin Name: oQey Gallery
 Version: 0.4
 Contributors:  oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image, 
-
-skinnable gallery,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
+Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image, skinnable gallery,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
 Requires at least: 3.0.0
 Tested up to: 3.0.0
 Stable tag: 0.4
 
 == Description ==
-oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version of gallery built-in for all non-flash 
-
-browsers and mobile devices like iPhone / iPad / iPod etc. The flash version supports music and skins, so users can change the way it looks with a few 
-
-simple clicks. Customizable, commercial skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions 
-
-and a simple batch upload system. Multiple galleries are supported.
+oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version supports music and skins, so users can change the way it looks with a few simple clicks. Customizable, commercial skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system. Multiple galleries are supported.
 
 Links:
 
@@ -81,10 +73,10 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Changelog ==
 
-=0.4= * quick fix 
+=0.4=
+* quick core bug fix
 
 =0.3=
-
 * This version just fixes a few minor bugs.
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
@@ -101,7 +93,8 @@ Just edit css/oqeystyle.css and make all changes that you need.
 == Upgrade Notice ==
 
 =0.4=
-* quick fix
+
+* quick core bug fix
 
 =0.3=
 
