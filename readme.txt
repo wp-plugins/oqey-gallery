@@ -72,7 +72,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Changelog ==
-= 0.3=
+= 0.4=
 * This version just fixes a few minor bugs.
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
@@ -88,7 +88,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Upgrade Notice ==
-= 0.3=
+= 0.4=
 * This version just fixes a few minor bugs.
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
