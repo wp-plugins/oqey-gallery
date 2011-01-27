@@ -17,8 +17,7 @@ Links:
 *	<a href=http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/ title="FAQ">oQey Gallery FAQ</a> 
  
 
-For more details, skins and examples and custom flash gallery, please visit 
-www.oqeysites.com 
+For skins, examples and custom galleries, please visit: www.oqeysites.com 
 
 
 Features:
@@ -48,14 +47,14 @@ Features:
 
 == Frequently Asked Questions ==
 
-= oQey Gallery plugin need a special setup? =
+= Does oQey Gallery plugin need a special setup? =
 No.
 
-= How is must be set safe_mode? =
+= How should 'safe_mode' be set? =
 oQey Gallery plugin works fine with safe_mode=Off only. Please contact you server administrator 
 in order to switch safe_mode to 'off', if it is 'on'.
  
-= How can I change the image size for the no flash version of my gallery? =
+= How can I change the image size for the non flash version of my gallery? =
 Just edit css/oqeystyle.css and make all changes that you need.
 
 
