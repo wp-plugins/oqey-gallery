@@ -52,13 +52,14 @@ function oqey_db_install() {
   wp_mkdir_p ($skins_dir); // make the music folder - root
   
   if(is_dir($skins_dir) && is_file($skin_file) ){
-  			ini_set('memory_limit', '-1');
-            $zip = new ZipArchive;
-	        $zip_file = $skin_file;
-            $zip->open($zip_file);
-	        $zip_extract = str_replace('\\', '/', ABSPATH)."wp-content/oqey_gallery/skins/";
-            $zip->extractTo($zip_extract);
-            $zip->close();
+  			
+			require_once(str_replace('\\', '/', ABSPATH) . 'wp-admin/includes/class-pclzip.php');			
+			
+			$archive = new PclZip($skin_file);
+            $list = $archive->extract($skins_dir);
+            if ($list == 0) {
+            die("ERROR : '".$archive->errorInfo(true)."'");
+            }
    }
   
 
