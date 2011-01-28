@@ -1,5 +1,5 @@
 <?php 
-include('../../../wp-config.php');
+include('../../../wp-load.php');
 global $wpdb;
 $oqey_skins = $wpdb->prefix . "oqey_skins";
 

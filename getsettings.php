@@ -1,5 +1,5 @@
 <?php
-include('../../../wp-config.php');
+include('../../../wp-load.php');
 if(get_option('crop_images')=="on"){
 $crop = "true";	
 }else{

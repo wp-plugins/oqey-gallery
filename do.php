@@ -1,5 +1,5 @@
 <?php
-include('../../../wp-config.php');
+include('../../../wp-load.php');
 //include('oqey-functions.php');
 global $wpdb, $current_user;
    $oqey_galls = $wpdb->prefix . "oqey_gallery";

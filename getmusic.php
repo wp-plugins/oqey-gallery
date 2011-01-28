@@ -1,5 +1,5 @@
 <?php
-include ("../../../wp-config.php");
+include ("../../../wp-load.php");
 global $wpdb;
 
 if(isset($_POST['galleryid'])){

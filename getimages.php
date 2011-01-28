@@ -1,5 +1,5 @@
 <?php
-include ("../../../wp-config.php");
+include ("../../../wp-load.php");
 global $wpdb;   
    $oqey_galls = $wpdb->prefix . "oqey_gallery";
    $oqey_images = $wpdb->prefix . "oqey_images";
