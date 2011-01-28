@@ -423,7 +423,6 @@ if ($isCrawler) {
 
 ob_start();	
 print <<< SWF
-<span id="audionplayer{$counter}" style="display:none;"></span>
 <span id="image{$counter}" style="display:none;"></span>
 
 <script type="text/javascript">
@@ -447,12 +446,6 @@ jQuery(function($) {
 		jQuery.noConflict();
 		jQuery("#image{$counter}").show().html('{$imgs}');	
 		jQuery("#image{$counter} img").lazyload();
-		/*
-		if (jQuery.browser.webkit) {
-	        var html='<audio src="{$song}" controls="controls">';
-	        jQuery("#audionplayer{$counter}").show().html(html);
-          }	
-		  */
 	    }
 });
 </script>
