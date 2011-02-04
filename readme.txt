@@ -66,7 +66,7 @@ No. Just make sure your server runs PHP Version 5 +. Version 4 won't be supporte
 = I can`t get the photo gallery work with my theme. With the default theme it works all right though. =
 In most cases your theme is missing the appropriate call to wp_head(), which is usually found in header.php. Please patch it, taking it from the default theme.? If you don`t know how to do this, the following steps might work for you. Do them at your own risk:
 
-   1. In your admin panel, go to Plugins / Theme Editor
+   1. In your admin panel, go to Plugins - Theme Editor
    2. On the right bar,click on Header
    3. Locate the line with <code></head></code>
    4. Insert the following link before it:
