@@ -3,13 +3,25 @@ Plugin Name: oQey Gallery
 Version: 0.4.1
 Contributors:  oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom slideshow, picture, pictures,image, skinnable gallery,oqey-gallery, custom flash, oqey gallery, wp custom slideshow, slideshow with music suport, gallery with music
+Tags:  custom gallery, photos,flash,slideshow,images,gallery, photo,media ,gallery in post,photo-albums, custom 
+
+slideshow, picture, pictures,image, skinnable gallery,oqey-gallery, custom flash, oqey gallery, wp custom 
+
+slideshow, slideshow with music suport, gallery with music
 Requires at least: 3.0.0
 Tested up to: 3.0.0
 Stable tag: 0.4.1
 
 == Description ==
-oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version supports music and skins, so users can change the way it looks with a few simple clicks. Customizable, commercial skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system. Multiple galleries are supported.
+oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version 
+
+of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version 
+
+supports music and skins, so users can change the way it looks with a few simple clicks. Customizable, commercial 
+
+skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and 
+
+a simple batch upload system. Multiple galleries are supported.
 
 Links:
 
@@ -49,7 +61,17 @@ Features:
 == Frequently Asked Questions ==
 
 = oQey Gallery plugin need a special setup? =
-No.
+No. Just make sure your server runs PHP Version 5 +. Version 4 won't be supported.
+
+= I can`t get the photo gallery work with my theme. With the default theme it works all right though. =
+In most cases your theme is missing the appropriate call to wp_head(), which is usually found in header.php. Please patch it, taking it from the default theme.? If you don`t know how to do this, the following steps might work for you. Do them at your own risk:
+
+   1. In your admin panel, go to Plugins – Theme Editor
+   2. On the right bar,click on Header
+   3. Locate the line with <code></head></code>
+   4. Insert the following link before it:
+      <code><?php wp_head(); ?></code>
+   5. Save 
 
 = How is must be set safe_mode? =
 oQey Gallery plugin works fine with safe_mode=Off only. Please contact you server administrator 
