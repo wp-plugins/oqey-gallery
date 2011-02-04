@@ -92,15 +92,15 @@ Just edit css/oqeystyle.css and make all changes that you need.
 == Changelog ==
 =0.4.1=
 
-* This version just fixes a few minor bugs.
+* Several compatibility issues fixed.
 
 =0.4=
 
-* quick core bug fix
+* Quick core bug fix.
 
 =0.3=
 
-* This version just fixes a few minor bugs.
+* Few bugs fixes
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
 * Flash photo resizing issues fixed
@@ -119,15 +119,15 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.4.1=
 
-* This version just fixes a few minor bugs.
+* Several compatibility issues fixed.
 
 =0.4=
 
-* quick core bug fix
+* Quick core bug fix.
 
 =0.3=
 
-* This version just fixes a few minor bugs.
+* Few bugs fixes.
 * Flash slideshow size limits lifted
 * Flash thumbnails auto-hide function added
 * Flash photo resizing issues fixed
