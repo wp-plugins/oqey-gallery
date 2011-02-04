@@ -12,13 +12,13 @@ $gthmb = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.$s->folder.
 $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.$s->folder.'/galimg/';
 
       if($s->splash_img !=0){
-	 	$bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE id ='".$s->splash_img."' ");
+	 	$bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE id ='".$s->splash_img."' AND status!=2 ");
 									   
-	    if(count($bg)==0){		
-		$bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE gal_id ='".$id."' ORDER BY img_order ASC LIMIT 0,1 ");		
+	    if(!$bg){		
+		$bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE gal_id ='".$id."' AND status!=2 ORDER BY img_order ASC LIMIT 0,1 ");		
 		}
 		
-	  }else{ $bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE gal_id ='".$id."' ORDER BY img_order ASC LIMIT 0,1 "); } 
+	  }else{ $bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE gal_id ='".$id."' AND status!=2 ORDER BY img_order ASC LIMIT 0,1 "); } 
 
 header('Content-Type: ' . feed_content_type('rss-http') . '; charset=' . get_option('blog_charset'), true);
 $r .= '<?xml version="1.0" encoding="UTF-8"?>';
