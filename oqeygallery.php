@@ -21,7 +21,7 @@ Author URI: http://oqeysites.com/
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'oqeygallery.php' == basename($_SERVER['SCRIPT_FILENAME']))
 	die ('Please do not load this page directly. Thanks!');
 	
-define( 'OQEY_ABSPATH', str_replace('\\', '/', ABSPATH) );
+define('OQEY_ABSPATH', str_replace('\\', '/', ABSPATH) );
 
 include("oqey-functions.php");
 global $oqey_db_version;	
