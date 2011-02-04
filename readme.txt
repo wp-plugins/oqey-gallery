@@ -13,14 +13,10 @@ Tested up to: 3.0.0
 Stable tag: 0.4.1
 
 == Description ==
-oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version 
-
-of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version 
-
+oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version
+of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version
 supports music and skins, so users can change the way it looks with a few simple clicks. Customizable, commercial 
-
-skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and 
-
+skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and
 a simple batch upload system. Multiple galleries are supported.
 
 Links:
