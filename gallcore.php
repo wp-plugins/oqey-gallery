@@ -415,14 +415,14 @@ $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.$gal->folder
 $imgs = '<span class="all_images">';
 
 foreach($all as $i){ 
-$imgs .= '<span class"single_img"><img src="'.$gimg.trim($i->title).'" alt="'.trim($i->alt).'"/><\/span>';
+$imgs .= '<span class"single_img"><img src="'.$gimg.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'"/><\/span>';
 }		 
 $imgs .= '<\/span>'; 
 
 $isCrawler = getUserNow($_SERVER['HTTP_USER_AGENT']); // check if is a crowler
 
 if ($isCrawler) {
-	echo str_replace("\\", "", $imgs);
+	echo str_replace("\\", "", urldecode($imgs) );
     }else{
 
 ob_start();	
