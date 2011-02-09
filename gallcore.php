@@ -313,9 +313,19 @@ function oqey_top_page() {
 <div class="postbox" style="width:850px; padding:10px; height:85px;">
 <div align="left"><strong>Donate</strong><p>If you really like this plugin and find it useful, help to keep this plugin free and constantly updated by clicking the donate button below.</p></div>
 <div align="right">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"><input name="cmd" value="_donations" type="hidden"/><input name="business" value="donations@oqeysites.com" type="hidden"/><input name="lc" value="US" type="hidden"/><input name="item_name" value="oQey Gallery plugin" type="hidden"/><input name="item_number" value="Support Open Source" type="hidden"/><input name="no_note" value="0" type="hidden"/><input name="currency_code" value="USD" type="hidden"/><input name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" type="hidden"/><input alt="PayPal - The safer, easier way to donate online!" name="submit" src="<?php echo oQeyPluginUrl(); ?>/images/btn_donate.gif" type="image"/><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" width="1" border="0" height="1"/></form>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="3ZV8CCFYAUYKJ"><input alt="PayPal - The safer, easier way to donate online!" name="submit" src="<?php echo oQeyPluginUrl(); ?>/images/btn_donate.gif" type="image"/><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" width="1" border="0" height="1"/></form>
 </div>
 </div>
+
+
+<div class="postbox" style="width:850px; padding:10px;">
+	<strong>Original WP Themes</strong>
+	<p>If you are interested to buy an original WP theme, oQey Sites recommends the following themes. They have a cool 1 click auto install feature and excellent after care support services. Check it out!</p>
+    <div align="right">
+    <a href="https://www.e-junkie.com/ecom/gb.php?ii=850762&c=ib&aff=155824&cl=136641" target="ejejcsingle"><img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/themes.jpg" /></a>
+    </div>
+</div>
+
 
 </div>
 <?php
@@ -364,11 +374,8 @@ foreach($atts as $a){
 
    $oqey_galls = $wpdb->prefix . "oqey_gallery";
    $oqey_images = $wpdb->prefix . "oqey_images";
-   //$oqey_music = $wpdb->prefix . "oqey_music";
-   //$oqey_music_rel = $wpdb->prefix . "oqey_music_rel";
    $oqey_skins = $wpdb->prefix . "oqey_skins";
    
-//$id = mysql_real_escape_string($gasite[1]);
 $oqey_BorderSize = get_option('oqey_BorderSize');
 $oqey_height = get_option('oqey_height');
 $oqey_width = get_option('oqey_width');
@@ -378,8 +385,7 @@ $plugin_repo_url = oQeyPluginRepoUrl();
 
 $gal = $wpdb->get_row("SELECT * FROM $oqey_galls WHERE id ='".$id."' AND status !='2'");
 
-if($gal){ // if gallery still exist
-
+if($gal){
 $folder = $gal->folder;
 
 if($gal->skin_id!="0"){
@@ -397,15 +403,8 @@ if($gal->splash_only==1){ $s = "AND id!=".$gal->splash_img; }else{ $s=""; }
 									         ".$s."
 									ORDER BY img_order ASC
 									 ");
-/*
-	  //verifica daca este muzica setata la galerie
-	 $m = $wpdb->get_results("SELECT * FROM $oqey_music_rel WHERE gallery_id = '".$id."' " );
-	 if(count($m)>0){  
-	  $fsong = $wpdb->get_row("SELECT link FROM $oqey_music WHERE id ='".$m[0]->music_id."'");
-      $song = get_option('siteurl').'/wp-content/oqey_gallery/music/'.$fsong->link;
-	 }
-*/
-define('IBROWSER', preg_match('~(iPad|iPod|iPhone)~si', $_SERVER['HTTP_USER_AGENT'])); //check for apple devices
+
+define('IBROWSER', preg_match('~(iPad|iPod|iPhone)~si', $_SERVER['HTTP_USER_AGENT']));
 if(IBROWSER){
 $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.$gal->folder.'/iphone/';
 }else{
