@@ -448,7 +448,7 @@ jQuery(function($) {
 		var playerVersion = swfobject.getFlashPlayerVersion();
 		if(playerVersion.major<8){	
 		jQuery.noConflict();
-		jQuery("#image{$counter}").show().html('{$imgs}');	
+		jQuery("#image{$counter}").show().html(decodeURIComponent('{$imgs}'.replace(/\+/g, '%20')));	
 		jQuery("#image{$counter} img").lazyload();
 	    }
 });
