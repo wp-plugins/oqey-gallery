@@ -363,6 +363,13 @@ function getUserNow($userAgent) {
     return $isCrawler;
 }
 
+function oQeycrawlerFood($t){
+	$t = str_replace("oqeyimg", "oQey Photo Gallery Plugin for WordPress -", urldecode($t) );
+	//$t = str_replace("]", ">", $t );
+	$t = $t."<p align='center'><a href='http://oqeysites.com'>oQey Photo Gallery Plugin for WordPress</a></p>";
+	return $t;
+}
+
 add_shortcode( 'oqeygallery', 'add_gallery' );
 
 function add_gallery($atts){// insert flash gallery in content
@@ -387,6 +394,7 @@ $gal = $wpdb->get_row("SELECT * FROM $oqey_galls WHERE id ='".$id."' AND status 
 
 if($gal){
 $folder = $gal->folder;
+$gal_title = urlencode($gal->title);
 
 if($gal->skin_id!="0"){
 $skin = $wpdb->get_row("SELECT * FROM $oqey_skins WHERE id = '".$gal->skin_id."'");
@@ -411,18 +419,16 @@ $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.$gal->folder
 $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.$gal->folder.'/galimg/';	
 }
 
-$imgs = '<span class="all_images">';
-
-foreach($all as $i){ 
-$imgs .= '<span class"single_img"><img src="'.$gimg.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'"/><\/span>';
-}		 
-$imgs .= '<\/span>'; 
+ 
 
 $isCrawler = getUserNow($_SERVER['HTTP_USER_AGENT']); // check if is a crowler
 
-if ($isCrawler) {
-	echo str_replace("\\", "", urldecode($imgs) );
-    }else{
+if ($isCrawler){
+	$imgs = "<p align='center'>".$gal_title."</p>";
+    $imgs .= '<span class="all_images">';	foreach($all as $i){   $imgs .= '<img src="'.$gimg.trim($i->title).'" alt="oqeyimg '.urlencode(trim($i->alt)).'"/>'; } $imgs .= '</span>'; echo oQeycrawlerFood($imgs);
+}else{	
+    $imgs = '[p align="center"]'.$gal_title.'[/p]';
+	$imgs .= '[span class="all_images"]'; foreach($all as $i){ $imgs .= '[img src="'.$gimg.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'"/]'; } $imgs .= '[/span]';
 
 ob_start();	
 print <<< SWF
@@ -444,12 +450,9 @@ print <<< SWF
 
 <script type="text/javascript">
 jQuery(function($) {	
-		var playerVersion = swfobject.getFlashPlayerVersion();
-		if(playerVersion.major<8){	
-		jQuery.noConflict();
-		jQuery("#image{$counter}").show().html(decodeURIComponent('{$imgs}'.replace(/\+/g, '%20')));	
-		jQuery("#image{$counter} img").lazyload();
-	    }
+		var pv = swfobject.getFlashPlayerVersion();
+		oqey_e(pv, {$counter}, '{$imgs}');
+
 });
 </script>
 </span>&nbsp;

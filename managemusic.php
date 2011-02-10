@@ -81,7 +81,9 @@ jQuery(document).ready(function($) {
 jQuery.loadImages([ '<?php echo oQeyPluginUrl().'/images/preview_button.png'; ?>', '<?php echo oQeyPluginUrl().'/images/remove_button.png'; ?>', '<?php echo oQeyPluginUrl().'/images/edit_button.png'; ?>' ],function(){});
 
 hoverSongs();
-jQuery(".click").editable("<?php echo oQeyPluginUrl(); ?>/save_music_details.php", { 
+jQuery(".click").editable("<?php echo oQeyPluginUrl(); ?>/do.php", { 
+	  name: "music_edit_title",
+	  id: "music_edit_id",
       indicator : 'Updating...',
       tooltip   : "Double-click to rename...",
       event     : "dblclick",

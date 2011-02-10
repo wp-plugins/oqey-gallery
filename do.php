@@ -92,7 +92,7 @@ echo $r;
 }
 /*END*/
 
-/*Rename category title or rename*/
+/*Rename gallery titles*/
 if(isset($_POST['gal_edit_title']) && isset($_POST['gal_edit_id'])){
 
 $gal_id = str_replace("gall_id_", "", $_POST['gal_edit_id'] );
@@ -111,6 +111,29 @@ echo stripslashes_deep($title);
 }else{
 echo '<p class="error fade">Error!</p>';
 }
+}
+/*END edit*/
+
+/*Rename songs titles*/
+if(isset($_POST['music_edit_title']) && isset($_POST['music_edit_id'])){	
+
+$id = str_replace("select_", "", $_POST['music_edit_id'] );
+$newtitle = esc_sql(stripslashes_deep(trim(urldecode($_POST["music_edit_title"]))));
+
+if(!$sql=$wpdb->get_row($wpdb->prepare("SELECT * FROM $oqey_music WHERE title = %s AND id != %d ",$newtitle, $id))){ 
+$title = $newtitle;
+}else{
+$sql=$wpdb->get_row($wpdb->prepare("SELECT * FROM $oqey_music WHERE title = %s AND id != %d ",$newtitle, $id));
+$title = trim($sql->title.time());	
+}
+$update = sprintf("UPDATE $oqey_music SET title = '%s' WHERE id = '%d' ",$title, $id);						
+$m= mysql_query($update) or die (mysql_error());
+if($m){
+echo stripslashes_deep($title);
+}else{
+echo '<p class="error fade">Error!</p>';
+}
+
 }
 /*END edit*/
 
