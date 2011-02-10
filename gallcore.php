@@ -452,7 +452,6 @@ print <<< SWF
 jQuery(function($) {	
 		var pv = swfobject.getFlashPlayerVersion();
 		oqey_e(pv, {$counter}, '{$imgs}');
-
 });
 </script>
 </span>&nbsp;
