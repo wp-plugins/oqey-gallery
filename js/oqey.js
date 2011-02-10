@@ -13,7 +13,22 @@
 		var isIE = navigator.appName.indexOf("Microsoft") != -1;   return (isIE) ? window[movieName] : document[movieName];
 	}
 	
-	
+
+function oqey_e(pv, nr, t){
+	    var t = t.replace(/\[/g, '<');
+		var t = t.replace(/\]/g, '>');
+		
+		if(pv.major<8){	
+		var res = oqeyurldecode(t);
+		jQuery("#image" + nr).show().html(res);
+		jQuery("#image" + nr + " img").lazyload();
+	    }
+}
+
+function oqeyurldecode(t){
+	var r = decodeURIComponent( t.replace(/\+/g, '%20') );
+	return r;
+}
 	
 (function($){$.fn.lazyload=function(options){var settings={threshold:0,failurelimit:0,event:"scroll",effect:"show",container:window};if(options){$.extend(settings,options);}
 var elements=this;if("scroll"==settings.event){$(settings.container).bind("scroll",function(event){var counter=0;elements.each(function(){if($.abovethetop(this,settings)||$.leftofbegin(this,settings)){}else if(!$.belowthefold(this,settings)&&!$.rightoffold(this,settings)){$(this).trigger("appear");}else{if(counter++>settings.failurelimit){return false;}}});var temp=$.grep(elements,function(element){return!element.loaded;});elements=$(temp);});}
