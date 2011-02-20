@@ -1,11 +1,10 @@
 <?php 
-if (!empty($_SERVER['SCRIPT_FILENAME']) && 'oqey-functions.php' == basename($_SERVER['SCRIPT_FILENAME']))
+if (!empty($_SERVER['SCRIPT_FILENAME']) && 'functions.php' == basename($_SERVER['SCRIPT_FILENAME']))
 	die ('Please do not load this page directly. Thanks!');
 	
 global $wpdb;
-   $oqey_galls = $wpdb->prefix . "oqey_gallery";
-   
-//get the gallery folder
+$oqey_galls = $wpdb->prefix . "oqey_gallery";
+
 function getFolder($id){
 global $wpdb;
 $id = (int)$id;
@@ -72,8 +71,6 @@ function rm($fileglob)
     }
     return true;
 }
-
-
 
 /*jSon*/
 class custom_json {
@@ -207,5 +204,4 @@ function img_resize($tmpname, $save_dir, $save_name, $newheight, $newwidth ){
         $c = imagejpeg($im, $save_dir.$save_name, 90);
 		imagedestroy($im);
     }
-
 ?>
