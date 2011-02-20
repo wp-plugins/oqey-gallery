@@ -42,7 +42,8 @@ function oqey_db_install() {
 	add_option("oqey_pause_between_tran", "6" ,'', 'yes');
 	add_option("oqey_LoopOption", "on" ,'', 'yes');
 	add_option("oqey_license", "" ,'', 'yes');
-	
+	add_option("oqey_backlinks", "on" ,'', 'yes');
+		
 	$license_text = '
 	<p>oQey Gallery License</p>
 <p>Preamble</p>
