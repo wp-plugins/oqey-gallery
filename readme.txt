@@ -50,6 +50,10 @@ Features:
 = oQey Gallery plugin need a special setup? =
 No. Just make sure your server runs PHP Version 5.2+. Version 4 won't be supported.
 
+= Can I have gallery custom size per post? =
+
+Yes. You might specify the gallery width and height, i.e.: [oqeygallery id=1 width=600 height=450]
+
 = I can`t get the photo gallery work with my theme. With the default theme it works all right though. =
 In most cases your theme is missing the appropriate call to wp_head(), which is usually found in header.php. Please patch it, taking it from the default theme.? If you don`t know how to do this, the following steps might work for you. Do them at your own risk:
 
