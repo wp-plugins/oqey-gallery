@@ -84,6 +84,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.4.2=
 
+* Each gallery post can have a custom size now
 * Media content SEO improvements
 * Continuous play option added
 * Security updates
@@ -117,6 +118,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.4.2=
 
+* Each gallery post can have a custom size now
 * Media content SEO improvements
 * Continuous play option added
 * Security updates
