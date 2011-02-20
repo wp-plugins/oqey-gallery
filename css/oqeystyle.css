@@ -1,0 +1,2 @@
+.all_images img{ max-width:900px; height: auto; width: expression(this.width > 900 ? 900: true); margin-left:auto; margin-right:auto; display:block; margin-top:3px; }
+
