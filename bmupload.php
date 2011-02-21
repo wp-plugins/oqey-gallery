@@ -26,7 +26,7 @@ if ( !is_user_logged_in() ) die('Login failure. -1');
 
 global $wpdb;
 $oqey_music = $wpdb->prefix . "oqey_music";
-$filespath = OQEY_ABSPATH."wp-content/oqey_gallery/skins/";
+$filespath = OQEY_ABSPATH."wp-content/oqey_gallery/music/";
 
 if($_FILES['Filedata']['size']>0){
     	if($_FILES["Filedata"]["size"]>0){
