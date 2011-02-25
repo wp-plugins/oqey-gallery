@@ -142,16 +142,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 					 Handler:"<?php echo oQeyPluginUrl(); ?>/bmupload.php",
 					 FTypes:"*.mp3",
 					 FDescription:"Media Files"};
-	var params = {bgcolor:"#FFFFFF",
-				  allowFullScreen:"true", wMode:"transparent",
-				  post_id : "<?php echo $post_id; ?>",
-				  auth_cookie : "<?php if ( is_ssl() ) echo $_COOKIE[SECURE_AUTH_COOKIE]; else echo $_COOKIE[AUTH_COOKIE]; ?>",
-				  logged_in_cookie : "<?php echo $_COOKIE[LOGGED_IN_COOKIE]; ?>",
-				  _wpnonce : "<?php echo wp_create_nonce('media-form'); ?>",
-				  type : "<?php echo $type; ?>",
-				tab : "<?php echo $tab; ?>",
-				short : "1"
-	}
+	var params = {bgcolor:"#FFFFFF", allowFullScreen:"true", wMode:"transparent" }
 	var attributes = {id: "flash"};
 	swfobject.embedSWF("<?php echo oQeyPluginUrl(); ?>/demoupload.swf", "flashuploader", "110", "30", "8.0.0", "", flashvars, params, attributes);
 </script>
@@ -206,15 +197,13 @@ $i++;
 }
 }else{ ?>
     <tr style="padding:3px;">
-    <td align="center" width="50" style="height:35px;">
-       
+    <td align="center" width="50" style="height:35px;">       
     </td>
     <td width="725" align="left" valign="middle" >You have no music yet. Please upload some files.</td>
     <td width="30" align="center" valign="middle" class="lasttd">    
     </td>
   </tr>    
-    
-    
+
     <?php } ?>
   </tbody>
 </table>
