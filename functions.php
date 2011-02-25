@@ -1,0 +1,139 @@
+<?php 
+if (!empty($_SERVER['SCRIPT_FILENAME']) && 'functions.php' == basename($_SERVER['SCRIPT_FILENAME']))
+	die ('Please do not load this page directly. Thanks!');
+	
+global $wpdb;
+$oqey_galls = $wpdb->prefix . "oqey_gallery";
+
+function getFolder($id){
+global $wpdb;
+$id = (int)$id;
+$oqey_galls = $wpdb->prefix . "oqey_gallery";	
+$r = $wpdb->get_row("SELECT folder FROM $oqey_galls WHERE id ='".mysql_real_escape_string($id)."'");
+return $r->folder;
+}
+
+function checkPost($post_id){
+global $wpdb;
+$check = $wpdb->get_var("SELECT post_type
+						   FROM $wpdb->posts
+					      WHERE ID = '$post_id'");
+	return $check;
+}
+
+function uploadSize(){
+	$upload_size_unit = $max_upload_size =  wp_max_upload_size();
+	$sizes = array( 'KB', 'MB', 'GB' );
+	for ( $u = -1; $upload_size_unit > 1024 && $u < count( $sizes ) - 1; $u++ )
+		$upload_size_unit /= 1024;
+	if ( $u < 0 ) {
+		$upload_size_unit = 0;
+		$u = 0;
+	} else {
+		$upload_size_unit = (int) $upload_size_unit;
+	}   
+
+	printf( __( 'Maximum upload file size: %d%s' ), $upload_size_unit, $sizes[$u] );
+}
+
+function rm($fileglob)
+{
+    if (is_string($fileglob)) {
+        if (is_file($fileglob)) {
+            return unlink($fileglob);
+        } else if (is_dir($fileglob)) {
+            $ok = rm("$fileglob/*");
+            if (! $ok) {
+                return false;
+            }
+            return rmdir($fileglob);
+        } else {
+            $matching = glob($fileglob);
+            if ($matching === false) {
+                trigger_error(sprintf('No files match supplied glob %s', $fileglob), E_USER_WARNING);
+                return false;
+            }       
+            $rcs = array_map('rm', $matching);
+            if (in_array(false, $rcs)) {
+                return false;
+            }
+        }       
+    } else if (is_array($fileglob)) {
+        $rcs = array_map('rm', $fileglob);
+        if (in_array(false, $rcs)) {
+            return false;
+        }
+    } else {
+        trigger_error('Param #1 must be filename or glob pattern, or array of filenames or glob patterns', E_USER_ERROR);
+        return false;
+    }
+    return true;
+}
+
+function scanSkins( $outerDir, $type, $filters = array()){
+    $dirs = array_diff( scandir( $outerDir ), array_merge( Array( ".", ".." ), $filters ) );
+    $dir_array = Array();
+    foreach( $dirs as $d ){
+	if($type=="1"){  if(is_dir($outerDir."/".$d)){ $dir_array[] = $d; } }else{ $dir_array[] = $d; }
+	}		
+    return $dir_array;
+} 
+
+function php4_scandir($dir,$listDirectories=false, $skipDots=true) {
+    $dirArray = array();
+    if ($handle = opendir($dir)) {
+        while (false !== ($file = readdir($handle))) {
+            if (($file != "." && $file != "..") || $skipDots == true) {
+                if($listDirectories == false) { if(is_dir($file)) { continue; } }
+                array_push($dirArray,basename($file));
+            }
+        }
+        closedir($handle);
+    }
+    return $dirArray;
+}
+
+function img_resize($tmpname, $save_dir, $save_name, $newheight, $newwidth ){	
+	ini_set('memory_limit', '-1');
+    $save_dir     .= ( substr($save_dir,-1) != "/") ? "/" : "";
+    $gis        = getimagesize($tmpname);
+    $type        = $gis[2];
+    switch($type){
+        case "1": $imorig = imagecreatefromgif($tmpname); break;
+        case "2": $imorig = imagecreatefromjpeg($tmpname);break;
+        case "3": $imorig = imagecreatefrompng($tmpname); break;
+        default:  $imorig = imagecreatefromjpeg($tmpname);
+        }
+        $x = imagesx($imorig);
+        $y = imagesy($imorig);       
+        $width = $x;
+        $height = $y;
+		
+		if($width>$newwidth){		
+		$dheight = $newheight;
+	    $dwidth = $newwidth;
+        $coef = $width / $height;
+        if ($coef > 1){
+	    $newheight = $newwidth / $coef;
+		if($newheight > $dheight){		
+		$newcoef = $newheight/$dheight;
+		$newwidth = $dwidth/$newcoef;
+		$newheight = $dheight;
+		}		
+		if($coef >1.5){
+		$newheight = $dheight;
+		$newwidth = $dheight*$coef; 
+		}
+        } else {
+	    $newwidth = $newheight * $coef;
+        };	
+		}else{
+		$newwidth=$width; 
+		$newheight=$height;
+		}		
+        $im = imagecreatetruecolor($newwidth,$newheight);
+        $i = imagecopyresampled($im,$imorig , 0,0,0,0,$newwidth,$newheight,$x,$y);
+        $c = imagejpeg($im, $save_dir.$save_name, 90);
+		imagedestroy($im);
+    }
+?>
