@@ -179,8 +179,15 @@ if ($isCrawler){
 	foreach($all as $i){ 
 	$img_path = $ipath.trim($i->title);
     list($iwidth, $iheight, $itype, $iattr)= getimagesize($img_path);
-    if($iwidth!=0 && $iheight!=0){	$coeficient = $iwidth/$iheight; }else{ $coeficient = 1.5; }
-	//$coeficient = $iwidth/$iheight;	
+    if($iwidth!=0 && $iheight!=0){	
+        $coeficient = $iwidth/$iheight; 
+    }else{ 
+    $x = imagesx($img_path);
+    $y = imagesy($img_path);
+    
+    $coeficient = $x/$y; 
+         
+    }
 	if($coeficient>1){
 	$new_height = round($oqey_width/$coeficient);
 	}else{
