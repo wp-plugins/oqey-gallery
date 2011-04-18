@@ -48,7 +48,6 @@ Features:
 * Auto-crop option
 * Continuous play option
 * Reverse order function
-* install skins with a single click
 
 
 == Installation ==
@@ -60,6 +59,8 @@ Features:
 
 == Frequently Asked Questions ==
 
+= I have just updated the gallery to version 0.4.6 and it seems to be disabled. What should I do to enable it? =
+The new update has Roles enabled, so updating the gallery is a little bit tricky. Administrator privileges are required and manual activation. Just deactivate and reactivate the plugin.
 
 = oQey Gallery plugin need a special setup? =
 No. Just make sure your server runs PHP Version 5.2+. Version 4 won't be supported.
@@ -76,7 +77,6 @@ In most cases your theme is missing the appropriate call to wp_head(), which is 
    4. Insert the following link before it:
       <code><?php wp_head(); ?></code>
    5. Save 
-
 
 = How should safe_mode be set? =
 oQey Gallery plugin works fine with safe_mode=Off only. Please contact you server administrator
