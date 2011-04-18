@@ -1044,12 +1044,12 @@ if(isset($_POST['get_the_preview'])){
     if ( !current_user_can('oQeySkins') ) die(__('You do not have sufficient permissions to do this.'));
     
 echo '
-<object height="565" width="896">
+<object height="598" width="896">
 <param value="#ffffff" name="bgcolor">
 <param value="true" name="allowFullScreen">
 <param name="movie" value="http://oqeysites.com/skinsxml/'.$_POST['get_the_preview'].'/'.$_POST['get_the_preview'].'.swf">
 <param name="FlashVars" value="flashId=fid&amp;FKey='.$_POST['comkey'].'&amp;GalleryPath=http://oqeysites.com/skinsxml/&amp;GalleryID=1&amp;FirstRun=0">
-<embed src="http://oqeysites.com/skinsxml/'.$_POST['get_the_preview'].'/'.$_POST['get_the_preview'].'.swf" bgcolor="#ffffff" FlashVars="flashId=fid&amp;FKey='.$_POST['comkey'].'&amp;GalleryPath=http://oqeysites.com/skinsxml/&amp;GalleryID=1&amp;FirstRun=0" width="896" height="565" wmode="transparent" allowFullScreen="true"></embed>
+<embed src="http://oqeysites.com/skinsxml/'.$_POST['get_the_preview'].'/'.$_POST['get_the_preview'].'.swf" bgcolor="#ffffff" FlashVars="flashId=fid&amp;FKey='.$_POST['comkey'].'&amp;GalleryPath=http://oqeysites.com/skinsxml/&amp;GalleryID=1&amp;FirstRun=0" width="896" height="598" wmode="transparent" allowFullScreen="true"></embed>
 </object>
 ';    
 }

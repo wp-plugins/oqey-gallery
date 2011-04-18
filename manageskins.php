@@ -199,11 +199,11 @@ jQuery(".get_new_skins").click(function(){
             jQuery.post("<?php echo oQeyPluginUrl(); ?>/do.php", { get_the_preview: id },
             function(r){
               
-            var $dialog = jQuery('<div style="height:573px; width:896px; position:relative; display:block;"><\/div>').html(r).dialog({
+            var $dialog = jQuery('<div style="height:598px; width:896px; position:relative; display:block;"><\/div>').html(r).dialog({
 			width: 896,
-            height:600,
-			maxWidth: 896,
-			maxHeight: 600,
+            height:633,
+			maxWidth: 900,
+			maxHeight: 635,
 			resizable: false,
 			autoOpen: false,
 			title: title,

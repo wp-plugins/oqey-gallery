@@ -233,11 +233,11 @@ function oqey_db_install(){
 		PRIMARY KEY  (`id`)
 	) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";	
     $wpdb->query($sql6);	
-	}
+	
     
    $wpdb->query("INSERT INTO $oqey_skins (name, description, folder, status, commercial, skinid) VALUES ('oQey Default Skin', '".esc_sql(stripslashes_deep("That's the default gray skin that comes with the free oQey Galleries pack"))."', 'oqeymainsk', '1', 'no', '0001')");
    $wpdb->query("INSERT INTO $oqey_skins (name, description, folder, status, commercial, skinid) VALUES ('Dark Theme Skin', '".esc_sql(stripslashes_deep("Just another free skin for dark wordpress themes"))."', 'darkfreesk', '0', 'no', '0002')");
-
+}
    
    // Upgrade table code
    $installed_oqey_ver = get_option( "oqey_db_version" );
