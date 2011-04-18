@@ -1,13 +1,13 @@
 === Plugin Name ===
 
 Plugin Name: oQey Gallery
-Version: 0.4.5
+Version: 0.4.6
 Contributors:  oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags:  photo, gallery, slideshow, plugin, widget, album, flash, images, music, media, fullscreen, post, photo-albums, custom slideshow, picture, pictures, image, skinnable gallery, oqey, custom flash, oqey gallery, wp custom slideshow, slideshow with music, gallery with music, google, iphone, ipad, compatible
+Tags:  photo, gallery, slideshow, plugin, widget, album, flash, images, music, media, fullscreen, post, photo-albums, custom slideshow, captions, picture, pictures, image, skinnable gallery, oqey, custom flash, oqey gallery, wp custom slideshow, slideshow with music, gallery with music, google, iphone, ipad, compatible
 Requires at least: 3.0.0
-Tested up to: 3.1
-Stable tag: 0.4.5
+Tested up to: 3.1.1
+Stable tag: 0.4.6
 
 
 == Description ==
@@ -42,7 +42,8 @@ Features:
 * Advanced SEO tools for indexing photos in google and other major Search Engines
 * Multiple play control - if you press play another instance of a slideshow in a page, 
   the started slideshow will stop playing
-* Custom logo support - commercial skins
+* Custom logo support | commercial skins
+* Captions support | commercial skins
 * Flash Watermark support
 * Auto-crop option
 * Continuous play option
@@ -95,6 +96,15 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Changelog ==
+
+=0.4.6=
+
+* roles support added
+* gallery management improvements
+* tags support added for custom insertion
+* skins management improvements
+* get more skins auto-feed added
+* install skins with a single click added
 
 =0.4.5=
 
@@ -149,6 +159,15 @@ Just edit css/oqeystyle.css and make all changes that you need.
 * The first stable version.
 
 == Upgrade Notice ==
+
+=0.4.6=
+
+* roles support added
+* gallery management improvements
+* tags support added for custom insertion
+* skins management improvements
+* get more skins auto-feed added
+* install skins with a single click added
 
 =0.4.5=
 
