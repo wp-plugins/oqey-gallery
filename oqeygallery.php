@@ -96,8 +96,8 @@ global $oqey_db_version;
 function oqey_db_install(){
    global $wpdb, $oqey_db_version, $wp_filesystem, $wp_roles;
 
-	if ( !current_user_can('activate_plugins') ) 
-		return;
+	//if ( !current_user_can('activate_plugins') ) 
+	//	return;
 
 	$perm = get_role('administrator');	
 	$perm->add_cap('oQeySettings');
