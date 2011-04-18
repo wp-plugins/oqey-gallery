@@ -48,6 +48,7 @@ Features:
 * Auto-crop option
 * Continuous play option
 * Reverse order function
+* install skins with a single click
 
 
 == Installation ==
