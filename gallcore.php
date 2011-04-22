@@ -112,7 +112,7 @@ add_action('wp_head', 'oqey_gallery_front_head');
 function getUserNow($userAgent) {
     $crawlers = 'Google|msnbot|Rambler|Yahoo|AbachoBOT|accoona|' .
     'AcioRobot|ASPSeek|CocoCrawler|Dumbot|FAST-WebCrawler|' .
-    'GeonaBot|Gigabot|Lycos|MSRBOT|Scooter|AltaVista|IDBot|eStyle|Scrubby|yandex';
+    'GeonaBot|Gigabot|Lycos|MSRBOT|Scooter|AltaVista|IDBot|eStyle|Scrubby|yandex|facebook';
     $isCrawler = (preg_match("/$crawlers/i", $userAgent) > 0);
     return $isCrawler;
 }
