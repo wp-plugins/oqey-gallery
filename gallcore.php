@@ -1432,16 +1432,17 @@ if ($isCrawler){
 	}
 	
 	$margleft = $oqey_width - 70;
+    $margin_top = $img_holder_h/2-35;
     
 ob_start();	
 print <<< SWF
 <div id="oqey_image_div{$counter}" style="position:relative; width:{$oqey_width}px; height:{$img_holder_h}px; display:none; margin: 0 auto;">
 
-<div style="position:absolute; left:0px; top:47%; z-index:99999;" class="gall_links">
+<div style="position:absolute; left:0px; top:{$margin_top}px; z-index:99999;" class="gall_links">
 <a id="prev{$counter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/larrow.png" style="border:none;" alt="" /></a>
 </div>
 
-<div style="position:absolute; left:{$margleft}px; top:47%; z-index:99999;" class="gall_links">
+<div style="position:absolute; left:{$margleft}px; top:{$margin_top}px; z-index:99999;" class="gall_links">
 <a id="next{$counter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/rarrow.png" style="border:none;" alt="" /></a>
 </div>
 
