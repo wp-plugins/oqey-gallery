@@ -1099,9 +1099,9 @@ function oQeyImagePermDelete(){
    $d = $wpdb->query("DELETE FROM $oqey_images WHERE gal_id = '".esc_sql($galid)."' AND title = '".esc_sql($title)."'");
 
    if(is_file(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galimg/'.trim($title)) ){    
-      	$i = @unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galimg/'.trim($title));
-	    $t = @unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galthmb/'.trim($title));
-	    $t = @unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/iphone/'.trim($title));
+      	$i = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galimg/'.trim($title));
+	    $t = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galthmb/'.trim($title));
+	    $t = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/iphone/'.trim($title));
     }
    }
 
@@ -1124,7 +1124,7 @@ function oQeySongPermDelete(){
 
    if($d){
      if(is_file(OQEY_ABSPATH."wp-content/oqey_gallery/music/".oqey_getBlogFolder($wpdb->blogid).trim($_POST['name']))){    
-	    $i = @unlink(OQEY_ABSPATH."wp-content/oqey_gallery/music/".oqey_getBlogFolder($wpdb->blogid).trim($_POST['name']));
+	    $i = unlink(OQEY_ABSPATH."wp-content/oqey_gallery/music/".oqey_getBlogFolder($wpdb->blogid).trim($_POST['name']));
    }
    if(!$sql=$wpdb->get_row($wpdb->prepare("SELECT id FROM $oqey_music WHERE status = '%d' ", 2 ))){ $e="no"; }
    echo $e;

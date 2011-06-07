@@ -24,9 +24,9 @@ $d = $wpdb->query("DELETE FROM $oqey_images WHERE id = '".$img->id."'");
         //$ii = @unlink(OQEY_ABSPATH.'/'.trim($img->img_path).'/thumbs/thumbs_'.trim($img->title));
         //$tt = @unlink(OQEY_ABSPATH.'/'.trim($img->img_path).'/'.trim($img->title));       
       }else{
-       	$ii = @unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galimg/'.trim($img->title));
-        $tt = @unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galthmb/'.trim($img->title));
-        $ip = @unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/iphone/'.trim($img->title));
+       	$ii = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galimg/'.trim($img->title));
+        $tt = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galthmb/'.trim($img->title));
+        $ip = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/iphone/'.trim($img->title));
      } 
 }	
 
@@ -73,7 +73,7 @@ $r = $wpdb->query("DELETE FROM $oqey_music_rel WHERE music_id = '".$m->id."' ");
 
 if($d){
  if(is_file(OQEY_ABSPATH."wp-content/oqey_gallery/music/".oqey_getBlogFolder($wpdb->blogid).trim($m->link))){    
-	$i = @unlink(OQEY_ABSPATH."wp-content/oqey_gallery/music/".oqey_getBlogFolder($wpdb->blogid).trim($m->link));
+	$i = unlink(OQEY_ABSPATH."wp-content/oqey_gallery/music/".oqey_getBlogFolder($wpdb->blogid).trim($m->link));
   }
  }
 }
@@ -246,7 +246,7 @@ foreach($imgs as $img){
     if($img->img_type=="nextgen"){
        $gthmbnew = get_option('siteurl').'/'.trim($img->img_path).'/thumbs/thumbs_';
      }else{
-       $gthmbnew = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).'/'.$gal->folder.'/galthmb/';
+       $gthmbnew = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$gal->folder.'/galthmb/';
      } 
 
 if($s->splash_img==$img->id){ $b=' style="border:#7A82DE thin solid;" class="imgsel"'; }
