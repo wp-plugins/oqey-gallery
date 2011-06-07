@@ -19,9 +19,10 @@ function oqey_e(pv, nr, t, optouch, incolums){
 	    var t = t.replace(/\[/g, '<');
 		var t = t.replace(/\]/g, '>');
 
-       if(pv.major<8){	
+   if(pv.major<8){	
 		var res = oqeyurldecode(t);		
 		jQuery("#oqey_image_div" + nr).show();
+            jQuery("#flash_gal_" + nr).hide();
 		jQuery("#image" + nr).show().html(res);
 		jQuery("#image" + nr + " img").lazyload();
       
@@ -47,6 +48,9 @@ function oqey_e(pv, nr, t, optouch, incolums){
    }
 		
   }else{ jQuery(".gall_links").hide(); }
+ }else{    
+    jQuery("#flash_gal_" + nr).show();
+    jQuery("#oqey_image_div" + nr).hide();        
  }
 }
 
