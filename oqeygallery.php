@@ -273,7 +273,7 @@ function oqey_db_install(){
 	      }
   }
   
-  update_option( "oqey_db_version", $oqey_db_version );  
+  //update_option( "oqey_db_version", $oqey_db_version );  
 }
 
 if (function_exists('register_activation_hook')){
