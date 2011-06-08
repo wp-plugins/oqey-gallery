@@ -281,7 +281,7 @@ textarea
   resize:none;
 }
 
-.galleriesbox{ border:#dfdfdf 1px solid;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; height:auto; padding:10px; width:auto; background-color: #fff; position: relative; min-width: 880px; margin-right:20px; float: left;}
+.galleriesbox{ border:#dfdfdf 1px solid;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; height:auto; padding:10px; width:auto; background-color: #fff; position: relative; min-width: 880px; margin-right:20px; float: left; margin-bottom:20px;}
 
 #galleryarea{ margin-left:0px; }
 #musicpostbox{ width:900px; display:none; }
