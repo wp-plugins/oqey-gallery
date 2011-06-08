@@ -1,13 +1,13 @@
 === Plugin Name ===
 
 Plugin Name: oQey Gallery
-Version: 0.4.6
+Version: 0.4.7
 Contributors:  oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags:  photo, gallery, slideshow, plugin, widget, album, flash, images, music, media, fullscreen, post, photo-albums, custom slideshow, captions, picture, pictures, image, skinnable gallery, oqey, custom flash, oqey gallery, wp custom slideshow, slideshow with music, gallery with music, google, iphone, ipad, compatible
+Tags:  photo, gallery, slideshow, plugin, widget, album, flash, images, music, media, fullscreen, post, photo-albums, custom slideshow, captions, picture, pictures, image, skinnable gallery, oqey, custom flash, oqey gallery, wp custom slideshow, slideshow with music, gallery with music, google, iphone, ipad, compatible, import
 Requires at least: 3.0.0
-Tested up to: 3.1.1
-Stable tag: 0.4.6
+Tested up to: 3.1.3
+Stable tag: 0.4.7
 
 
 == Description ==
@@ -48,6 +48,7 @@ Features:
 * Auto-crop option
 * Continuous play option
 * Reverse order function
+* Import from existing slideshows / galleries created by supported plugins without duplicating content
 
 
 == Installation ==
@@ -97,6 +98,13 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 
 == Changelog ==
+
+=0.4.7=
+
+* major functionality improvements
+* a few server incompatibility issues fixed
+* import from NextGEN galleries added
+* transition type option added for commercial skins
 
 =0.4.6=
 
@@ -160,6 +168,13 @@ Just edit css/oqeystyle.css and make all changes that you need.
 * The first stable version.
 
 == Upgrade Notice ==
+
+=0.4.7=
+
+* major functionality improvements
+* a few server incompatibility issues fixed
+* import from NextGEN galleries added
+* transition type option added for commercial skins
 
 =0.4.6=
 
