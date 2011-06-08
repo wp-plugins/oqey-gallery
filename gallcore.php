@@ -44,7 +44,7 @@ function oQeyCheckForOthersGalleries(){
          echo '<option value="0" selected="selected">Select</option>';
          echo '<option value="nextgen">nextgen</option>';
          echo '</select>';
-         }else{ echo "Nextgen gallery is not detected."; }
+         }else{ echo "Importable galleries not found."; }
          //echo '<div id="others_info"></div>';
          
         break;
@@ -827,7 +827,7 @@ global $wpdb, $current_user;
        if(!$sql = $wpdb->get_row("SELECT id FROM $oqey_skins WHERE skinid ='".mysql_real_escape_string($x->skinid)."'")){		   
 	   
        $install = '<a href="#install_skin" class="install_skin" id="'.$x->archivename.'" >Install</a>';
-       if($x->price!="" && $x->commercial=="yes"){ $price = 'Skins price: $'.urldecode($x->price).'<br/>'; }else{ $discount_code = "<br/>"; }
+       if($x->price!="" && $x->commercial=="yes"){ $price = 'Skin price: $'.urldecode($x->price).'<br/>'; }else{ $discount_code = "<br/>"; }
 	   if($x->commercial=="yes"){ $info = ' - Commercial skin'; }else{ $info = ' - Free skin'; }
        $preview = '<a href="#preview_skin" class="preview_skin" id="'.$x->archivename.'" title="Preview '.urldecode($x->title).'" >Preview</a>';
        
@@ -1415,28 +1415,31 @@ if ($isCrawler){
 	//$imgs .= '[/span]';
 
 	if(get_option("oqey_backlinks")=="on"){ 
-	$oqeybacklink = '<div style="font-size:11px; margin-left:auto; margin-right:auto; width:100%; text-align:center;">powered by &copy; <a href="http://oqeysites.com" target="_blank">oQeySites</a></div>'; 
+	$oqeybacklink = '<div style="font-size:11px; margin-left:auto; margin-right:auto; width:100%; text-align:center; font-family:Arial, Helvetica, sans-serif">powered by &copy; <a href="http://oqeysites.com" target="_blank">oQeySites</a></div>'; 
 	}	
 	
 	if( get_option('oqey_noflash_options')=="incolums" ){  
 	$incolums = "on";
 	$optouch = "off"; 
+    $custom_height = "auto";
 	}
 	if( get_option('oqey_noflash_options')=="injsarr" ){ 
 	$incolums = "off"; 
 	$optouch = "off"; 	
+    $custom_height = $img_holder_h."px";
 	}
 	if( get_option('oqey_noflash_options')=="injsarrtouch" ){ 
 	$incolums = "off"; 
 	$optouch = "on";                    
-	}
+	$custom_height = $img_holder_h."px";
+    }
 	
 	$margleft = $oqey_width - 70;
     $margin_top = $img_holder_h/2-35;
     
 ob_start();	
 print <<< SWF
-<div id="oqey_image_div{$counter}" style="position:relative; width:{$oqey_width}px; height:{$img_holder_h}px; display:none; margin: 0 auto;">
+<div id="oqey_image_div{$counter}" style="position:relative; width:{$oqey_width}px; height:{$custom_height}; display:none; margin: 0 auto;">
 
 <div style="position:absolute; left:0px; top:{$margin_top}px; z-index:99999;" class="gall_links">
 <a id="prev{$counter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/larrow.png" style="border:none;" alt="" /></a>
@@ -1456,24 +1459,21 @@ print <<< SWF
 
 <script type="text/javascript">
     var flashvars{$counter} = {
-                     autoplay:"{$oqey_autoplay}",
-		                 flashId:"{$counter}",
-		                 FKey:"{$skin->comkey}",
+                          autoplay:"{$oqey_autoplay}",
+                           flashId:"{$counter}",
+		                      FKey:"{$skin->comkey}",
 	                   GalleryPath:"{$plugin_url_qu}",	
-					           GalleryID:"{$id}-{$post->ID}",
-					           FirstRun:"{$skin->firstrun}"
+                         GalleryID:"{$id}-{$post->ID}",
+					      FirstRun:"{$skin->firstrun}"
 					 };
 	var params{$counter} = {bgcolor:"{$oqey_bgcolor}", allowFullScreen:"true", wMode:"transparent"};
 	var attributes{$counter} = {id: "oqeygallery{$counter}"};
 	swfobject.embedSWF("{$plugin_repo_url}/skins/{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$counter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$counter}, params{$counter}, attributes{$counter});
 </script> 
 
-<div id="flash_gal_{$counter}" style="width:{$oqey_width}px; min-width:{$oqey_width}px; min-height:{$oqey_height}px; height:{$oqey_height}px; margin: 0 auto; display:block;">
+<div id="flash_gal_{$counter}" style="width:{$oqey_width}px; min-width:{$oqey_width}px; min-height:{$oqey_height}px; height:{$oqey_height}px; margin: 0 auto;">
 <script type="text/javascript">
 jQuery(function($) {
-                  
-        jQuery("#oqeygallery{$counter}").css({"margin-right":"auto", "margin-left":"auto"}); 
-
         var pv = swfobject.getFlashPlayerVersion();
 		oqey_e(pv, {$counter}, '{$imgs}', '{$optouch}', '{$incolums}');
 });

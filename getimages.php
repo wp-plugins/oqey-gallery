@@ -13,11 +13,10 @@ if(isset($_REQUEST['gal_id'])){
 
    $id = $data[0];
    $pid = $data[1];//post id
-
+/*
    $content = $wpdb->get_var("SELECT post_content FROM $wpdb->posts WHERE ID = '$pid' AND post_type != 'revision'");
-
    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $content, $m);
-
+*/
    $s = $wpdb->get_row("SELECT * FROM $oqey_galls WHERE id ='".$id."' ");
 
    $gthmb = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$s->folder.'/galthmb/';
@@ -73,6 +72,7 @@ if(isset($_REQUEST['gal_id'])){
     $r .= '<item><thumb file="'.$gthmbnew.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" comments="'.urlencode(trim($i->comments)).'" /><image file="'.$gimgnew.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" comments="'.urlencode(trim($i->comments)).'" /></item>';
    }
 
+/*
    $j=0;
    if(!empty($m[0])){
    foreach($m[1] as $i) { 
@@ -84,6 +84,7 @@ if(isset($_REQUEST['gal_id'])){
     $j++; 
     }
    }
+   */
    $r .= '</oqeygallery>';
    echo $r;
   

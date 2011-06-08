@@ -494,6 +494,16 @@ jQuery("#sortable tr").hover(
   <div id="error">&nbsp;</div>
 </div>
 
+<!--<img src="<?php //echo oQeyPluginUrl().'/images/'; ?>upperbanddress.jpg" width="950" height="120" /><br /><br />-->
+<div class="postbox" style="height:50px; width:900px;">
+
+    <div style="margin-right:2px; padding-top:3px; float:right;">
+    <a href="<?php echo admin_url('admin.php?page=oQeySkins&showskins=yes'); ?>"><img src="<?php echo oQeyPluginUrl().'/images/'; ?>getmoreskinsbgn.jpg" width="249" height="44" /></a>    
+    </div>
+
+</div>
+
+
 <div class="postbox" style="width:900px;">
 <div id="creator" >
 Create a new gallery: 
@@ -501,7 +511,7 @@ Create a new gallery:
 </div>
 <div id="messages" style=" float:left;">&nbsp;</div>
 <div id="magic"><a href="#create" id="createfromothers">
-                <img src='<?php echo oQeyPluginUrl().'/images/wizard.png'; ?>' height="25" width="25" alt="Create from others galleries" title="Create from others galleries"/>
+                <img src='<?php echo oQeyPluginUrl().'/images/wizard.png'; ?>' height="25" width="25" alt="Import from existing galleries" title="Import from existing galleries"/>
                 </a>
 </div>
 <br class="clear" />
@@ -530,6 +540,8 @@ Create a new gallery:
 <div id="gallery_content"><div class="obis">Loading content...</div></div>
 <br class="clear" />
 </div>
+
+<a href="http://www.oqeysites.com" target="_blank"><img src="<?php echo oQeyPluginUrl().'/images/'; ?>galleries_banner.png"/></a>
 
 <script type="text/javascript">
 jQuery(document).ready(function($){

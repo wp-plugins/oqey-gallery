@@ -127,6 +127,7 @@ function oqey_db_install(){
 	add_option("oqey_noflash_options", "incolums" ,'', 'yes');	
 	add_option("oqey_gall_title_no", "on" ,'', 'yes');
 	add_option("oqey_border_bgcolor", "#000000" ,'', 'yes');
+	add_option("oqey_effect_transition_type", "fade" ,'', 'yes');	
     
     add_option("oqey_gallery_version", "0.4.6");
     add_option("oqey_db_version", $oqey_db_version);
@@ -298,6 +299,9 @@ function oqey_check_upgrade(){
 	}
    
     if (version_compare($installed_oqey_ver, '0.4.7', '<')){     
+	
+	 add_option("oqey_effect_transition_type", "fade" ,'', 'yes');//default effect transition - fade
+	
      $wpdb->query("ALTER TABLE $oqey_images ADD img_link TEXT NOT NULL DEFAULT '' AFTER status");
      $wpdb->query("ALTER TABLE $oqey_images ADD img_path TEXT NOT NULL DEFAULT '' AFTER img_link");
      $wpdb->query("ALTER TABLE $oqey_images ADD img_type varchar(255) NOT NULL DEFAULT 'oqey' AFTER img_path");

@@ -84,7 +84,11 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
     </form>  
     </div>
     </td>
-    <td width="246" align="right" valign="middle"><div style="margin-right:20px; padding:5px;"><a href="#get_new_skins" class="get_new_skins"><strong>Get more skins</strong></a></div></td>
+    <td width="246" align="right" valign="middle">
+    <div style="margin-right:2px;">
+    <a href="#get_new_skins" class="get_new_skins"><img src="<?php echo oQeyPluginUrl().'/images/'; ?>getmoreskinsbgn.jpg" width="249" height="44" /></a>
+    </div>
+    </td>
   </tr>
 </table>
 </div>
@@ -266,6 +270,13 @@ jQuery.post(ajaxurl, { action:"oQeyGetAllInstalledSkins", allskins: "yes" },
 			});
 		});
    });
+   
+   
+<?php if(isset($_REQUEST['showskins']) && $_REQUEST['showskins']=="yes"){ ?>
+      jQuery('.get_new_skins').trigger('click');
+<?php } ?>
+   
+   
 });
 </script>
 

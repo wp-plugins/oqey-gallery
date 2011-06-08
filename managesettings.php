@@ -21,6 +21,9 @@ echo '<div id="message" class="updated fade"><p><strong>Settings saved.</strong>
     <h2>oQey Gallery settings</h2>
 </div>
 
+<a href="<?php echo admin_url('admin.php?page=oQeySkins&showskins=yes'); ?>"><img src="<?php echo oQeyPluginUrl().'/images/'; ?>settings_banner.png"/></a><br /><br />
+
+
 <div class="wrap">
 <script type="text/javascript" charset="utf-8">
 jQuery(document).ready(function($) {
@@ -272,6 +275,15 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
     <td width="230">Pause between transitions:</td>
     <td width="670"><input name="oqey_pause_between_tran" id="oqey_pause_between_tran" type="text" value="<?php echo get_option('oqey_pause_between_tran'); ?>" size="5"/> seconds</td>
 </tr>
+  <tr>
+    <td width="230">Effect transition type:</td>
+    <td width="670">
+<input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type" value="fade" <?php if(get_option('oqey_effect_transition_type')=="fade"){ echo 'checked="checked"'; } ?> style="margin-top:-3px;"/>
+    Fade
+<input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type1" value="slide" <?php if(get_option('oqey_effect_transition_type')=="slide"){ echo 'checked="checked"'; } ?> style="margin-top:-3px;"/>
+    Slide 
+    </td>
+</tr>
 <tr valign="top">
 <th height="25" align="left" valign="middle" scope="row">Auto hide thumbnails</th>
 <td height="25" align="left" valign="middle"><input type="checkbox" name="oqey_HideThumbs" id="oqey_HideThumbs" <?php if(get_option('oqey_HideThumbs')=="on"){ echo 'checked="checked"'; } ?>/></td>
@@ -348,7 +360,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 <td width="875" height="25" align="left" valign="middle" scope="row"> I would like to credt oQey Sites with a copyright note and a back link </td>
 </tr>
 </table>
-<input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="oqey_height,oqey_width,oqey_bgcolor,oqey_thumb_width,oqey_thumb_height,oqey_max_width,oqey_max_height,oqey_limitmax,oqey_crop_images,oqey_effects_trans_time,oqey_pause_between_tran,oqey_HideThumbs,oqey_LoopOption,oqey_backlinks,oqey_BorderOption,oqey_AutostartOption,oqey_CaptionsOption,oqey_options,oqey_noflash_options,oqey_gall_title_no,oqey_border_bgcolor" />
+<input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="oqey_height,oqey_width,oqey_bgcolor,oqey_thumb_width,oqey_thumb_height,oqey_max_width,oqey_max_height,oqey_limitmax,oqey_crop_images,oqey_effects_trans_time,oqey_pause_between_tran,oqey_HideThumbs,oqey_LoopOption,oqey_backlinks,oqey_BorderOption,oqey_AutostartOption,oqey_CaptionsOption,oqey_options,oqey_noflash_options,oqey_gall_title_no,oqey_border_bgcolor,oqey_effect_transition_type" />
 <p class="submit">
 <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 </p>

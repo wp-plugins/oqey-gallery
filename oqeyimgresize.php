@@ -6,7 +6,7 @@ if($_REQUEST['img_type']=="nextgen"){
     $img  = $path.$_REQUEST['img'];    
 }else{
     $path = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$_REQUEST['folder'];
-    $img  = $path . '/galimg/' . $_REQUEST['img'];
+    $img  = $path . '/iphone/' . $_REQUEST['img'];
 }
 
 if (file_exists($img)) {
@@ -25,8 +25,14 @@ $im = ImageCreateFromPNG ($img) or
 $im = false;
 
 if (!$im) {
+   /* 
     header ("Content-type: image/jpeg");
-	@readfile ($img);
+	readfile ($img);
+    */
+    $fisier = str_replace(OQEY_ABSPATH, get_option("siteurl")."/", $img);
+    header('Location: '.$fisier);
+    exit();
+    
 } else {
     header ("Content-type: image/jpeg");
 	$thumb = @ImageCreateTrueColor ($width, $height);
