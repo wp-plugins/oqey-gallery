@@ -1353,8 +1353,19 @@ $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlog
 
 $isCrawler = getUserNow($_SERVER['HTTP_USER_AGENT']); // check if is a crowler
 
-if ($isCrawler){
-	    $imgs = "<p align='center'>".$gal_title."</p>";
+if ($isCrawler || (is_plugin_active('wptouch/wptouch.php') && IBROWSER)){
+    
+        if ($isCrawler){
+           $imgs = "<p align='center'>".$gal_title."</p>";
+        }else{ 
+            if(is_plugin_active('wptouch/wptouch.php') && IBROWSER){
+               if(get_option('oqey_gall_title_no')=="on"){
+   	              $imgs = '<div style="margin-left:auto; margin-right:auto; width:100%; text-align:center;">'.urldecode($gal_title).'</div>';
+	           } 
+            }
+        }
+    
+	    
         $imgs .= '<span class="all_images">';	
     
         foreach($all as $i){ 
@@ -1363,17 +1374,17 @@ if ($isCrawler){
          $gimg = get_option('siteurl').'/'.trim($i->img_path).'/';
         }
         
-        $imgs .= '<img src="'.$gimg.trim($i->title).'" alt="oqeyimg '.urlencode(trim($i->alt)).'"/>'; 
+        $imgs .= '<img src="'.$gimg.trim($i->title).'" alt="oqeyimg '.urlencode(trim($i->alt)).'" width="'.$oqey_width.'" style="margin-top:3px;"/>'; 
         
         } 
         $imgs .= '</span>'; 
-        echo oQeycrawlerFood($imgs);
+        
+        if ($isCrawler){ echo oQeycrawlerFood($imgs); }else{ echo $imgs; }
         
 }else{	
-    
 	
 	if(get_option('oqey_gall_title_no')=="on"){
-	$galtitle = '<div style="margin-left:auto; margin-right:auto; width:100%; text-align:center;">'.urldecode($gal_title).'</div>';
+   	$galtitle = '<div style="margin-left:auto; margin-right:auto; width:100%; text-align:center;">'.urldecode($gal_title).'</div>';
 	}else{ $galtitle =""; }
 	//$imgs .= '[span class="all_images"]'; 
 	$allimgs = array();
