@@ -787,7 +787,7 @@ jQuery.post( ajaxurl, { action :"oQeyImageDetails", imagedetails: id },
 	Comments:<br/>
 	<textarea name="comments" rows="3" id="comments" class="comments" style="width:550px;"></textarea>
 	</p>
-    <p>Link <small>(ex: http://oqeysites.com), *Note: work only with custom skins.</small><br />
+    <p>Link <small>(ex: http://oqeysites.com), *Note: works only with custom skins.</small><br />
     <input type="text" name="oqey_image_link" id="oqey_image_link" style="width:550px;" value="" /></p>
 	<p>
 	<input type="button" name="updatedetails" id="updatedetails" value="save details" />
