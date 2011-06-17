@@ -15,15 +15,17 @@ if ( !current_user_can('oQeyTrash') ) die(__('You do not have sufficient permiss
 
 
 	$imgs = $wpdb->get_results("SELECT * FROM $oqey_images WHERE status=2");
-    $folder = $i->folder;
 
-foreach ($imgs as $img){
-$d = $wpdb->query("DELETE FROM $oqey_images WHERE id = '".$img->id."'");
+    foreach ($imgs as $img){
+    $d = $wpdb->query("DELETE FROM $oqey_images WHERE id = '".$img->id."'");
 
      if($img->img_type=="nextgen"){
         //$ii = @unlink(OQEY_ABSPATH.'/'.trim($img->img_path).'/thumbs/thumbs_'.trim($img->title));
         //$tt = @unlink(OQEY_ABSPATH.'/'.trim($img->img_path).'/'.trim($img->title));       
       }else{
+        
+        $folder = oqey_get_gallery_folder($img->gal_id);
+        
        	$ii = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galimg/'.trim($img->title));
         $tt = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/galthmb/'.trim($img->title));
         $ip = unlink(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$folder.'/iphone/'.trim($img->title));
