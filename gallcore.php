@@ -1,6 +1,6 @@
 <?php
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'gallcore.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!');
-$counter = 1;
+$oqeycounter = 1;
 $d=0;
 
 
@@ -1314,7 +1314,7 @@ function oQeycrawlerFood($t){
 //add_shortcode( 'oqeygallery', 'add_gallery' );
 
 function add_gallery($atts){
-global $counter, $post_ID, $wpdb, $post;
+global $oqeycounter, $post_ID, $wpdb, $post;
 
 if($atts['width']!=""){ $oqey_width = $atts['width']; }else{ $oqey_width = get_option('oqey_width'); }
 if($atts['height']!=""){ $oqey_height = $atts['height']; }else{ $oqey_height = get_option('oqey_height'); }
@@ -1450,50 +1450,50 @@ if ($isCrawler || (is_plugin_active('wptouch/wptouch.php') && IBROWSER)){
     
 ob_start();	
 print <<< SWF
-<div id="oqey_image_div{$counter}" style="position:relative; width:{$oqey_width}px; height:{$custom_height}; display:none; margin: 0 auto;">
+<div id="oqey_image_div{$oqeycounter}" style="position:relative; width:{$oqey_width}px; height:{$custom_height}; display:none; margin: 0 auto;">
 
 <div style="position:absolute; left:0px; top:{$margin_top}px; z-index:99999;" class="gall_links">
-<a id="prev{$counter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/larrow.png" style="border:none;" alt="" /></a>
+<a id="prev{$oqeycounter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/larrow.png" style="border:none;" alt="" /></a>
 </div>
 
 <div style="position:absolute; left:{$margleft}px; top:{$margin_top}px; z-index:99999;" class="gall_links">
-<a id="next{$counter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/rarrow.png" style="border:none;" alt="" /></a>
+<a id="next{$oqeycounter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/rarrow.png" style="border:none;" alt="" /></a>
 </div>
 
 {$galtitle}
 
-<div id="image{$counter}" style="height:auto; display:none;" class="oqey_images"></div>
+<div id="image{$oqeycounter}" style="height:auto; display:none;" class="oqey_images"></div>
 
 {$oqeybacklink}
 
 </div>
 
 <script type="text/javascript">
-    var flashvars{$counter} = {
+    var flashvars{$oqeycounter} = {
                           autoplay:"{$oqey_autoplay}",
-                           flashId:"{$counter}",
+                           flashId:"{$oqeycounter}",
 		                      FKey:"{$skin->comkey}",
 	                   GalleryPath:"{$plugin_url_qu}",	
                          GalleryID:"{$id}-{$post->ID}",
 					      FirstRun:"{$skin->firstrun}"
 					 };
-	var params{$counter} = {bgcolor:"{$oqey_bgcolor}", allowFullScreen:"true", wMode:"transparent"};
-	var attributes{$counter} = {id: "oqeygallery{$counter}"};
-	swfobject.embedSWF("{$plugin_repo_url}/skins/{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$counter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$counter}, params{$counter}, attributes{$counter});
+	var params{$oqeycounter} = {bgcolor:"{$oqey_bgcolor}", allowFullScreen:"true", wMode:"transparent"};
+	var attributes{$oqeycounter} = {id: "oqeygallery{$oqeycounter}"};
+	swfobject.embedSWF("{$plugin_repo_url}/skins/{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$oqeycounter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$oqeycounter}, params{$oqeycounter}, attributes{$oqeycounter});
 </script> 
 
-<div id="flash_gal_{$counter}" style="width:{$oqey_width}px; min-width:{$oqey_width}px; min-height:{$oqey_height}px; height:{$oqey_height}px; margin: 0 auto;">
+<div id="flash_gal_{$oqeycounter}" style="width:{$oqey_width}px; min-width:{$oqey_width}px; min-height:{$oqey_height}px; height:{$oqey_height}px; margin: 0 auto;">
 <script type="text/javascript">
 jQuery(function($) {
         var pv = swfobject.getFlashPlayerVersion();
-		oqey_e(pv, {$counter}, '{$imgs}', '{$optouch}', '{$incolums}');
+		oqey_e(pv, {$oqeycounter}, '{$imgs}', '{$optouch}', '{$incolums}');
 });
 </script>
 </div>
 SWF;
 $output = ob_get_contents();
 ob_end_clean();
-$counter ++;
+$oqeycounter ++;
 return $output;
 }
 }//end crawler check
