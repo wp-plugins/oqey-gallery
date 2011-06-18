@@ -38,17 +38,17 @@ if ( !current_user_can('oQeyTrash') ) die(__('You do not have sufficient permiss
 $get_g_list = $wpdb->get_results("SELECT * FROM $oqey_galls WHERE status=2");
 
 foreach ($get_g_list as $g){
-$d = $wpdb->query("DELETE FROM $oqey_galls WHERE id = '".$g->id."' ");
-$d = $wpdb->query("DELETE FROM $oqey_images WHERE gal_id = '".$g->id."'");
-$r = $wpdb->query("DELETE FROM $oqey_music_rel WHERE gallery_id = '".$g->id."' ");
+   $d = $wpdb->query("DELETE FROM $oqey_galls WHERE id = '".$g->id."' ");
+   $d = $wpdb->query("DELETE FROM $oqey_images WHERE gal_id = '".$g->id."'");
+   $r = $wpdb->query("DELETE FROM $oqey_music_rel WHERE gallery_id = '".$g->id."' ");
 
-if($d){
- if(is_dir(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).trim($g->folder))){   
- $dir = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).trim($g->folder);
- $do = oqey_rm($dir);
-  } 
+   if($d){
+    if(is_dir(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).trim($g->folder))){   
+    $dir = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).trim($g->folder);
+    $do = oqey_rm($dir);
+   } 
+  }
  }
-}
 /*end*/
 
 /*delete skins*/
