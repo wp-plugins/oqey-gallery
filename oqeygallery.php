@@ -193,9 +193,9 @@ function oqey_db_install(){
 		`alt` text NOT NULL,
 		`comments` text NOT NULL,
 		`status` int(1) NOT NULL DEFAULT '0',
-        img_link text NOT NULL DEFAULT '',
-        img_path text NOT NULL DEFAULT '',
-        img_type varchar(255) NOT NULL DEFAULT 'oqey',        
+        `img_link` text NOT NULL DEFAULT '',
+        `img_path` text NOT NULL DEFAULT '',
+        `img_type` varchar(255) NOT NULL DEFAULT 'oqey',        
 		PRIMARY KEY  (`id`)
 	) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";	
 	 $wpdb->query($sql2);
