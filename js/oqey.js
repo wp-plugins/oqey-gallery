@@ -1,11 +1,13 @@
-var name=1;
+    var flashname=1;
 	var firstplay = true;
+
+    
 	function checkActivePlayer(newname) {
 		if (!firstplay) {
-        	getFlashMovie("oqeygallery" + name).sendIDToFlash(newname);
-			name = newname;
+        	getFlashMovie("oqeygallery" + flashname).sendIDToFlash(newname);
+			flashname = newname;
 		} else {
-			name = newname;
+			flashname = newname;
 			firstplay = false;
 		}
 	}
