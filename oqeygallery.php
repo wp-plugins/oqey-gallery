@@ -13,7 +13,7 @@
 /*
 Plugin Name: oQey Gallery
 Version: 0.4.8
-Description: oQey Gallery plugin is the best photo gallery / slideshow solution for your custom blog. It has a built-in skinnable slideshow and supports music also.
+Description: This is a plugin, that lets you create and manage flash photo galleries / slideshows that will work fine under iPhone / iPad and other non-flash mobile devices. The flash version supports music and skins, so you can change the way it looks like with a few simple clicks. Customizable, commercial skins are also available as well as custom photo galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system.
 Author: oqeysites.com
 Author URI: http://oqeysites.com/
 */
