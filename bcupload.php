@@ -51,10 +51,10 @@ function oqey_img_process($from, $to, $name, $height, $width, $wt){
     	 
     $thumb->size($width,$height);
     $thumb->quality=100;                      //default 75 , only for JPG format
-    
+        
     if(is_plugin_active('oqey-addons/oqeyaddons.php') && $wt){
     $thumb->output_format='JPG'; 
-    $thumb->img_watermark=OQEY_ABSPATH.'wp-content/plugins/oqey-addons/watermark.png';	    // [OPTIONAL] set watermark source file, only PNG format [RECOMENDED ONLY WITH GD 2 ]
+    $thumb->img_watermark=OQEY_ABSPATH.'wp-content/oqey_gallery/watermark/'.oqey_getBlogFolder($wpdb->blogid).'watermark.png';	    // [OPTIONAL] set watermark source file, only PNG format [RECOMENDED ONLY WITH GD 2 ]
     $thumb->img_watermark_Valing= $pos[0];   	    // [OPTIONAL] set watermark vertical position, TOP | CENTER | BOTTOM
     $thumb->img_watermark_Haling=$pos[1]; 
     //$thumb->txt_watermark='Watermark text';
