@@ -1,8 +1,8 @@
 <?php
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'gallcore.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!');
 global $oqeycounter;
-$oqeycounter = 1;
 $d=0;
+$oqeycounter = 1;
 
 add_action( 'widgets_init', 'oqey_load_widgets' );
 
@@ -1605,7 +1605,13 @@ function oQeycrawlerFood($t){
 //add_shortcode( 'oqeygallery', 'add_gallery' );
 
 function add_gallery($atts){
-global $oqeycounter, $post_ID, $wpdb, $post;
+global $oqeycounter, $post_ID, $wpdb, $post, $wp_query;
+/*
+$theme_name = get_current_theme();
+if(strtolower($theme_name) == "thesis" && ($wp_query->is_page || $wp_query->is_single)){
+    $oqeycounter = 0;
+}
+*/
 
 if($atts['width']!=""){ $oqey_width = $atts['width']; }else{ $oqey_width = get_option('oqey_width'); }
 if($atts['height']!=""){ $oqey_height = $atts['height']; }else{ $oqey_height = get_option('oqey_height'); }
@@ -1717,7 +1723,7 @@ if ($isCrawler || (is_plugin_active('wptouch/wptouch.php') && IBROWSER)){
 	//$imgs .= '[/span]';
 
 	if(get_option("oqey_backlinks")=="on"){ 
-	$oqeybacklink = '<div style="font-size:11px; margin-left:auto; margin-right:auto; width:100%; text-align:center; font-family:Arial, Helvetica, sans-serif">powered by &copy; <a href="http://oqeysites.com" target="_blank">oQeySites</a></div>'; 
+	$oqeybacklink = '<div style="font-size:11px; margin-left:auto; margin-right:auto; width:100%; text-align:center; font-family:Arial, Helvetica, sans-serif">powered by <a href="http://oqeysites.com" target="_blank">oQeySites</a></div>'; 
 	}	
 	
 	if( get_option('oqey_noflash_options')=="incolums" ){  
@@ -1738,6 +1744,7 @@ if ($isCrawler || (is_plugin_active('wptouch/wptouch.php') && IBROWSER)){
 	
 	$margleft = $oqey_width - 53;
     $margin_top = $img_holder_h/2-20;
+    if(get_option('oqey_flash_gallery_true')){ $pfv = "on"; }else{ $pfv = "off"; }
     
 ob_start();	
 print <<< SWF
@@ -1777,7 +1784,7 @@ print <<< SWF
 <script type="text/javascript">
 jQuery(function($) {
         var pv = swfobject.getFlashPlayerVersion();
-		oqey_e(pv, {$oqeycounter}, '{$imgs}', '{$optouch}', '{$incolums}');
+        oqey_e(pv, {$oqeycounter}, '{$imgs}', '{$optouch}', '{$incolums}', '{$pfv}');      
 });
 </script>
 </div>

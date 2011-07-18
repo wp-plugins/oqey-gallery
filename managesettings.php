@@ -281,8 +281,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 <input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type" value="fade" <?php if(get_option('oqey_effect_transition_type')=="fade"){ echo 'checked="checked"'; } ?> style="margin-top:-3px;"/>
     Fade
 <input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type1" value="slide" <?php if(get_option('oqey_effect_transition_type')=="slide"){ echo 'checked="checked"'; } ?> style="margin-top:-3px;"/>
-    Slide 
-    </td>
+    Slide    </td>
 </tr>
 <tr valign="top">
 <th height="25" align="left" valign="middle" scope="row">Auto hide thumbnails</th>
@@ -324,12 +323,17 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
     <td width="20" height="20" align="center" valign="middle"><input type="radio" name="oqey_options" id="bm" value="BM" title="bottom middle" <?php if(get_option('oqey_options')=="BM"){ echo 'checked="checked"'; } ?>/></td>
     <td width="20" height="20" align="center" valign="middle"><input type="radio" name="oqey_options" id="br" value="BR" title="bottom right" <?php if(get_option('oqey_options')=="BR"){ echo 'checked="checked"'; } ?>/></td>
   </tr>
-</table>
-
-</td>
+</table></td>
 </tr>
 <tr valign="top" >
   <td height="30" colspan="2" align="left" valign="middle" scope="row">* Options applied to commercial skins only (working with some commercial skins)</td>
+</tr>
+<tr valign="top" >
+  <td height="30" colspan="2" align="left" valign="middle" scope="row">&nbsp;</td>
+</tr>
+<tr valign="top" >
+  <th height="30" align="left" valign="middle" scope="row">Do not use  Flash skins:</th>
+  <td height="30" align="left" valign="middle" scope="row"><input type="checkbox" name="oqey_flash_gallery_true" id="oqey_flash_gallery_true" <?php if(get_option('oqey_flash_gallery_true')=="on"){ echo 'checked="checked"'; } ?>/></td>
 </tr>
 <tr valign="top">
 <th height="39" colspan="2" align="left" valign="middle" scope="row">Non-flash browsers options:</th>
@@ -342,8 +346,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 <input type="radio" name="oqey_noflash_options" id="oqey_noflash_options2" value="injsarr" <?php if(get_option('oqey_noflash_options')=="injsarr"){ echo 'checked="checked"'; } ?> style="margin-top:-3px;"/> 
 &nbsp;Javascript slideshow with navigation arrows.<br />
 <input type="radio" name="oqey_noflash_options" id="oqey_noflash_options3" value="injsarrtouch" <?php if(get_option('oqey_noflash_options')=="injsarrtouch"){ echo 'checked="checked"'; } ?> style="margin-top:-3px;"/> 
-&nbsp;Javascript slideshow with &quot;touch and slide&quot; option (for touchscreen devices).
-</td>
+&nbsp;Javascript slideshow with &quot;touch and slide&quot; option (for touchscreen devices).</td>
 </tr>
 <tr valign="top">
 <th height="25" align="left" valign="middle" scope="row">Display gallery title</th>
@@ -360,7 +363,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 <td width="875" height="25" align="left" valign="middle" scope="row"> I would like to credt oQey Sites with a copyright note and a back link </td>
 </tr>
 </table>
-<input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="oqey_height,oqey_width,oqey_bgcolor,oqey_thumb_width,oqey_thumb_height,oqey_max_width,oqey_max_height,oqey_limitmax,oqey_crop_images,oqey_effects_trans_time,oqey_pause_between_tran,oqey_HideThumbs,oqey_LoopOption,oqey_backlinks,oqey_BorderOption,oqey_AutostartOption,oqey_CaptionsOption,oqey_options,oqey_noflash_options,oqey_gall_title_no,oqey_border_bgcolor,oqey_effect_transition_type" />
+<input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="oqey_height,oqey_width,oqey_bgcolor,oqey_thumb_width,oqey_thumb_height,oqey_max_width,oqey_max_height,oqey_limitmax,oqey_crop_images,oqey_effects_trans_time,oqey_pause_between_tran,oqey_HideThumbs,oqey_LoopOption,oqey_backlinks,oqey_BorderOption,oqey_AutostartOption,oqey_CaptionsOption,oqey_options,oqey_noflash_options,oqey_gall_title_no,oqey_border_bgcolor,oqey_effect_transition_type,oqey_flash_gallery_true" />
 <p class="submit">
 <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 </p>

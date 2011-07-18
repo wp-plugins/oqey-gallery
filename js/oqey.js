@@ -14,15 +14,17 @@
 	}
 	
 
-function oqey_e(pv, nr, t, optouch, incolums){
+function oqey_e(pv, nr, t, optouch, incolums, pfv){
 	
-	    var t = t.replace(/\[/g, '<');
+        var t = t.replace(/\[/g, '<');
 		var t = t.replace(/\]/g, '>');
 
-   if(pv.major<8){	
+   if(pv.major<8 || pfv=="on"){	
 		var res = oqeyurldecode(t);		
 		jQuery("#oqey_image_div" + nr).show();
         jQuery("#flash_gal_" + nr).hide();
+        jQuery("#oqeygallery" + nr).hide();
+        
 		jQuery("#image" + nr).show().html(res);
       
    if(incolums=="off"){		

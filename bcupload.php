@@ -41,25 +41,24 @@ function oqey_wtmk_position($w){
 function oqey_img_process($from, $to, $name, $height, $width, $wt){
     
     $to = $to.$name;
-    $settings = json_decode(get_option("oqey_addons_watermark_settings"));
-    
-    $pos = oqey_wtmk_position($settings->oqey_addons_watermark);
     
     $thumb=new Thumbnail($from);
-    
-    //ini_set('memory_limit', '-1');
     	 
     $thumb->size($width,$height);
     $thumb->quality=100;                      //default 75 , only for JPG format
         
     if(is_plugin_active('oqey-addons/oqeyaddons.php') && $wt){
+    
+    $settings = json_decode(get_option("oqey_addons_watermark_settings"));    
+    $pos = oqey_wtmk_position($settings->oqey_addons_watermark);
+    
     $thumb->output_format='JPG'; 
     $thumb->img_watermark=OQEY_ABSPATH.'wp-content/oqey_gallery/watermark/'.oqey_getBlogFolder($wpdb->blogid).'watermark.png';	    // [OPTIONAL] set watermark source file, only PNG format [RECOMENDED ONLY WITH GD 2 ]
     $thumb->img_watermark_Valing= $pos[0];   	    // [OPTIONAL] set watermark vertical position, TOP | CENTER | BOTTOM
     $thumb->img_watermark_Haling=$pos[1]; 
     //$thumb->txt_watermark='Watermark text';
-    $thumb->txt_watermark_Hmargin=$settings->oqey_W_Y_margin;          // [OPTIONAL] set watermark text horizonatal margin in pixels
-    $thumb->txt_watermark_Vmargin=$settings->oqey_W_X_margin;           // [OPTIONAL] set watermark text vertical margin in pixels
+    //$thumb->txt_watermark_Hmargin=$settings->oqey_W_Y_margin;          // [OPTIONAL] set watermark text horizonatal margin in pixels
+    //$thumb->txt_watermark_Vmargin=$settings->oqey_W_X_margin;           // [OPTIONAL] set watermark text vertical margin in pixels
     }
     $thumb->memory_limit='128M';
     $thumb->max_execution_time='60';  
