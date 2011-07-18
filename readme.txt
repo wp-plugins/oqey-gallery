@@ -2,9 +2,9 @@
 
 Plugin Name: oQey Gallery
 Version: 0.4.8
-Contributors:  oQeySites.com
+Contributors: oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags:  photo, gallery, slideshow, plugin, widget, album, flash, images, music, media, fullscreen, post, photo-albums, custom slideshow, captions, picture, pictures, image, skinnable gallery, oqey, custom flash, oqey gallery, wp custom slideshow, slideshow with music, gallery with music, google, iphone, ipad, compatible, import
+Tags: photo, gallery, slideshow, widget, photographs, portfolio, album, flash, image, music, fullscreen, captions, picture, images, photos, iphone, ipad
 Requires at least: 3.0.0
 Tested up to: 3.2.1
 Stable tag: 0.4.8
@@ -12,8 +12,7 @@ Stable tag: 0.4.8
 
 == Description ==
 
-oQey Gallery is a Plugin for Wordpress that let users create and manage flash slideshows with a non-flash version of gallery built-in for all non-flash browsers and mobile devices like iPhone / iPad / iPod etc. The flash version supports music and skins, so users can change the way it looks with a few simple clicks. Customizable, commercial skins are also available as well as custom galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system. Multiple galleries are supported.
-
+oQey Gallery is a Plugin for WordPress that gives its users the possibility to create and manage flash photo galleries / slideshows with an iPhone / iPad version built-in for all non-flash browsers and mobile devices that do not run Adobe Flash Player, i.e. iOS based devices like iPhone, iPad, iPod etc. The flash version supports music and skins, so users can change the way it looks like with a few simple clicks. Customizable, commercial skins are also available as well as custom photo galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system. Multiple photo galleries are supported.
 
 
 Links:
@@ -101,10 +100,13 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.4.8=
 
-* Rss fixedm now you can view gallery iamges in RSS
-* widget added
-* few functionality improvements
-* 
+* RSS fixed - now you can view all the gallery images listed in RSS
+* widgets support added
+* some functionality improvements
+* WordPress flash themes compatibility added for photography portfolio flash based websites
+* iPhone / iPad / iOS compatibility improved
+* minor design changes
+* added option to disable flash gallery skins and use java slideshow only
 
 =0.4.7=
 
@@ -178,10 +180,13 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.4.8=
 
-* major functionality improvements
-* wiget
-* rss
-
+* RSS fixed - now you can view all the gallery images listed in RSS
+* widgets support added
+* some functionality improvements
+* WordPress flash themes compatibility added for photography portfolio flash based websites
+* iPhone / iPad / iOS compatibility improved
+* minor design changes
+* added option to disable flash gallery skins and use java slideshow only
 
 =0.4.7=
 
@@ -231,7 +236,6 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 * Several compatibility issues fixed.
 
-
 =0.4=
 
 * Quick core bug fix
@@ -245,7 +249,6 @@ Just edit css/oqeystyle.css and make all changes that you need.
 * Thumbnails hide option added to gallery settings
 
 =0.2=
-
 
 * This version just fixes a few minor bugs.
 
