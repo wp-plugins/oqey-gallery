@@ -333,7 +333,8 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 </tr>
 <tr valign="top" >
   <th height="30" align="left" valign="middle" scope="row">Do not use  Flash skins:</th>
-  <td height="30" align="left" valign="middle" scope="row"><input type="checkbox" name="oqey_flash_gallery_true" id="oqey_flash_gallery_true" <?php if(get_option('oqey_flash_gallery_true')=="on"){ echo 'checked="checked"'; } ?>/></td>
+  <td height="30" align="left" valign="middle" scope="row"><input type="checkbox" name="oqey_flash_gallery_true" id="oqey_flash_gallery_true" <?php if(get_option('oqey_flash_gallery_true')=="on"){ echo 'checked="checked"'; } ?>/>
+    (if checked, most functions will be disabled)</td>
 </tr>
 <tr valign="top">
 <th height="39" colspan="2" align="left" valign="middle" scope="row">Non-flash browsers options:</th>
