@@ -1,4 +1,3 @@
-
 <?php
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'managegal.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!');
 global $wpdb, $current_user;
@@ -19,6 +18,8 @@ $oqeyImagesRoot = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oq
 <input type="hidden" id="coef" value=""/>
 </form>
 
+<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL; ?>/oqey-photo-cropper/css/jquery.jcrop.css" type="text/css" />
+<script type="text/javascript" src="<?php echo WP_PLUGIN_URL; ?>/oqey-photo-cropper/js/jquery.jcrop.js"></script>
 
 <script type="text/javascript">
 function refreshPage(){ 
@@ -89,14 +90,14 @@ function showCropImage(imgid, tw, th, ttw, tth, src, src2){  //alert(decodeURICo
         var i2 = decodeURIComponent(src2);
         var id = Math.floor(Math.random()*7777777);
 
-		var img = '<img src="' + i + '?' + d.getTime() + '" height="'+Qth+'" width="'+Qtw+'" id="cropbox' + id + '" style="" \/>'; 
+		var img = '<img src="' + i + '?' + d.getTime() + '" height="'+Qth+'" width="'+Qtw+'" id="cropbox' + id + '" style="background-color: transparent;" \/>'; 
         var img2 = '<img src="' + i + '" id="preview' + id + '" style="display:none;" \/>'; 
         var img3 = '<img src="' + i2 + '?' + d.getTime() + '" id="actual' + id + '" \/>';  
         var bb = '<input type="button" name="update" value="update" onclick="saveNewThumb()" class="button-secondary" style="float:left; margin-left:4px;"/><p id="oqeyr' + id + '" style="float:left; margin-left:4px; width:100px;"><\/p>';       
         var x = jQuery("#trget").attr("value", id);   
         
         //var c = '<table width="660" height="320" border="0"><tr><td rowspan="2" width="500" align="center" valign="top">' + img + '</td><td width="150" height="150" align="center" valign="top"><div style="width:' + Qttw + 'px;height:'+ Qtth +'px;overflow:hidden;">' + img2 + img3 + '<\/div></td></tr><tr><td align="left" valign="top">'+ bb + '</td></tr></table>';
-         var c = '<table width="660" height="320" border="0" style="position:absolute;"><tr><td rowspan="2" width="500" align="center" valign="top" >' + img + '<\/td><td width="150" height="150" align="center" valign="top"><div style="width:150px;height:100px;overflow:hidden;">' + img2 + img3 + '<\/div><\/td><\/tr><tr><td align="left" valign="top">'+ bb + '<\/td><\/tr><\/table>';
+         var c = '<table width="660" height="320" border="0"><tr><td rowspan="2" width="500" align="center" valign="top" >' + img + '<\/td><td width="150" height="150" align="center" valign="top"><div style="width:150px;height:100px;overflow:hidden;">' + img2 + img3 + '<\/div><\/td><\/tr><tr><td align="left" valign="top">'+ bb + '<\/td><\/tr><\/table>';
                        
         //var c = img + '<div style="width:' + Qttw + 'px;height:'+ Qtth +'px;overflow:hidden;">' + img2 + img3 + '<\/div>' + bb;
         
@@ -112,23 +113,12 @@ function showCropImage(imgid, tw, th, ttw, tth, src, src2){  //alert(decodeURICo
 			draggable: false		
 		});			
 		$dialog.dialog('open'); 
-		/*
-		$("#dialog-selector" ).dialog({
-          open: function(event, ui) { $('#cropbox').Jcrop(); }
-        }); */
 
-
-
-        setTimeout(function(){ 
-        
-		 jQuery('#cropbox' + id).Jcrop({
+                   jQuery('#cropbox' + id).Jcrop({
 					onChange: showPreview,
 					onSelect: showPreview,
 					aspectRatio: 1.5
-				}); 
-        }, 3000 ); 
-		
-                   
+				});
 }
 
    function showPreview(coords){
@@ -799,7 +789,7 @@ jQuery.post( ajaxurl, { action :"oQeyImageDetails", imagedetails: id },
 	Comments:<br/>
 	<textarea name="comments" rows="3" id="comments" class="comments" style="width:550px;"></textarea>
 	</p>
-    <p>Link <small>(ex: http://oqeysites.com), *Note: works only with custom skins.</small><br />
+    <p>Link <small>(ex: http://oqeysites.com), *Note: work only with custom skins.</small><br />
     <input type="text" name="oqey_image_link" id="oqey_image_link" style="width:550px;" value="" /></p>
 	<p>
 	<input type="button" name="updatedetails" id="updatedetails" value="save details" />
