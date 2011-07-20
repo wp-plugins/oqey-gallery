@@ -1751,11 +1751,13 @@ print <<< SWF
 <div id="oqey_image_div{$oqeycounter}" style="position:relative; width:{$oqey_width}px; height:{$custom_height}; display:none; margin: 0 auto;">
 
 <div style="position:absolute; left:0px; top:{$margin_top}px; z-index:99999;" class="gall_links">
-<a id="prev{$oqeycounter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/larrow.png" style="border:none;" alt="" /></a>
+<a id="prev{$oqeycounter}" href="#" style="text-decoration:none;">
+<button style="background: url({$plugin_url_qu}/images/larrow.png) center center no-repeat; width:53px; height:101px; border:none;">&nbsp;</button></a>
 </div>
 
 <div style="position:absolute; left:{$margleft}px; top:{$margin_top}px; z-index:99999;" class="gall_links">
-<a id="next{$oqeycounter}" href="#" style="text-decoration:none;"><img src="{$plugin_url_qu}/images/rarrow.png" style="border:none;" alt="" /></a>
+<a id="next{$oqeycounter}" href="#" style="text-decoration:none;">
+<button style="background: url({$plugin_url_qu}/images/rarrow.png) center center no-repeat; width:53px; height:101px; border:none;">&nbsp;</button></a>
 </div>
 
 {$galtitle}
