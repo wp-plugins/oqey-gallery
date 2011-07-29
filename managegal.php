@@ -18,9 +18,6 @@ $oqeyImagesRoot = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oq
 <input type="hidden" id="coef" value=""/>
 </form>
 
-<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL; ?>/oqey-photo-cropper/css/jquery.jcrop.css" type="text/css" />
-<script type="text/javascript" src="<?php echo WP_PLUGIN_URL; ?>/oqey-photo-cropper/js/jquery.jcrop.js"></script>
-
 <script type="text/javascript">
 function refreshPage(){ 
     var id = jQuery('#currentGalID').val(); 
