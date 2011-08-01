@@ -69,8 +69,9 @@ if(isset($_REQUEST['gal_id'])){
        $gthmbnew = $gthmb;
        $gimgnew = $gimg;
      }      
-    $r .= '<item><thumb file="'.$gthmbnew.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" comments="'.urlencode(trim($i->comments)).'" /><image file="'.$gimgnew.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" comments="'.urlencode(trim($i->comments)).'" /></item>';
-   }
+    $r .= '<item><thumb file="'.$gthmbnew.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" comments="'.urlencode(trim($i->comments)).'" link="'.urlencode(trim($i->img_link)).'"/>
+    <image file="'.$gimgnew.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" comments="'.urlencode(trim($i->comments)).'" link="'.urlencode(trim($i->img_link)).'"/></item>';
+    }
 
 /*
    $j=0;
