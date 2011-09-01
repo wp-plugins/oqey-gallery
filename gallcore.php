@@ -121,9 +121,9 @@ class oQey_Gallery_Widget extends WP_Widget {
                	swfobject.embedSWF("'.$plugin_repo_url.'/skins/'.$skin->folder.'/'.$skin->folder.'.swf", "flash_gal_'.$oqeycounter.'", "'.$instance['width'].'", "'.$instance['height'].'", "8.0.0", "", flashvars'.$oqeycounter.', params'.$oqeycounter.', attributes'.$oqeycounter.');
                </script> 
                
-               <div>';
+               </div>';
          $oqeycounter ++;         
-         echo $after_widget;
+         //echo $after_widget;
          
          /*         
          <object data="'.$plugin_repo_url.'/skins/'.$skin->folder.'/'.$skin->folder.'.swf" id="oqeygallery'.$oqeycounter.'" type="application/x-shockwave-flash" height="'.$instance['height'].'" width="'.$instance['width'].'">
@@ -133,6 +133,10 @@ class oQey_Gallery_Widget extends WP_Widget {
                <param value="autoplay='.$autoplay.'&amp;flashId='.$oqeycounter.'&amp;FKey='.$skin->comkey.'&amp;GalleryPath='.$plugin_url.'&amp;GalleryID='.$instance['oqeygalleryid'].'-0&amp;FirstRun='.$skin->firstrun.'" name="flashvars">
                </object>
                */
+          if (isset($after_widget)) {
+				echo $after_widget;
+		}
+
 }
 
 	/**
