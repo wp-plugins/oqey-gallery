@@ -38,16 +38,22 @@ if(isset($_REQUEST['gal_id'])){
 	 	$bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE id ='".$s->splash_img."' AND status!=2 ");
 									   
      if(!$bg){		
-		$bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE gal_id ='".$id."' AND status!=2 ORDER BY img_order ASC LIMIT 0,1 ");		
+		$bg = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_images WHERE gal_id ='%d' AND status!=2 ORDER BY img_order ASC LIMIT 0,1 ", $id ) );		
 	 }
 		
-	 }else{ $bg = $wpdb->get_row("SELECT * FROM $oqey_images WHERE gal_id ='".$id."' AND status!=2 ORDER BY img_order ASC LIMIT 0,1 "); } 
+	 }else{ 
+	    
+        $bg = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_images WHERE gal_id ='%d' AND status!=2 ORDER BY img_order ASC LIMIT 0,1 ", $id ) ); } 
       
       
      if( $s->splash_only == 1){ 
-         $imgs = $wpdb->get_results("SELECT * FROM $oqey_images WHERE gal_id = '".$id."' AND id !='".$s->splash_img."' AND status!=2 ORDER BY img_order ASC");
+        
+         $imgs = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $oqey_images WHERE gal_id = '%d' AND id !='".$s->splash_img."' AND status!=2 ORDER BY img_order ASC", $id ) );
+     
      }else{ 
-         $imgs = $wpdb->get_results("SELECT * FROM $oqey_images WHERE gal_id = '".$id."' AND status!=2 ORDER BY img_order ASC"); 
+     
+         $imgs = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $oqey_images WHERE gal_id = '%d' AND status!=2 ORDER BY img_order ASC", $id ) ); 
+     
      }
    
      if($bg->img_type=="nextgen"){
