@@ -14,7 +14,7 @@ if(isset($_REQUEST['gal_id'])){
    $id = $data[0];
    $pid = $data[1];//post id
 /*
-   $content = $wpdb->get_var("SELECT post_content FROM $wpdb->posts WHERE ID = '$pid' AND post_type != 'revision'");
+   $content = $wpdb->get_var( $wpdb->prepare("SELECT post_content FROM $wpdb->posts WHERE ID = '%d' AND post_type != 'revision'", $pid) );
    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $content, $m);
 */
    $s = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_galls WHERE id ='%d'", $id ) );
