@@ -21,8 +21,8 @@ if ( empty($_COOKIE[LOGGED_IN_COOKIE]) && !empty($logged_in_cookie) )
 unset($current_user);
 global $wpdb;
 require_once(OQEY_ABSPATH . 'wp-admin/admin.php');
-if ( !wp_verify_nonce($nonce, 'oqey-music') ) die("Security check");
-if ( !is_user_logged_in() ) die('Login failure. -1');
+if ( !wp_verify_nonce($nonce, 'oqey-music') ) die("Access denied. Security check failed! What are you trying to do? It`s not working like that. ");
+if ( !is_user_logged_in() ) die('Login failure.');
 if ( !current_user_can('oQeyMusic') ) die(__('You do not have sufficient permissions to upload files.'));
 
 global $wpdb;

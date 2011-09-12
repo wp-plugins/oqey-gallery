@@ -93,7 +93,7 @@ if ( empty($_COOKIE[LOGGED_IN_COOKIE]) && !empty($logged_in_cookie) )
 unset($current_user);
 global $wpdb;
 require_once(OQEY_ABSPATH . 'wp-admin/admin.php');
-if ( !wp_verify_nonce($nonce, 'oqey-upload') ) die("Access denied. Please use the uploader from the admin page.");
+if ( !wp_verify_nonce($nonce, 'oqey-upload') ) die("Access denied. Security check failed! What are you trying to do? It`s not working like that. ");
 if ( !is_user_logged_in() ) die('Login failure. You must be logged in.');
 if ( !current_user_can('oQeyGalleries') ) die(__('You do not have sufficient permissions to upload files.'));
 
