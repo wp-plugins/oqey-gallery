@@ -58,7 +58,7 @@ if($_FILES['Filedata']['size']>0){
 				}
 					ini_set('memory_limit', '-1');
   					@move_uploaded_file($_FILES["Filedata"]["tmp_name"],$filespath.$name);
-					$wpdb->query("INSERT INTO $oqey_music (link, title) VALUES ('$name', '$music_title')");		
+					$wpdb->query( $wpdb->prepare( "INSERT INTO $oqey_music (link, title) VALUES ('%s', '%s')",$name, $music_title) );		
   					break;
   			}
     	}
