@@ -147,19 +147,18 @@ if($_FILES['Filedata']['size']>0){
                     oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespaththumb, $name, "100", "150", false);	
  					oqey_img_process( $file, $iphonepath, $name, "640", "960", true);
                     
-					$wpdb->query( $wpdb->prepare( "INSERT INTO $oqey_images (title, gal_id, img_order, alt, comments, status, img_link, img_path, img_type) 
-                                                                     VALUES ('%s ', '%d', '%d', '%s', '%s', '%d', '%s', '%s', '%s')",
+					//$wpdb->query( "INSERT INTO $oqey_images (title, gal_id, img_order, alt, comments, status, img_link, img_path, img_type) VALUES ('$name ', '$gal_id', '0', '$image_alt', '', '0', '', '', 'oqey')");
+  					
+                      $wpdb->query( $wpdb->prepare( "INSERT INTO $oqey_images (title, gal_id, alt, status, img_type) 
+                                                                     VALUES ('%s', '%d', '%s', '%d', '%s')",
                                                                      $name,
                                                                      $gal_id,
-                                                                     0,
                                                                      $image_alt,
-                                                                     '',
-                                                                     0,
-                                                                     '',
-                                                                     '',
+                                                                     '0',
                                                                      'oqey'                                                                     
                                                                      ) );
-  					break;  		
+                   
+                      break;  		
   			}
     	}
 	}
