@@ -1444,16 +1444,15 @@ function oqeygall_tab_content(){
 add_action('admin_menu', 'oqey_add_pages');
 function oqey_add_pages() {
 	$icon = oQeyPluginUrl().'/images/oqeygallery.png';
-    add_menu_page('oQey Gallery plugin', 'oQey Gallery', 8, __FILE__, 'oqey_top_page', $icon);	  
+    $oqeym = plugin_basename( dirname(__FILE__));
     
-	add_submenu_page(__FILE__,'oQey Gallery plugin', 'Settings', 'oQeySettings', 'oQeysettings',  'oqey_settings_page');
-	//add_submenu_page(__FILE__,'oQey-Gallery plugin', 'Categories', 8, 'oQeyCategories',  'oqey_categories_page');
-    add_submenu_page(__FILE__, 'Galleries', 'Galleries', 'oQeyGalleries', 'oQeyGalleries', 'oqey_galleries_page');
-	add_submenu_page(__FILE__,'Skins', 'Skins', 'oQeySkins', 'oQeySkins',  'oqey_galleries_skin_page');
-	add_submenu_page(__FILE__, 'Music', 'Music', 'oQeyMusic', 'oQeyMusic', 'oqey_music_page');
-    add_submenu_page(__FILE__, 'Roles', 'Roles', 'oQeyRoles', 'oQeyRoles', 'oqey_roles_page');
-	add_submenu_page(__FILE__, 'Trash', 'Trash', 'oQeyTrash', 'oQeyTrash', 'oqey_trash_page');	
-
+    add_menu_page('oQey Gallery plugin', 'oQey Gallery', 8, $oqeym, 'oqey_top_page', $icon);	  
+	add_submenu_page($oqeym,'oQey Gallery plugin', 'Settings', 'oQeySettings', 'oQeysettings',  'oqey_settings_page');
+    add_submenu_page($oqeym, 'Galleries', 'Galleries', 'oQeyGalleries', 'oQeyGalleries', 'oqey_galleries_page');
+	add_submenu_page($oqeym,'Skins', 'Skins', 'oQeySkins', 'oQeySkins',  'oqey_galleries_skin_page');
+	add_submenu_page($oqeym, 'Music', 'Music', 'oQeyMusic', 'oQeyMusic', 'oqey_music_page');
+    add_submenu_page($oqeym, 'Roles', 'Roles', 'oQeyRoles', 'oQeyRoles', 'oqey_roles_page');
+	add_submenu_page($oqeym, 'Trash', 'Trash', 'oQeyTrash', 'oQeyTrash', 'oqey_trash_page');	
 }
 
 
