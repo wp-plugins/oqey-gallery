@@ -1,6 +1,5 @@
 <?php 
-if (!empty($_SERVER['SCRIPT_FILENAME']) && 'functions.php' == basename($_SERVER['SCRIPT_FILENAME']))
-	die ('Please do not load this page directly. Thanks!');
+if (!empty($_SERVER['SCRIPT_FILENAME']) && 'functions.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!');
 	
 global $wpdb;
 $oqey_galls = $wpdb->prefix . "oqey_gallery";
@@ -20,7 +19,6 @@ $nggal = $wpdb->prefix . 'ngg_gallery';
 $r = $wpdb->get_row("SELECT title FROM $nggal WHERE gid ='".mysql_real_escape_string($id)."'");
 return $r->title;
 }
-
 
 function oqey_getBlogFolder($id){ $folder=""; if($id==0 || $id==1){ $folder = "";}else{ $folder=$id."/"; } return $folder; }
 function oqey_checkPost($post_id){ global $wpdb; $check = $wpdb->get_var("SELECT post_type FROM $wpdb->posts WHERE ID = '$post_id'"); return $check; }
@@ -96,66 +94,6 @@ function oqey_php4_scandir($dir,$listDirectories=false, $skipDots=true) {
     return $dirArray;
 }
 
-function oqey_img_resize($tmpname, $save_dir, $save_name, $newheight, $newwidth, $wtmtk ){	
-	ini_set('memory_limit', '-1');
-    $save_dir     .= ( substr($save_dir,-1) != "/") ? "/" : "";
-    $gis        = getimagesize($tmpname);
-    $type        = $gis[2];
-    switch($type){
-        case "1": $imorig = imagecreatefromgif($tmpname); break;
-        case "2": $imorig = imagecreatefromjpeg($tmpname);break;
-        case "3": $imorig = imagecreatefrompng($tmpname); break;
-        default:  $imorig = imagecreatefromjpeg($tmpname);
-        }
-        $x = imagesx($imorig);
-        $y = imagesy($imorig);       
-        $width = $x;
-        $height = $y;
-		
-		if($width>$newwidth){		
-		$dheight = $newheight;
-	    $dwidth = $newwidth;
-        $coef = $width / $height;
-        if ($coef > 1){
-	    $newheight = $newwidth / $coef;
-		if($newheight > $dheight){		
-		$newcoef = $newheight/$dheight;
-		$newwidth = $dwidth/$newcoef;
-		$newheight = $dheight;
-		}		
-		if($coef >1.5){
-		$newheight = $dheight;
-		$newwidth = $dheight*$coef; 
-		}
-        } else {
-	    $newwidth = $newheight * $coef;
-        };	
-		}else{
-		$newwidth=$width; 
-		$newheight=$height;
-		}		
-        
-        
-        if($wtmtk=="yes"){
-        $watermark = @imagecreatefrompng("images/small-logo.png"); 
-        imageAlphaBlending($watermark, false);
-        imageSaveAlpha($watermark, true);
-        $watermarkWidth=imageSX($watermark);
-        $watermarkHeight=imageSY($watermark);
-        $coordinate_X = ( $x - 5) - ( $watermarkWidth);
-        $coordinate_Y = ( $y - 5) - ( $watermarkHeight);
-        $im = imagecreatetruecolor($newwidth,$newheight);
-        $i = imagecopyresampled($im,$imorig , 0,0,0,0,$newwidth,$newheight,$x,$y);        
-        imagecopy($im, $watermark, 0, 0, 0, 0, $watermarkWidth, $watermarkHeight); 
-        }else{
-            $im = imagecreatetruecolor($newwidth,$newheight);
-            $i = imagecopyresampled($im,$imorig , 0,0,0,0,$newwidth,$newheight,$x,$y); 
-        }    
-            
-        $c = imagejpeg($im, $save_dir.$save_name, 100);
-		imagedestroy($im);
-}
-	
 add_action('save_post', 'oqey_gallery_in_post');
 function oqey_gallery_in_post($post_id) {
 global $wpdb;
