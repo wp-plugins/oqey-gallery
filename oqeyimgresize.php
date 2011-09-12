@@ -18,7 +18,7 @@ if($x){
 $oqeyw = $x[0];
 $oqeyh = $x[1];
 }
-}
+
 
 $im = ImageCreateFromJPEG ($img) or 
 $im = ImageCreateFromPNG ($img) or 
@@ -39,5 +39,7 @@ if (!$im) {
 	@ImageCopyResampled ($thumb, $im, 0, 0, 0, 0, $width, $height, $oqeyw, $oqeyh);
 	@ImageJPEG ($thumb);
     @imagedestroy($thumb);
+}
+
 }
 ?>
