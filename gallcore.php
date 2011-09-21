@@ -1673,13 +1673,14 @@ if($atts['width']!=""){ $oqey_width = $atts['width']; }else{ $oqey_width = get_o
 if($atts['height']!=""){ $oqey_height = $atts['height']; }else{ $oqey_height = get_option('oqey_height'); }
 if($atts['autoplay']!=""){ $oqey_autoplay = $atts['autoplay']; }else{ $oqey_autoplay = "false"; }
 
- 
-   $id = esc_sql( $atts['id'] );
+   
+   $id = str_replace(":", "", $atts['id']); 
+   $id = esc_sql( $id );
    
    $oqey_galls = $wpdb->prefix . "oqey_gallery";
    $oqey_images = $wpdb->prefix . "oqey_images";
    $oqey_skins = $wpdb->prefix . "oqey_skins";
-   
+    
    $oqey_BorderSize = get_option('oqey_BorderSize');
    $oqey_bgcolor = get_option('oqey_bgcolor');
    $plugin_url_qu = oQeyPluginUrl();
@@ -1893,6 +1894,7 @@ ob_end_clean();
 $oqeycounter ++;
 return $output;
 }
+
 }//end crawler check
 
 }
