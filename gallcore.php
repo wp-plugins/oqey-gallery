@@ -1715,8 +1715,8 @@ if($atts['autoplay']!=""){ $oqey_autoplay = $atts['autoplay']; }else{ $oqey_auto
       $all = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $oqey_images WHERE gal_id = %d AND status!=2 ".$s." ORDER BY img_order ASC", $id  ));
 
       
-      define('OQEYBROWSER', preg_match('~(iPad|iPod|iPhone)~si', $_SERVER['HTTP_USER_AGENT']));
-      if(OQEYBROWSER){
+      define('IBROWSER', preg_match('~(iPad|iPod|iPhone)~si', $_SERVER['HTTP_USER_AGENT']));
+      if(IBROWSER){
 
            $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$gal->folder.'/iphone/';
 
