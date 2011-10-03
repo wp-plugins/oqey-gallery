@@ -1575,9 +1575,9 @@ function oqey_roles_page(){ include("manageroles.php"); }
 function oqey_settings_page(){ include("managesettings.php"); }
 
 
-add_filter('the_content', 'gallery_embed');
+//add_filter('the_content', 'gallery_embed');
 
-function gallery_embed($content){
+//function gallery_embed($content){
   if (is_feed()) {
     
     add_shortcode( 'oqeygallery', 'add_oqey_gallery_feed' );
@@ -1588,8 +1588,8 @@ function gallery_embed($content){
  
    }
    
-   return $content;
-}
+ //  return $content;
+//}
 
 function add_oqey_gallery_feed($atts){
     global $oqeycounter, $post_ID, $wpdb, $post;
