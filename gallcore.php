@@ -1755,7 +1755,15 @@ if($atts['autoplay']!=""){ $oqey_autoplay = $atts['autoplay']; }else{ $oqey_auto
         } 
         $imgs .= '</span>'; 
         
-        if ($isCrawler){ echo oQeycrawlerFood($imgs); }else{ echo $imgs; }
+        if ($isCrawler){ 
+            
+             return oQeycrawlerFood($imgs); 
+             
+           }else{ 
+            
+             return $imgs; 
+           
+           }
         
     }else{	
 	
