@@ -98,6 +98,10 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Changelog ==
 
+=0.4.8.5=
+
+* GPL compatibility fixed
+
 =0.4.8.4=
 
 * WP Touch Plugin compatibility issues fixed
@@ -198,6 +202,10 @@ Just edit css/oqeystyle.css and make all changes that you need.
 * The first stable version.
 
 == Upgrade Notice ==
+
+=0.4.8.5=
+
+* GPL compatibility fixed
 
 =0.4.8.4=
 
