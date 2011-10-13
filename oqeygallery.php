@@ -25,7 +25,7 @@ define('OQEY_ABSPATH', str_replace('\\', '/', ABSPATH) );
 include("oqey-gallery-functions.php");
 require_once(OQEY_ABSPATH . 'wp-admin/includes/plugin.php');
 global $oqey_db_version;	
-       $oqey_db_version = "0.4.9.2";
+       $oqey_db_version = "0.4.9.1";
        $plugin_name = "oQey Gallery plugins";
 
 function oqey_db_install(){
@@ -163,6 +163,9 @@ if (function_exists('register_activation_hook')){
 /*Upgrade database if the DB version is lower than 0.4.7*/
 function oqey_check_upgrade(){
     global $wpdb, $oqey_db_version, $wp_roles;
+    
+    $oqey_db_version = "0.4.9.1";
+    
      $oqey_images = $wpdb->prefix . "oqey_images";
      $oqey_skins = $wpdb->prefix . "oqey_skins";
        
