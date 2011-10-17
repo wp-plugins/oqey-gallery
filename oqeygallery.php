@@ -53,7 +53,7 @@ function oqey_db_install(){
 	add_option("oqey_pause_between_tran", "6" ,'', 'no');
 	add_option("oqey_LoopOption", "on" ,'', 'no');
 	add_option("oqey_gall_title_no", "on" ,'', 'no');
-    add_option("oqey_flash_gallery_true", "on" ,'', 'no');
+    //add_option("oqey_flash_gallery_true", "on" ,'', 'no');
 	add_option("oqey_backlinks", "on" ,'', 'no');
 	add_option("oqey_BorderOption", "on" ,'', 'no');
 	add_option("oqey_AutostartOption", "" ,'', 'no');
@@ -179,6 +179,15 @@ function oqey_db_install(){
 	) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";
     $wpdb->query($sql7);
     }
+    
+     $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins ");   
+  
+     if(empty($r)){
+    
+       add_option("oqey_flash_gallery_true", "on" ,'', 'no');
+     
+     }
+    
    
 }
 
