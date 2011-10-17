@@ -53,6 +53,7 @@ function oqey_db_install(){
 	add_option("oqey_pause_between_tran", "6" ,'', 'no');
 	add_option("oqey_LoopOption", "on" ,'', 'no');
 	add_option("oqey_gall_title_no", "on" ,'', 'no');
+    add_option("oqey_flash_gallery_true", "on" ,'', 'no');
 	add_option("oqey_backlinks", "on" ,'', 'no');
 	add_option("oqey_BorderOption", "on" ,'', 'no');
 	add_option("oqey_AutostartOption", "" ,'', 'no');
