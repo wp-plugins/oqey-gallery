@@ -17,7 +17,6 @@ oQey Gallery is a Plugin for WordPress that gives its users the possibility to c
 
 Links:
 
-
 *	<a href="http://oqeysites.com/oqey-flash-gallery-plugin/" title="Demo gallery">Demo Gallery</a>
 *	<a href="http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/" title="FAQ">oQey Gallery FAQ</a> 
  
@@ -94,7 +93,6 @@ Just edit css/oqeystyle.css and make all changes that you need.
 5. oQey Gallery Skin management
 6. oQey Gallery Insert Button
 7. oQey Gallery Gallery List
-
 
 == Changelog ==
 
