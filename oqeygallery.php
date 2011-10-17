@@ -125,7 +125,7 @@ function oqey_db_install(){
     $sql4 = "CREATE TABLE `" . $oqey_music . "` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`link` varchar(255) NOT NULL DEFAULT '',
-        `path` varchar(255) NOT NULL DEFAULT ''
+        `path` varchar(255) NOT NULL DEFAULT '',
 		`title` tinytext NOT NULL,
 		`artist` varchar(255) NOT NULL DEFAULT '',
 		`music_order` int(11) NOT NULL DEFAULT '0',
