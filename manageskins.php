@@ -53,6 +53,13 @@ if( !$sql=$wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_skins WHERE folde
 
 }
 
+     $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins ");   
+     if(!empty($r)){
+
+       delete_option("oqey_flash_gallery_true");
+     
+     }
+
 $mesaj = '<p class="updated fade">'.$d.' new skins found.</p>';
 }
 ?>
