@@ -7,6 +7,21 @@ global $wpdb, $current_user;
    $oqey_music = $wpdb->prefix . "oqey_music";
    $oqey_music_rel = $wpdb->prefix . "oqey_music_rel";   
    $oqey_skins = $wpdb->prefix . "oqey_skins";
+   
+   
+       $rn = $wpdb->get_results( "SELECT skinid FROM $oqey_skins WHERE status = '1' "); 
+       
+       if(empty($rn)){
+          
+          $i = $wpdb->get_row("SELECT id FROM $oqey_skins WHERE status = '0' ORDER BY id ASC LIMIT 0,1");
+          
+          if(!empty($i)){
+            
+              $wpdb->query( "UPDATE $oqey_skins SET status = '1' WHERE id = '".$i->id."'" );
+          
+          }
+          
+       }
 
 if(isset($_GET['new_skin'])) {
 
@@ -53,11 +68,29 @@ if( !$sql=$wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_skins WHERE folde
 
 }
 
-     $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins ");   
+     $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins "); 
+      
      if(!empty($r)){
 
        delete_option("oqey_flash_gallery_true");
-     
+       
+       
+       $rn = $wpdb->get_results( "SELECT skinid FROM $oqey_skins WHERE status = '1' "); 
+       
+       if(empty($rn)){
+          
+          $i = $wpdb->get_row("SELECT id FROM $oqey_skins WHERE status = '0' ORDER BY id ASC LIMIT 0,1");
+          
+          if(!empty($i)){
+            
+              $wpdb->query( "UPDATE $oqey_skins SET status = '1' WHERE id = '".$i->id."'" );
+          
+          }
+          
+       }
+       
+       
+            
      }
 
      $mesaj = '<p class="updated fade">'.$d.' new skins found.</p>';
