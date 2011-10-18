@@ -60,7 +60,8 @@ if( !$sql=$wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_skins WHERE folde
      
      }
 
-$mesaj = '<p class="updated fade">'.$d.' new skins found.</p>';
+     $mesaj = '<p class="updated fade">'.$d.' new skins found.</p>';
+     
 }
 ?>
 

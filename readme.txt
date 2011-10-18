@@ -26,6 +26,9 @@ For more details, skins and examples and custom flash gallery, please visit <a h
 
 Features:
 
+* NEW: Video support added
+* Music scanner / locator
+* New skins added
 * Simple and intuitive gallery management
 * Built-in video support
 * Skinnable flash slideshow
