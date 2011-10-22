@@ -723,7 +723,7 @@ function AddoQeyGallery($atts){
         }else{
             
             $c_width = $oqey_width;
-            
+            $oqey_width_n = $oqey_width;
         }
        
        
