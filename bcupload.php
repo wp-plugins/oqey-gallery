@@ -166,17 +166,20 @@ if($_FILES['Filedata']['size']>0){
 				$file = $filespath.$name; 	
                 
                     ini_set('memory_limit', '-1');
-                    
-                    //move_uploaded_file($_FILES["Filedata"]["tmp_name"], $file);                    
-                    //oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespath, $name, "1200", "1800", true );
-                    //oqey_img_process( $file, $iphonepath, $name, "640", "960", false);
-                    //oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespaththumb, $name, "100", "150", false);
-                    
+                   
+                    //$exif = @exif_read_data( $_FILES["Filedata"]["tmp_name"] ); 
+                    $exif = wp_read_image_metadata($_FILES["Filedata"]["tmp_name"]); 
+                   
                     oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespath, $name, "1200", "1800", true, $gal_id);
                     oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespaththumb, $name, "100", "150", false, $gal_id);	
  					oqey_img_process( $_FILES["Filedata"]["tmp_name"], $iphonepath, $name, "640", "960", true, $gal_id);
-                    
-                    $exif = @exif_read_data( $_FILES["Filedata"]["tmp_name"] );         
+                                        
+                    if(empty($exif)){
+                        
+                        $exif = "default";
+                        
+                    }
+                          
            
                       $wpdb->query( $wpdb->prepare( "INSERT INTO $oqey_images (title, gal_id, alt, status, img_type, meta_data) 
                                                                        VALUES (%s, %d, %s, %d, %s, %s)",
