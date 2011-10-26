@@ -234,6 +234,12 @@ function oqey_check_upgrade(){
      $wpdb->query("ALTER TABLE $oqey_galls ADD permalink varchar(255) NOT NULL DEFAULT 'default' AFTER wtmrk_status");
 
 	}
+    
+    if (version_compare($installed_oqey_ver, '0.4.9.1', '<')){     
+
+      $wpdb->query("ALTER TABLE $oqey_skins MODIFY skinid varchar(55)");
+
+	}
    
     if (version_compare($installed_oqey_ver, '0.5', '<')){
 	 $perm = get_role('administrator');	
