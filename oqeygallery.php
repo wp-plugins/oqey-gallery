@@ -205,6 +205,7 @@ function oqey_check_upgrade(){
     $oqey_galls = $wpdb->prefix . "oqey_gallery";
     $oqey_video = $wpdb->prefix . "oqey_video";
     $oqey_music = $wpdb->prefix . "oqey_music";
+    $oqey_skins = $wpdb->prefix . "oqey_skins";
     
     $installed_oqey_ver = get_option( "oqey_db_version" );
           
@@ -234,16 +235,12 @@ function oqey_check_upgrade(){
      $wpdb->query("ALTER TABLE $oqey_galls ADD permalink varchar(255) NOT NULL DEFAULT 'default' AFTER wtmrk_status");
 
 	}
-    
-    if (version_compare($installed_oqey_ver, '0.4.9.1', '<')){     
-
-      $wpdb->query("ALTER TABLE $oqey_skins MODIFY skinid varchar(55)");
-
-	}
-    
+   
     if (version_compare($installed_oqey_ver, '0.5', '<')){
 	 $perm = get_role('administrator');	
      $perm->add_cap('oQeyVideo');	
+     
+     $wpdb->query("ALTER TABLE $oqey_skins MODIFY skinid varchar(55)");
      
      $wpdb->query("ALTER TABLE $oqey_images ADD video_id int(11) NOT NULL DEFAULT '0' AFTER img_type");
      $wpdb->query("ALTER TABLE $oqey_images ADD meta_data longtext NOT NULL DEFAULT '' AFTER video_id");
