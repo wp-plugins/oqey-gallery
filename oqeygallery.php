@@ -188,7 +188,6 @@ function oqey_db_install(){
      
      }
     
-   
 }
 
 if (function_exists('register_activation_hook')){
@@ -240,7 +239,7 @@ function oqey_check_upgrade(){
 	 $perm = get_role('administrator');	
      $perm->add_cap('oQeyVideo');	
      
-     $wpdb->query("ALTER TABLE $oqey_skins MODIFY skinid varchar(55)");
+     //$wpdb->query("ALTER TABLE $oqey_skins MODIFY skinid varchar(55)");
      
      $wpdb->query("ALTER TABLE $oqey_images ADD video_id int(11) NOT NULL DEFAULT '0' AFTER img_type");
      $wpdb->query("ALTER TABLE $oqey_images ADD meta_data longtext NOT NULL DEFAULT '' AFTER video_id");
@@ -261,7 +260,7 @@ function oqey_check_upgrade(){
         `status` int(1) NOT NULL DEFAULT '0',
         `vorder` int(1) NOT NULL DEFAULT '0',
 		PRIMARY KEY  (`id`)
-	) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;;";
+	) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;";
     $wpdb->query($sql7);
     }
      
