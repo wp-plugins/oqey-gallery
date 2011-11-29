@@ -780,6 +780,7 @@ function oQeyGetAllImages(){
     
    }/*END with croper icon*/
 
+   //<img src="'.oQeyPluginUrl().'/images/separator_line.png" width="120" height="2" align="middle" class="img_thumbs_top_line"/>
 
    $resp["allimages"] .= '
                        <li id="img_li_'.$img->id.'"'.$b.'><div class="allbut" align="center">
@@ -794,7 +795,6 @@ function oQeyGetAllImages(){
                        '.$croper.'
 		               <input name="selected" type="checkbox" value="'.$img->id.'" class="styled" id="selected_'.$img->id.'">
 		               </div>
-					   <img src="'.oQeyPluginUrl().'/images/separator_line.png" width="120" height="2" align="middle" class="img_thumbs_top_line"/>
 		               <img src="'.$fullimg.'?'.time().'" alt="image_'.$img->id.'" class="img_thumbs" />
                        </li>';
     $b = "";
