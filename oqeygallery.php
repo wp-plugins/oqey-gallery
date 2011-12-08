@@ -321,6 +321,10 @@ function oqey_check_upgrade(){
 }
 
 //.................................................................//	
+function oqey_no_skins_installed(){
+      echo '<div class="error fade" style="background-color:#ff8c7a;width:887px;"><p>oQey Gallery Plugin didn`t detect any active slideshow skins. Would youl like to install one? If so, please click <a href="'.admin_url('admin.php?page=oQeySkins&showskins=yes').'">here</a>.</p></div>';
+}
+
 function oqey_init_method() { 
     
    oqey_check_upgrade();//make update if need to do
@@ -349,10 +353,6 @@ if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries
      wp_enqueue_script('jqueryajaxupload', WP_PLUGIN_URL . '/oqey-gallery/js/ajaxupload.js', array('jquery')); 
    
      /*Admin if no skins is installed*/
-    function oqey_no_skins_installed(){
-      echo '<div class="error fade" style="background-color:#ff8c7a;width:887px;"><p>oQey Gallery Plugin didn`t detect any active slideshow skins. Would youl like to install one? If so, please click <a href="'.admin_url('admin.php?page=oQeySkins&showskins=yes').'">here</a>.</p></div>';
-    }
-     
       global $wpdb;
       $oqey_skins = $wpdb->prefix . "oqey_skins";
       $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins WHERE status !='2'"); 
