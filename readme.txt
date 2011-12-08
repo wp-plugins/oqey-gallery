@@ -103,7 +103,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.5.1=
 
-* compatibility with wp 3.3
+* Compatibility with WordPress v3.3.
 * major functionality improvements
 
 =0.5=
@@ -195,7 +195,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.5.1=
 
-* compatibility with wp 3.3
+* Compatibility with WordPress v3.3.
 * major functionality improvements
 
 =0.5=
