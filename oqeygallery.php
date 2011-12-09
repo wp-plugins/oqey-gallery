@@ -384,9 +384,6 @@ if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries
      wp_enqueue_script('jquery-ui-tabs'); 
    }
   
-  
-  
-  
  }
 }  
  
