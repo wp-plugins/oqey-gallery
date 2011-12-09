@@ -322,7 +322,7 @@ function oqey_check_upgrade(){
 
 //.................................................................//	
 function oqey_no_skins_installed(){
-      echo '<div class="error fade" style="background-color:#ff8c7a;width:887px;"><p>oQey Gallery Plugin didn`t detect any active slideshow skins. Would youl like to install one? If so, please click <a href="'.admin_url('admin.php?page=oQeySkins&showskins=yes').'">here</a>.</p></div>';
+      echo '<div class="error fade" style="background-color:#ff8c7a;width:887px;"><p>oQey Gallery Plugin didn`t detect any active slideshow skins. Would you like to install one? If so, please click <a href="'.admin_url('admin.php?page=oQeySkins&showskins=yes').'">here</a>.</p></div>';
 }
 
 function oqey_init_method() { 
