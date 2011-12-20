@@ -1700,9 +1700,9 @@ function oQeyGalleryPermDelete(){
    $d = $wpdb->query( $wpdb->prepare("DELETE FROM $oqey_images WHERE gal_id = %d ", esc_sql($_POST['deletegall']) ) );   
 
    if($d){
-      if(is_dir(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.fj_getBlogFolder($wpdb->blogid).esc_sql($_POST['name'])) ){   
-         $dir = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.fj_getBlogFolder($wpdb->blogid).esc_sql($_POST['name']);
-         $do = fj_rm($dir);
+      if(is_dir(OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).esc_sql($_POST['name'])) ){   
+         $dir = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).esc_sql($_POST['name']);
+         $do = oqey_rm($dir);
       if($do){ 
       if(!$sql=$wpdb->get_row($wpdb->prepare("SELECT id FROM $oqey_galls WHERE status = %d ", "2" ))){ $e="no"; }
           echo $e;
