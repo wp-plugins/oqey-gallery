@@ -299,7 +299,7 @@ function oqey_top_page(){
 <div class="postbox" style="width:870px;">
 				<h3 class="hndle"><span>About</span></h3>
 				<div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">
-                <p>oQey Gallery is a premium grade plugin for managing images and video, creating photo slideshows with music, photo & video galleries that will work fine under iPhone / iPad and other mobile devices. Flash version of the slideshow is automatically replaced by the HTML5 | Java slideshow on a non-flash device. Flash gallery supports customizable skins, so you can change the way it looks with a few clicks using the skin options tool. Commercial skins are also available as well as custom built photo / video galleries and slideshows for professionals. This plugin uses built-in WP functions and a simple batch upload system. 
+                <p>oQey Gallery is a premium grade plugin for managing images and video, creating photo slideshows with music, photo &amp; video galleries that works fine under iPhone / iPad and other mobile devices. Flash version of the slideshow is automatically replaced by the HTML5 | Java slideshow on a non-flash device. Flash gallery supports customizable skins, so you can change the way it looks with a few clicks using the skin options tool. Commercial skins are also available as well as custom built photo / video galleries and slideshows for professionals. This plugin uses built-in WP functions and a simple batch upload system. 
 Check this out on <a href="http://oqeysites.com/" target="_blank">oqeysites.com</a></p>
 <p><a href="http://oqeysites.com"><img style="border: none;" src="<?php echo WP_PLUGIN_URL; ?>/oqey-gallery/images/oqeybanner.jpg" /></a></p>
                 </div>
