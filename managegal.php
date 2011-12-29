@@ -7,6 +7,15 @@ global $wpdb, $current_user;
    $oqey_music_rel = $wpdb->prefix . "oqey_music_rel";
 
 $oqeyImagesRoot = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid);
+
+   
+    function oqey_gd_error(){
+       echo '<div class="error fade" style="background-color:#E36464;">
+             <p>Attention! Graphic Library missing. oQey Gallery requires GD library in order to run properly. Please install this php extension!</p></div>';
+    }
+    
+if(!function_exists("gd_info")){ add_action( 'admin_notices', 'oqey_gd_error'); }
+
 ?>
 
 <form>
