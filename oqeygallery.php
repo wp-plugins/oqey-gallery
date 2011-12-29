@@ -17,11 +17,10 @@ Description: oQey Gallery is a premium grade plugin for managing images and vide
 Author: oqeysites.com
 Author URI: http://oqeysites.com/
 */
-
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'oqeygallery.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Please do not load this page directly. Thanks!');
-	
-define('OQEY_ABSPATH', str_replace('\\', '/', ABSPATH) );
 
+	
+define('OQEY_ABSPATH', str_replace('\\', '/', ABSPATH) ); //oqey path
 require("oqey-gallery-functions.php");
 require_once(OQEY_ABSPATH . 'wp-admin/includes/plugin.php');
 global $oqey_db_version;	
@@ -360,11 +359,12 @@ if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries
     /*END*/
    
    }
-   wp_enqueue_script('jquery-ui-core ');
-   wp_enqueue_script('jquery-ui-sortable');  
-   wp_enqueue_script('jquery-ui-draggable');
-   wp_enqueue_script('jquery-ui-selectable');
-   wp_enqueue_script('jquery-ui-dialog');
+    
+    wp_enqueue_script('jquery-ui-core ');
+    wp_enqueue_script('jquery-ui-sortable');  
+    wp_enqueue_script('jquery-ui-draggable');
+    wp_enqueue_script('jquery-ui-selectable');
+    wp_enqueue_script('jquery-ui-dialog');
    
    if (is_plugin_active('oqey-photo-cropper/oqeycropper.php') && $_GET['page']=='oQeyGalleries'){
     wp_enqueue_script('jqueryoqeyjCrop', WP_PLUGIN_URL . '/oqey-photo-cropper/js/jquery.jcrop.js', array('jquery')); 
