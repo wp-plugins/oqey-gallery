@@ -380,6 +380,12 @@ if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries
     
    }
    
+   if($_GET['page']=="oQeyGalleries"){ 
+    
+     if(!function_exists("gd_info")){ add_action( 'admin_notices', 'oqey_gd_error'); }
+ 
+   }
+   
    if($_GET['page']=="oQeyTrash"){ 
      wp_enqueue_script('jquery-ui-tabs'); 
    }
@@ -412,6 +418,11 @@ if($wpdb->get_var("show tables like '$oqey_galls'") != $oqey_galls ){ oqey_db_in
      add_action('init', 'oqey_init_method_gallery_multisite');
  
  } 
+ 
+function oqey_gd_error(){
+       echo '<div class="error fade" style="background-color:#E36464;">
+             <p>Attention! Graphic Library missing. oQey Gallery requires GD library installed in order to run properly. Please install this php extension!</p></div>';
+}
 
 function oqey_php_version(){
 echo '<div class="error fade" style="background-color:#E36464;">
