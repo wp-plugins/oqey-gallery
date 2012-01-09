@@ -852,7 +852,6 @@ print <<< SWF
 {$oqeybacklink}
 
 </div>
-
 <script type="text/javascript">
       var flashvars{$oqeycounter} = {
                           autoplay:"{$oqey_autoplay}",
@@ -866,25 +865,17 @@ print <<< SWF
 	var attributes{$oqeycounter} = {id: "oqeygallery{$oqeycounter}"};
 	swfobject.embedSWF("{$plugin_repo_url}/skins/{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$oqeycounter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$oqeycounter}, params{$oqeycounter}, attributes{$oqeycounter});
 </script> 
-
 <div id="flash_gal_{$oqeycounter}" style="width:{$oqey_width}px; min-width:{$oqey_width}px; min-height:{$oqey_height}px; height:{$oqey_height}px; margin: 0 auto;">
-
 <script type="text/javascript">
-  jQuery(document).ready(function($){
-        var pv = swfobject.getFlashPlayerVersion();
-        oqey_e(pv, {$oqeycounter}, '{$imgs}', '{$optouch}', '{$incolums}', '{$pfv}', '{$allimages}'); 
-  });
-
-  var htmlPlayer = document.getElementsByTagName('video');
-
-  function pausePlayer() {
- 
-   for(var i = 0; i < htmlPlayer.length; i++){
-       htmlPlayer[i].pause();
-   }
-  }
-</script>
-
+  jQuery(document).ready(function($){ 
+    var pv = swfobject.getFlashPlayerVersion();
+    oqey_e(pv, {$oqeycounter}, '{$imgs}', '{$optouch}', '{$incolums}', '{$pfv}', '{$allimages}');
+    });
+    var htmlPlayer = document.getElementsByTagName('video');
+    function pausePlayer(){
+        for(var i = 0; i < htmlPlayer.length; i++){
+            htmlPlayer[i].pause();
+}}</script>
 </div>
 SWF;
 $output = ob_get_contents();
