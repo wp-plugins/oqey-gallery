@@ -479,6 +479,13 @@ function AddoQeyGallery($atts){
    if($atts['autoplay']!=""){ $oqey_autoplay = $atts['autoplay']; }else{ $oqey_autoplay = "false"; }
  
    $id = str_replace(":", "", $atts['id']); 
+   
+   if(empty($id)){        
+   
+       $id = str_replace(":", "", $atts[0] );     
+      
+   }
+   
    $id = esc_sql( $id );
    
    $oqey_galls = $wpdb->prefix . "oqey_gallery";
