@@ -8,7 +8,6 @@ global $wpdb, $current_user;
    $oqey_music_rel = $wpdb->prefix . "oqey_music_rel";   
    $oqey_skins = $wpdb->prefix . "oqey_skins";
    
-   
        $rn = $wpdb->get_results( "SELECT skinid FROM $oqey_skins WHERE status = '1' "); 
        
        if(empty($rn)){
@@ -30,7 +29,6 @@ if(isset($_GET['new_skin'])) {
   
   $mesaj = '<p class="updated fade">New skin was set.</p>';
 }
-
 
 if(isset($_GET['scaner'])){
 
@@ -195,7 +193,6 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
          echo "<p>No skins have been installed yet.<br>
                In order to install a skin, please click on the link above or upload one if you have downloaded it from oQeySites website.
                </p>";
-    
      }
 ?>
     </td>
