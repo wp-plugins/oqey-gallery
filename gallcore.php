@@ -86,7 +86,7 @@ class oQey_Gallery_Widget extends WP_Widget {
        
       }else{
       
-        $ipath = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$gal->folder.'/iphone/';
+        $ipath = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$gal->folder.'/galimg/';
         $img_type = "oqey";
         $img_f_path = "";
       
@@ -369,15 +369,8 @@ function oqey_settings_page(){ include("managesettings.php"); }
 function oqey_video_page(){ include("managevideo.php"); }
 
 /*oqeygallery shortcode*/
-  if (is_feed()) {
-    
-    add_shortcode( 'oqeygallery', 'AddoQeyGalleryToFeed' );
-
-   }else{
-    
-    add_shortcode( 'oqeygallery', 'AddoQeyGallery' );
- 
-   }
+add_shortcode( 'oqeygallery', 'AddoQeyGallery' );
+add_shortcode( 'qgallery', 'AddoQeyGallery' );
 
 function AddoQeyGalleryToFeed($atts){
     global $oqeycounter, $post_ID, $wpdb, $post;
@@ -406,20 +399,22 @@ function AddoQeyGalleryToFeed($atts){
        
        $imgs .= '<span class="all_images">';	
     
-        foreach($all as $i){ 
+        foreach($all as $i){
+	 
+	 if($i->img_type!="video"){
             
-        if($i->img_type=="nextgen"){
+          if($i->img_type=="nextgen"){
             
-          $gimg = get_option('siteurl').'/'.trim($i->img_path).'/';
+            $gimg = get_option('siteurl').'/'.trim($i->img_path).'/';
         
-        }else{
+           }else{
         
-          $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$gal->folder.'/iphone/';
+            $gimg = get_option('siteurl').'/wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).$gal->folder.'/galimg/';
         
-        }
-        
-        $imgs .= '<span><img src="'.$gimg.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" style="margin-top:3px;"/></span>'; 
-        
+           } 
+	 
+          $imgs .= '<p><img src="'.$gimg.trim($i->title).'" alt="'.urlencode(trim($i->alt)).'" style="margin-top:3px;"/></p>'; 
+         }
         } 
         $imgs .= '</span>';
       }
@@ -472,9 +467,14 @@ function getUserNow($userAgent) {
 
 function AddoQeyGallery($atts){
    global $oqeycounter, $post_ID, $wpdb, $post, $wp_query;
+   
+   if (is_feed()) {
+
+     return AddoQeyGalleryToFeed($atts);
+
+   }else{
 
    if($atts['width']!=""){ $oqey_width = $atts['width']; }else{ $oqey_width = get_option('oqey_width'); $oqey_width_n = get_option('oqey_width'); }
-   
    if($atts['height']!=""){ $oqey_height = $atts['height']; }else{ $oqey_height = get_option('oqey_height'); }
    if($atts['autoplay']!=""){ $oqey_autoplay = $atts['autoplay']; }else{ $oqey_autoplay = "false"; }
  
@@ -518,9 +518,6 @@ function AddoQeyGallery($atts){
          
          }
          
-         
-         //{$plugin_repo_url}/skins/{$skin->folder}/{$skin->folder}.swf
-         
       }else{ 
          
          $skin = $wpdb->get_row("SELECT * FROM $oqey_skins WHERE status = '1'"); 
@@ -550,7 +547,6 @@ function AddoQeyGallery($atts){
         
       }
        
-
       if($gal->splash_only==1){ 
         
           $s = "AND id!=".$gal->splash_img; 
@@ -573,7 +569,7 @@ function AddoQeyGallery($atts){
     
         if ($isCrawler){
             
-           $imgs = "<p align='center'>".urldecode($gal_title)."</p>";
+           $imgs = "<p align='center'>".$gal_title."</p>";
         
         }else{ 
             
@@ -586,8 +582,6 @@ function AddoQeyGallery($atts){
                } 
             }
         }
-    	    
-        //$imgs .= '<span class="all_images">';	
     
         foreach($all as $i){ 
             
@@ -599,23 +593,24 @@ function AddoQeyGallery($atts){
          
            if($i->img_type!="video"){
           
-             $imgs .= '<p style="margin-left:auto; margin-right:auto;display:block;text-align:center;"><img src="'.$gimg.trim($i->title).'" alt="Photo '.urlencode(trim($i->alt)).'" style="margin-top:1px;height:auto;max-width:100%;"/></p>'; 
+             $imgs .= '<p style="margin-left:auto; margin-right:auto;display:block;text-align:center;">
+	                  <img src="'.$gimg.trim($i->title).'" alt="Photo '.trim($i->alt).'" style="margin-top:1px;height:auto;max-width:100%;"/></p>'; 
              
              if(get_option('oqey_show_captions_under_photos')=="on"){
                 
-                $imgs .= '<p class="oqey_p_comments">'.trim($i->comments)."</p>";
+		$comments = '';
+		
+		if(!empty($i->comments)){
+		   $comments = ' | '.trim($i->comments);
+	        }
+			       
+                $imgs .= '<p class="oqey_p_comments">'.trim($i->alt).$comments."</p>";
                 
              }
           
            }
            
         } 
-        
-        //$imgs .= '</span>';
-        
-        //if(get_option("oqey_backlinks")=="on"){             
-             
-        //}
         
         if ($isCrawler){ 
             
@@ -846,8 +841,9 @@ function AddoQeyGallery($atts){
    $img_holder_h = $img_holder_h."px";
    }   
    
-  // $allimages = json_encode($bgimages); 
-    
+   $oqeyblogid = oqey_getBlogFolder($wpdb->blogid);
+ 
+ 
 ob_start();	
 print <<< SWF
 <div id="oqey_image_div{$oqeycounter}" style="position:relative;width:{$oqey_width_n}px;height:{$custom_height_n};display:none;margin: 0 auto;{$div_custom_margin}{$custom_bg_img}">
@@ -870,7 +866,7 @@ print <<< SWF
 					 };
 	var params{$oqeycounter} = {bgcolor:"{$oqey_bgcolor}", allowFullScreen:"true", wMode:"transparent"};
 	var attributes{$oqeycounter} = {id: "oqeygallery{$oqeycounter}"};
-	swfobject.embedSWF("{$plugin_repo_url}/skins/{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$oqeycounter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$oqeycounter}, params{$oqeycounter}, attributes{$oqeycounter});
+	swfobject.embedSWF("{$plugin_repo_url}/skins/{$oqeyblogid}{$skin->folder}/{$skin->folder}.swf", "flash_gal_{$oqeycounter}", "{$oqey_width}", "{$oqey_height}", "8.0.0", "", flashvars{$oqeycounter}, params{$oqeycounter}, attributes{$oqeycounter});
 </script> 
 <div id="flash_gal_{$oqeycounter}" style="width:{$oqey_width}px; min-width:{$oqey_width}px; min-height:{$oqey_height}px; height:{$oqey_height}px; margin: 0 auto;">
 <script type="text/javascript">
@@ -888,10 +884,13 @@ SWF;
 $output = ob_get_contents();
 ob_end_clean();
 $oqeycounter ++;
+
 return $output;
 }
 
 }//end crawler check
+
+}
 
 }
 ?>

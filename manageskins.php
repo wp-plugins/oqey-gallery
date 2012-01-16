@@ -42,7 +42,7 @@ foreach($skins as $skin){
 
 if( !$sql=$wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_skins WHERE folder = %s ", $skin) ) ){
   
-  $myFile = OQEY_ABSPATH."wp-content/oqey_gallery/skins/".oqey_getBlogFolder($wpdb->blogid).$skin."/details.xml";
+  $myFile = OQEY_ABSPATH."wp-content/oqey_gallery/skins/".$skin."/details.xml";
   $xml = @simplexml_load_file($myFile);
   if(!empty($xml)){
     
@@ -159,7 +159,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
    if(!empty($r)){
    
    if($r->commercial=="yes"){ $comm = " - Commercial skin"; }else{ $comm = " - Free skin"; }
-   echo '<img src="'.oQeyPluginRepoUrl().'/skins/'.$r->folder.'/'.$r->folder.'.jpg" alt="Current theme preview" width="150" height="100" style="border:#999999 solid thin;"/>';
+   echo '<img src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/'.$r->folder.'.jpg" alt="Current theme preview" width="150" height="100" style="border:#999999 solid thin;"/>';
   
   }
   ?>
@@ -172,10 +172,10 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 
     <h4><?php echo urldecode($r->name).$comm; ?></h4>
     <p><?php echo urldecode($r->description); ?><br />
-       Skin files location: <code>/skins/<?php echo $r->folder; ?></code>.</p>
+       Skin files location: <code>/skins/<?php echo oqey_getBlogFolder($wpdb->blogid).$r->folder; ?></code>.</p>
        
        <?php
-           $skinpath = oQeyPluginRepoPath().'/skins/'.$r->folder.'/';
+           $skinpath = oQeyPluginRepoPath().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder;
 	       $sfpath = $skinpath.'settings.swf';  
            if(is_file($sfpath)){ 
               
@@ -237,7 +237,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 Notes: <br />
          * <?php echo oqey_uploadSize(); ?><br />
          * You may upload new skin files directly to your plugin directory via ftp.<br />
-         * Your skins folder location: <b><?php echo oQeyPluginRepoUrl().'/skins/'; ?></b>       
+         * Your skins folder location: <b><?php echo oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid); ?></b>       
     </div>
 </div>
 <script type="text/javascript">
