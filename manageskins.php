@@ -42,7 +42,7 @@ foreach($skins as $skin){
 
 if( !$sql=$wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_skins WHERE folder = %s ", $skin) ) ){
   
-  $myFile = OQEY_ABSPATH."wp-content/oqey_gallery/skins/".$skin."/details.xml";
+  $myFile = OQEY_ABSPATH."wp-content/oqey_gallery/skins/".oqey_getBlogFolder($wpdb->blogid).$skin."/details.xml";
   $xml = @simplexml_load_file($myFile);
   if(!empty($xml)){
     
