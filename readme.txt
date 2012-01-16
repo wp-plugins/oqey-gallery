@@ -9,7 +9,6 @@ Requires at least: 3.0.0
 Tested up to: 3.2.1
 Stable tag: 0.5.2
 
-
 == Description ==
 
 oQey Gallery is a Plugin for WordPress that gives its users the possibility to create and manage flash photo galleries / slideshows with an iPhone / iPad version built-in for all non-flash browsers and mobile devices that do not run Adobe Flash Player, i.e. iOS based devices like iPhone, iPad, iPod etc. The flash version supports music and skins, so users can change the way it looks like with a few simple clicks. Customizable, commercial skins are also available as well as custom photo galleries for professionals. This plugin uses built-in WP functions and a simple batch upload system. Multiple photo galleries are supported.
