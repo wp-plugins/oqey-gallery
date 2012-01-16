@@ -365,8 +365,8 @@ function oQeyGetPreviewGallery(){
          echo '<object height="600" width="896">
                <param value="#ffffff" name="bgcolor">
                <param value="true" name="allowFullScreen">
-               <param name="movie" value="'.$plugin_repo_url.'/skins/'.$skin->folder.'/'.$skin->folder.'.swf">
-               <param name="FlashVars" value="flashId='.$skin->skinid.'&amp;FKey='.$skin->comkey.'&amp;GalleryPath='.$plugin_url.'&amp;GalleryID='.$galleryID.'&amp;FirstRun='.$skin->firstrun.'"><embed src="'.$plugin_repo_url.'/skins/'.$skin->folder.'/'.$skin->folder.'.swf" bgcolor="#ffffff" FlashVars="flashId='.$skin->skinid.'&amp;FKey='.$skin->comkey.'&amp;GalleryPath='.$plugin_url.'&amp;GalleryID='.$galleryID.'&amp;FirstRun='.$skin->firstrun.'" width="896" height="600" wmode="transparent" allowFullScreen="true">
+               <param name="movie" value="'.$plugin_repo_url.'/skins/'.oqey_getBlogFolder($wpdb->blogid).$skin->folder.'/'.$skin->folder.'.swf">
+               <param name="FlashVars" value="flashId='.$skin->skinid.'&amp;FKey='.$skin->comkey.'&amp;GalleryPath='.$plugin_url.'&amp;GalleryID='.$galleryID.'&amp;FirstRun='.$skin->firstrun.'"><embed src="'.$plugin_repo_url.'/skins/'.oqey_getBlogFolder($wpdb->blogid).$skin->folder.'/'.$skin->folder.'.swf" bgcolor="#ffffff" FlashVars="flashId='.$skin->skinid.'&amp;FKey='.$skin->comkey.'&amp;GalleryPath='.$plugin_url.'&amp;GalleryID='.$galleryID.'&amp;FirstRun='.$skin->firstrun.'" width="896" height="600" wmode="transparent" allowFullScreen="true">
                </embed>
                </object>';
       }
@@ -951,11 +951,11 @@ echo '<table width="900" border="0" cellspacing="0" cellpadding="0" id="currents
       <tbody id="sortable">
 	    <tr id="skink_tr_'.$r->id.'">
              <td width="180" height="120" align="center" valign="middle">
-			   <div align="center"><img src="'.oQeyPluginRepoUrl().'/skins/'.$r->folder.'/'.$r->folder.'.jpg" alt="skin" width="150" height="100" style="border:#999999 solid thin;"/>
+			   <div align="center"><img src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/'.$r->folder.'.jpg" alt="skin" width="150" height="100" style="border:#999999 solid thin;"/>
 	           </div></td>
                <td width="720" align="left" valign="top">
                <p align="left" style="padding:5px;"><b>'.urldecode($r->name).'</b><br/>'.urldecode($r->description).'<br/>
-               Skin files location: <code>/skins/'.$r->folder.'</code>.
+               Skin files location: <code>/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'</code>.
                </p> 
 	          </td>       
         </tr>
@@ -991,11 +991,11 @@ if(!empty($get_list)){
 	foreach ($get_list as $r){   
        echo '<tr id="skink_tr_'.$r->id.'">
              <td width="180" height="120" align="center" valign="middle">
-             <div align="center"><img src="'.oQeyPluginRepoUrl().'/skins/'.$r->folder.'/'.$r->folder.'.jpg" alt="skin" width="150" height="100" style="border:#999999 solid thin;"/>
+             <div align="center"><img src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/'.$r->folder.'.jpg" alt="skin" width="150" height="100" style="border:#999999 solid thin;"/>
 	         </div></td>
              <td width="720" align="left" valign="top">
 	         <p align="left" style="padding:5px;"><b>'.urldecode($r->name).'</b><br/>'.urldecode($r->description).'<br/>
-             Skin files location: <code>/skins/'.$r->folder.'</code>.<br/><br/>
+             Skin files location: <code>/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'</code>.<br/><br/>
 			 <a href="#activate_skin" class="activate_skin" id="'.$r->id.'">Activate this skin</a>
         </p> 
 	    </td>       
@@ -1382,9 +1382,9 @@ function oQeySkinOptions(){
      <object height="660" width="990">
      <param value="#CCCCCC" name="bgcolor">
      <param value="true" name="allowFullScreen">
-     <param name="movie" value="'.oQeyPluginRepoUrl().'/skins/'.$_POST['folder'].'/settings.swf">
+     <param name="movie" value="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$_POST['folder'].'/settings.swf">
      <param name="FlashVars" value="spntype='.base64_encode($datele).'&loggedin='.$loggedin.'">
-     <embed src="'.oQeyPluginRepoUrl().'/skins/'.$_POST['folder'].'/settings.swf" bgcolor="#CCCCCC" FlashVars="spntype='.base64_encode($datele).'&loggedin='.$loggedin.'" width="990" height="660" wmode="transparent" allowFullScreen="true"></embed>
+     <embed src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$_POST['folder'].'/settings.swf" bgcolor="#CCCCCC" FlashVars="spntype='.base64_encode($datele).'&loggedin='.$loggedin.'" width="990" height="660" wmode="transparent" allowFullScreen="true"></embed>
      </object>';
    
    }
@@ -1414,19 +1414,19 @@ if(!empty($get_list)){
 	
 	if($r->commercial=="yes"){ $comm = " - Commercial skin"; }else{ $comm = " - Free skin"; }
     
-    $skinpath = oQeyPluginRepoPath().'/skins/'.$r->folder.'/';
+    $skinpath = oQeyPluginRepoPath().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/';
 	$sfpath = $skinpath.'settings.swf';
     
     if(is_file($sfpath)){ $skoptions = '<a href="#set_skin_options" class="set_skin_options" id="skopt'.$r->id.'" rel="'.$r->folder.'">Skin Options</a> | '; }else{ $skoptions = ""; }
     
        echo '<tr id="skink_tr_'.$r->id.'">
              <td width="170" height="120" align="center" valign="middle">
-			 <img src="'.oQeyPluginRepoUrl().'/skins/'.$r->folder.'/'.$r->folder.'.jpg" alt="skin" width="150" height="100" style="border:#999999 solid thin; margin-left:15px;" >
+			 <img src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/'.$r->folder.'.jpg" alt="skin" width="150" height="100" style="border:#999999 solid thin; margin-left:15px;" >
 			 </td>
              <td width="460" align="left" valign="top" style="margin-left:10px; padding:10px;">
 			 <h4>'.urldecode($r->name).$comm.'</h4>
              '.urldecode($r->description).'<br/>
-             Skin files location: <code>/skins/'.$r->folder.'</code>.
+             Skin files location: <code>/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'</code>.
 			 <p>'.$skoptions.'<a href="#set_as_default" class="set_as_default" id="'.$r->id.'">Set as default</a> | <a href="#delete_this_skin" class="delete_this_skin" id="'.$r->id.'">Move to trash</a></p>
              </td>
              <td width="270" align="left" valign="top" style="margin-left:10px; padding:5px;">';
