@@ -594,7 +594,7 @@ function AddoQeyGallery($atts){
            if($i->img_type!="video"){
           
              $imgs .= '<p style="margin-left:auto; margin-right:auto;display:block;text-align:center;">
-	                  <img src="'.$gimg.trim($i->title).'" alt="Photo '.trim($i->alt).'" style="margin-top:1px;height:auto;max-width:100%;"/></p>'; 
+	                  <img src="'.$gimg.trim($i->title).'" alt="Photo '.urldecode(trim($i->alt)).'" style="margin-top:1px;height:auto;max-width:100%;"/></p>'; 
              
              if(get_option('oqey_show_captions_under_photos')=="on"){
                 
