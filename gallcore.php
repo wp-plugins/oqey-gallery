@@ -569,7 +569,7 @@ function AddoQeyGallery($atts){
     
         if ($isCrawler){
             
-           $imgs = "<p align='center'>".$gal_title."</p>";
+           $imgs = "<p align='center'>".urldecode($gal_title)."</p>";
         
         }else{ 
             
@@ -601,10 +601,10 @@ function AddoQeyGallery($atts){
 		$comments = '';
 		
 		if(!empty($i->comments)){
-		   $comments = ' | '.trim($i->comments);
+		   $comments = ' | '.trim(urldecode($i->comments));
 	        }
 			       
-                $imgs .= '<p class="oqey_p_comments">'.trim($i->alt).$comments."</p>";
+                $imgs .= '<p class="oqey_p_comments">'.trim(urldecode($i->alt)).$comments."</p>";
                 
              }
           
