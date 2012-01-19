@@ -174,7 +174,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
        
        <?php
            $skinpath = oQeyPluginRepoPath().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder;
-	       $sfpath = $skinpath.'settings.swf';  
+	       $sfpath = $skinpath.'/settings.swf';  
            if(is_file($sfpath)){ 
               
               $skoptions = '<a href="#set_skin_options" class="set_skin_options" id="skopt'.$r->id.'" rel="'.$r->folder.'">Skin Options</a>'; 
