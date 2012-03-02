@@ -52,7 +52,7 @@ function oqey_db_install(){
 	add_option("oqey_pause_between_tran", "6" ,'', 'no');
 	add_option("oqey_LoopOption", "on" ,'', 'no');
 	add_option("oqey_gall_title_no", "on" ,'', 'no');
-    add_option("oqey_flash_gallery_true", "on" ,'', 'no');
+    //add_option("oqey_flash_gallery_true", "on" ,'', 'no');
 	add_option("oqey_backlinks", "on" ,'', 'no');
 	add_option("oqey_BorderOption", "on" ,'', 'no');
 	add_option("oqey_AutostartOption", "" ,'', 'no');
@@ -85,6 +85,9 @@ function oqey_db_install(){
    $oqey_video = $wpdb->prefix . "oqey_video";
    
    if(!$wpdb->get_var("SHOW TABLES LIKE '$oqey_galls'")){
+    
+    add_option("oqey_flash_gallery_true", "on" ,'', 'no');//add this option if on the fisrt install
+    
 	$sql = "CREATE TABLE `" . $oqey_galls . "` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`title` tinytext NOT NULL,
