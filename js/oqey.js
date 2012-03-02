@@ -19,7 +19,7 @@ function oqey_e(pv, nr, t, optouch, incolums, pfv, allimages ){
         var t = t.replace(/\[/g, '<');
 		var t = t.replace(/\]/g, '>');
 
-   if(pv.major<8 || pfv=="on"){	
+   if( ( pv.major>8 && pfv=="on") || pv.major<8 || pfv=="on" ){	
 		var res = oqeyurldecode(t);		
 		jQuery("#oqey_image_div" + nr).show();
         jQuery("#flash_gal_" + nr).hide();
