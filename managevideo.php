@@ -587,5 +587,5 @@ jQuery("#videolink").click(function(){
 <br class="clear"/>
 <div style="border-width:1px;border-style:solid;line-height:1;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;width:880px;padding:10px;border-color:#dfdfdf; text-align:justify;">
 <?php _e('Use this section to add videos to your website. We strongly recommend to first convert your videos to *.mp4 video using this free utility - Miro Video Converter', 'oqey-gallery') ?>  <a href="http://www.mirovideoconverter.com/" target="_blank">http://www.mirovideoconverter.com</a> 
- <?php _e('Converting your video content to mp4 will make it accessible from both flash enabled browsers and html5 devices. It is also recommended to upload video content via ftp when uploading files of a size above your server maximum upload limit.
-</div>', 'oqey-gallery') ?>
+ <?php _e('Converting your video content to mp4 will make it accessible from both flash enabled browsers and html5 devices. It is also recommended to upload video content via ftp when uploading files of a size above your server maximum upload limit.', 'oqey-gallery') ?>
+</div>
