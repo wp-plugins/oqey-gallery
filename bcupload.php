@@ -185,8 +185,7 @@ if($_FILES['Filedata']['size']>0){
                         
                         $exif = "default";
                         
-                    } 
-                          
+                    }                          
            
                       $wpdb->query( $wpdb->prepare( "INSERT INTO $oqey_images (title, gal_id, alt, status, img_type, meta_data) 
                                                                        VALUES (%s, %d, %s, %d, %s, %s)",
