@@ -332,7 +332,6 @@ function oqey_no_skins_installed(){
 function oqey_init_method() { 
     
    $oqey_dir = basename(dirname(__FILE__));
-   echo $oqey_dir;
    load_plugin_textdomain('oqey-gallery', false, $oqey_dir . '/languages'); 
    oqey_check_upgrade();//make update if need to do
 
