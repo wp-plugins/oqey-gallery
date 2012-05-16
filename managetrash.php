@@ -283,9 +283,9 @@ foreach($galls as $gal){
 	          <input type="button" name="doapply" class="doapply" value="'.__('Apply', 'oqey-gallery').'"/>
 	          </div>
             </td>
-            <td width="100" align="left" valign="middle"><input name="selectall" type="checkbox" class="selectall"/>&nbsp;<span class="seelectmessage">'.__('select all', 'oqey-gallery').'</span></td>
+            <td width="150" align="left" valign="middle"><input name="selectall" type="checkbox" class="selectall"/>&nbsp;<span class="seelectmessage">'.__('select all', 'oqey-gallery').'</span></td>
             <td width="396" align="left" valign="middle"><div class="messages">&nbsp;</div></td>
-            <td width="104" align="left" valign="middle">&nbsp;</td>
+            <td width="54" align="left" valign="middle">&nbsp;</td>
           </tr>
           </table>';
 

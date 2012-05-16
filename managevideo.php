@@ -53,7 +53,6 @@ if(isset($_GET['scaner'])){
 
     foreach($files as $file){
 
-
       $path = pathinfo($file);
 
         if (in_array( strtolower($path['extension']), $ext) ){	
@@ -85,7 +84,7 @@ if(isset($_GET['scaner'])){
    
     $mesaj = '<div class="wrap">
               <div class="updated fade" id="message" style="width:884px;">
-              <p>'.$d.__('new video files found', 'oqey-gallery').'</p>
+              <p>'.$d."&nbsp;".__('new video files found', 'oqey-gallery').'</p>
               </div>
               </div>';
               
@@ -264,7 +263,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 
 <div class="postbox" style="width:900px;">
 <div align="left" style="margin:15px;">
-Notes: <br />
+<?php _e('Notes', 'oqey-gallery'); ?>: <br />
          * <?php echo oqey_uploadSize(); ?><br />
          * <?php _e('You may upload new video files directly to your plugin video directory via ftp', 'oqey-gallery'); ?>.<br />
          * <?php _e('Your video folder location', 'oqey-gallery'); ?>:<b> <?php echo get_option('siteurl').'/wp-content/oqey_gallery/video/'.oqey_getBlogFolder($wpdb->blogid); ?></b>    
@@ -366,7 +365,7 @@ function SaveVideoImage(){
 		  cache: false,
 		  success: function(data){
 			jQuery("#video_content").html(data);
-            jQuery("#all_images").dialog({ width: 860, height: 600, resizable: false, autoOpen: true, title: 'Images', modal: true, draggable: false });
+            jQuery("#all_images").dialog({ width: 860, height: 600, resizable: false, autoOpen: true, title: '<?php _e('Images', 'oqey-gallery'); ?>', modal: true, draggable: false });
             
             jQuery(".videoimage").click(function(){      
                 

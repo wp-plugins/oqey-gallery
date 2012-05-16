@@ -274,7 +274,7 @@ function oQeyGetAllGalleries(){
     
     $get_list = $wpdb->get_results("SELECT * FROM $oqey_galls WHERE status !=2 ORDER BY gall_order ASC, id DESC");
     $r = "";
-    $r .= '<table width="900" border="0" cellspacing="0" cellpadding="3" id="gallerytable" class="tablesorter">
+    $r .= '<table width="900" border="0" cellspacing="0" cellpadding="0" id="gallerytable" class="tablesorter">
            <tbody id="sortable">';
     if(!empty($get_list)){
 	 foreach ($get_list as $list){   
@@ -286,7 +286,7 @@ function oQeyGetAllGalleries(){
                 <img src="'.oQeyPluginUrl().'/images/preview_button.png" title="'.__('Click to preview this gallery', 'oqey-gallery').'"/></a>
 			 </td>
              <td align="left" width="50">ID: '.$list->id.'</td>
-             <td align="left" width="720" valign="middle"><div class="dblclick" id="gall_id_'.$list->id.'">'.$list->title.'</div></td>
+             <td width="720" valign="middle"><div class="dblclick" id="gall_id_'.$list->id.'">'.$list->title.'</div></td>
              <td width="30" align="center" valign="middle" class="lasttd">
                <a href="#delete" onclick="deleteGallery(\''.$list->id.'\'); return false;" class="hiddenm">
 			    <img src="'.oQeyPluginUrl().'/images/remove_button.png" width="24" height="24" title="'.__('Click to move to trash this gallery', 'oqey-gallery').'"/>
@@ -486,16 +486,16 @@ if ( is_ssl() ){
 
 $datele = $gal->id.'--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.$_POST['wpnonce'];
 
-$resp["response"] .= '<table width="900" border="0" cellspacing="0" cellpadding="0">
+$resp["response"] .= '<table width="900" border="1" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="40" align="right" valign="middle">
-        <a href="#back_to_all_galleries" id="view_all_galleries"><img src="'.oQeyPluginUrl().'/images/back_to_list.png" title="back to all galleries" width="28" height="28" class="imgp"/></a>
+    <td width="32" align="right" valign="middle">
+        <a href="#back_to_all_galleries" id="view_all_galleries"><img src="'.oQeyPluginUrl().'/images/back_to_list.png" title="'.__('back to all galleries', 'oqey-gallery').'" width="28" height="28" class="imgp"/></a>
     </td>
     <td width="32" align="right" valign="middle">
-        <a href="#add_manage_music" id="oqeymusic"><img src="'.oQeyPluginUrl().'/images/music_button.png" title="add / manage music" width="28" height="28" class="imgp"/></a>
+        <a href="#add_manage_music" id="oqeymusic"><img src="'.oQeyPluginUrl().'/images/music_button.png" title="'.__('add / manage music', 'oqey-gallery').'" width="28" height="28" class="imgp"/></a>
     </td>
     <td width="32" align="right" valign="middle">
-        <a href="#add_manage_skins" id="oqeyskin"><img src="'.oQeyPluginUrl().'/images/skin_button.png" title="add / manage skins" width="28" height="28" class="imgp"/></a>
+        <a href="#add_manage_skins" id="oqeyskin"><img src="'.oQeyPluginUrl().'/images/skin_button.png" title="'.__('add / manage skins', 'oqey-gallery').'" width="28" height="28" class="imgp"/></a>
     </td>
     <td width="188" align="right" valign="middle">
     <div id="dodiv" style="margin-left:10px;">
@@ -507,9 +507,9 @@ $resp["response"] .= '<table width="900" border="0" cellspacing="0" cellpadding=
 	<input type="button" name="doapply" id="doapply" value="'.__('Apply', 'oqey-gallery').'"/>
 	</div>
     </td>
-    <td width="98" align="left" valign="middle"><input name="selectall" type="checkbox" id="selectall">&nbsp;<span id="seelectmessage">'.__('select all', 'oqey-gallery').'</span></td>    
-    <td width="100" align="center" valign="middle">'.__('Gallery ID', 'oqey-gallery').': '.(int)$_POST['newgallid'].' </td>
-    <td width="240" align="center" valign="middle">'.__('Shortcode', 'oqey-gallery').': <span style="background-color:#CCC;">[oqeygallery id='.(int)$_POST['newgallid'].'] </span></td>
+    <td width="130" align="left" valign="middle"><input name="selectall" type="checkbox" id="selectall">&nbsp;<span id="seelectmessage">'.__('select all', 'oqey-gallery').'</span></td>    
+    <td width="110" align="center" valign="middle">'.__('Gallery ID', 'oqey-gallery').': '.(int)$_POST['newgallid'].' </td>
+    <td width="206" align="center" valign="middle">'.__('Shortcode', 'oqey-gallery').': <span style="background-color:#CCC;">[oqeygallery id='.(int)$_POST['newgallid'].'] </span></td>
     <td width="30" align="center" valign="middle">
     
        <a href="#add_video" id="addvideofile"><img src="'.oQeyPluginUrl().'/images/addvideo.png" title="'.__('add video file', 'oqey-gallery').'" class="imgp" width="28" height="28" /></a>
@@ -1397,10 +1397,9 @@ if(!empty($get_list)){
 
 		echo '<div>
               <p>'.__('Commercial key', 'oqey-gallery').':<br/>
-              <input name="comkey" class="comkey" type="text" value="'.$r->comkey.'" id="key'.$r->id.'" style="background-color:#CCC;width:210px;"/>
-			  <input type="button" name="savekey" class="savekey" id="'.$r->id.'" value="'.__('Save', 'oqey-gallery').'" style="background-color:#CCC;width:43px;">
+              <input name="comkey" class="comkey" type="text" value="'.$r->comkey.'" id="key'.$r->id.'" style="background-color:#CCC;width:190px;"/>
+			  <input type="button" name="savekey" class="savekey" id="'.$r->id.'" value="'.__('Save', 'oqey-gallery').'" style="background-color:#CCC;width:63px;">
               </p>
-              <p>
               <form action="http://oqeysites.com/paypal/oqeypaypal.php" name="buyskin" method="post">
               <input type="hidden" name="oqey" value="qwe1qw5e4cw8c7fv8h7" />
               <input type="hidden" name="website" value="'.urlencode(get_option('siteurl')).'" />
@@ -1409,7 +1408,6 @@ if(!empty($get_list)){
         echo '<input type="text" name="d" value="discount code" class="discount_code" style="background-color:#CCC; width:259px;"/>'; 
         echo '<a href="#buy_this_skin" class="buy_this_skin"><img src="'.oQeyPluginUrl().'/images/btn_buynowcc_lg.gif" style="margin-top:8px;" /></a>
               </form>
-			  </p>
               </div>';
 		}
 		}
@@ -1440,6 +1438,8 @@ function oQeySaveSkinKey(){
    
    if($upd){
       _e('Skin key was saved.', 'oqey-gallery');
+   }else{ 
+    _e('Key already was updated.', 'oqey-gallery'); 
    }
    die();
 }
@@ -1761,7 +1761,7 @@ function oQeyScanForImagesForVideo(){
        $f_link_u = str_replace( OQEY_ABSPATH, $url, $img);
        if($f_link == $f_link_u){ $bg = "background:#AECFF0;"; }  
        echo "<div style='width:190px; height:110px; padding:4px; margin:1px; display: table-cell; text-align: center; vertical-align: bottom; border: 1px #999 solid; float:left; ".$bg."'>
-             <img src='".$f_link_u."' style='max-width:150px; max-height:100px; margin-top: 5px; margin-right: auto; margin-bottom: auto; margin-left: auto;' class='videoimage'/>
+             <img src='".$f_link_u."' style='max-width:150px; max-height:100px; margin-top: 5px; margin-right: auto; margin-bottom: auto; margin-left: auto;' class='videoimage' title='".$f_link_u."' />
              </div>";
        $bg = "";
        

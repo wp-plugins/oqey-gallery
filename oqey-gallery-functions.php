@@ -245,7 +245,7 @@ function oqey_image_resize( $file, $max_w, $max_h, $crop = false, $suffix = null
     $ignore_files = array("index.php", "index.html", "wp-config.php");
     $ignore_regex = '/^_/';
     // skip these directories
-    $ignore_dirs = array(".", "..", "images", "dev", "lib", "data", "osh", "fiq", "google", "stats", "_db_backups", "maps", "php_uploads", "test", "plugins", "themes", "wp-admin", "wp-includes", "galthmb", "galimg", "thumbs", "upgrade", "skins");
+    $ignore_dirs = array(".", "..", "images", "dev", "lib", "data", "osh", "fiq", "google", "stats", "_db_backups", "maps", "php_uploads", "test", "plugins", "themes", "wp-admin", "wp-includes", "galthmb", "galimg", "iphone", "thumbs", "upgrade", "skins");
 
     // run through content of root directory
     $dir_content = scandir($root_dir);

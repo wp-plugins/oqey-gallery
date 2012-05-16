@@ -86,9 +86,10 @@ if( !$sql=$wpdb->get_row( $wpdb->prepare( "SELECT * FROM $oqey_skins WHERE folde
        }            
      }
 
-     $mesaj = '<p class="updated fade">'.$d.__('new skins found.', 'oqey-gallery').'</p>';
+     $mesaj = '<p class="updated fade">'.$d."&nbsp;".__('new skins found.', 'oqey-gallery').'</p>';
 }
 ?>
+
 <script type="text/javascript">
 function refreshPage(){ window.location = "<?php echo admin_url('admin.php?page=oQeySkins&scaner=true'); ?>"; }
 </script>
@@ -156,8 +157,8 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
    
    if(!empty($r)){
    
-   if($r->commercial=="yes"){ $comm = ' - '._e('Commercial skin', 'oqey-gallery'); }else{ $comm = ' - '._e('Free skin', 'oqey-gallery'); }
-   echo '<img src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/'.$r->folder.'.jpg" alt="" width="150" height="100" style="border:#999999 solid thin;"/>';
+      if($r->commercial=="yes"){ $comm = ' - '.__('Commercial skin', 'oqey-gallery'); }else{ $comm = ' - '.__('Free skin', 'oqey-gallery'); }
+          echo '<img src="'.oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$r->folder.'/'.$r->folder.'.jpg" alt="" width="150" height="100" style="border:#999999 solid thin;" />';
   
   }
   ?>
@@ -204,8 +205,8 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
  <div style="margin-right:10px; padding:5px;">
                <p>
                 <?php _e('Commercial key', 'oqey-gallery'); ?>:<br/>
-                 <input name="comkey" class="comkey" type="text" value="<?php echo $r->comkey; ?>" id="key<?php echo $r->id; ?>" style="background-color:#CCC; width:210px;" />
-				 <input type="button" name="savekey" class="savekey" id="<?php echo $r->id; ?>" value="<?php _e('Save', 'oqey-gallery'); ?>" style="background-color:#CCC; width:43px; border:none;">
+                 <input name="comkey" class="comkey" type="text" value="<?php echo $r->comkey; ?>" id="key<?php echo $r->id; ?>" style="background-color:#CCC; width:190px;" />
+				 <input type="button" name="savekey" class="savekey" id="<?php echo $r->id; ?>" value="<?php _e('Save', 'oqey-gallery'); ?>" style="background-color:#CCC; width:63px; border:none;" />
                </p>
 <p>
 <form action="http://oqeysites.com/paypal/oqeypaypal.php" name="buyskin" method="post">
@@ -233,7 +234,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 
 <div class="postbox" style="width:900px;">
 <div align="left" style="margin:15px;">
-Notes: <br />
+<?php _e('Notes', 'oqey-gallery'); ?>: <br />
          * <?php echo oqey_uploadSize(); ?><br />
          * <?php _e('You may upload new skin files directly to your plugin directory via ftp.', 'oqey-gallery'); ?><br />
          * <?php _e('Your skins folder location', 'oqey-gallery'); ?>: <b><?php echo oQeyPluginRepoUrl().'/skins/'.oqey_getBlogFolder($wpdb->blogid); ?></b>       
@@ -333,13 +334,14 @@ jQuery.post(ajaxurl, { action:"oQeyGetAllInstalledSkins", allskins: "yes" },
 			  
               var id = jQuery(this).attr("id");
 			  var comkey = jQuery("#key" + id).val();
-			
-			  jQuery.post(ajaxurl, { action: "oQeySaveSkinKey", savekey: id, comkey: comkey },
-              function(r){
-			      jQuery("#save").hide().html('<p class="updated fade">' + r + '<\/p>').fadeIn("slow");
+			  
+              if(jQuery.trim(comkey)!=""){
+			    jQuery.post(ajaxurl, { action: "oQeySaveSkinKey", savekey: id, comkey: comkey },
+                  function(r){
+			        jQuery("#save").hide().html('<p class="updated fade">' + r + '<\/p>').fadeIn("slow");
 			 
-              });
-            
+                  });
+              }
 			});
 
 			jQuery(".discount_code").click(function(){	

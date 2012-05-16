@@ -47,7 +47,7 @@ if(isset($_GET['scaner'])){
 
   }
 
-    $mesaj = '<p class="updated fade">'.$d.__('new audio files found.', 'oqey-gallery').'</p>';
+    $mesaj = '<p class="updated fade">'.$d.'&nbsp;'.__('new audio files found.', 'oqey-gallery').'</p>';
   
 }
 ?>
@@ -225,7 +225,7 @@ $i++;
 </div>
 <div class="postbox" style="width:800px;">
 <div align="left" style="margin:15px;">
-Notes: <br />
+<?php _e('Notes', 'oqey-gallery'); ?>: <br />
          * <?php echo oqey_uploadSize(); ?><br />
          * <?php _e('You may upload new audio files directly to your plugin audio directory via ftp.', 'oqey-gallery'); ?><br />
          * <?php _e('Your audio folder location:', 'oqey-gallery'); ?><b> <?php echo get_option('siteurl').'/wp-content/oqey_gallery/music/'.oqey_getBlogFolder($wpdb->blogid); ?></b>       

@@ -468,13 +468,13 @@ jQuery("#selectall").click(function(){
      if (jQuery(this).attr('checked')){ 
          
          jQuery('#sortablegalls input').attr('checked', true); 
-         jQuery('#seelectmessage').text('clear all');
+         jQuery('#seelectmessage').text('<?php _e('clear all', 'oqey-gallery'); ?>');
          jQuery("#sortablegalls li").css('background-color', '#C0CFEF'); 
     
     }else{
          
          jQuery('#sortablegalls input').attr('checked', false); 
-         jQuery('#seelectmessage').text('select all');
+         jQuery('#seelectmessage').text('<?php _e('select all', 'oqey-gallery'); ?>');
          jQuery("#sortablegalls li").css('background-color', '#F8F8F8'); 
          
     }	
@@ -696,16 +696,13 @@ jQuery.post( ajaxurl, { action: 'oQeyGetPreviewGallery', previewid: id, flash: f
             indicator : '<?php _e('Updating...', 'oqey-gallery'); ?>',
             tooltip   : "<?php _e('Double-click to rename...', 'oqey-gallery'); ?>",
             event     : "dblclick",
-            style  : "inherit",
-	        width : "530px",
+	        width : "500px",
 	        height : "15px",
             submitdata : function ( value, settings ) { return { "action": 'oQeyEditGalleryTitle' }; }
     });
 
    hoverGallery();
 });
-
-
 
 jQuery('#newtitle').keypress(function(e) {
         if(e.which == 13) {
