@@ -838,17 +838,12 @@ function AddoQeyGallery($atts){
    
    $oqeyblogid = oqey_getBlogFolder($wpdb->blogid);
  
- 
 ob_start();	
 print <<< SWF
-<div id="oqey_image_div{$oqeycounter}" style="position:relative;width:{$oqey_width_n}px;height:{$custom_height_n};display:none;margin: 0 auto;{$div_custom_margin}{$custom_bg_img}">
-
+<div class="responsive_oqey" id="oqey_image_div{$oqeycounter}" style="position:relative;width:{$oqey_width_n}px;height:{$custom_height_n};display:none;margin: 0 auto;{$div_custom_margin}{$custom_bg_img}">
 {$arrowleft}{$arrowtight}{$galtitle}
-
 <div id="image{$oqeycounter}" style="width:{$c_width}px;height:{$img_holder_h};display:none;background:transparent;margin: 0 auto;{$custom_margin_top}" class="oqey_images"></div>
-
 {$oqeybacklink}
-
 </div>
 <script type="text/javascript">
       var flashvars{$oqeycounter} = {
@@ -870,18 +865,14 @@ print <<< SWF
     oqey_e(pv, {$oqeycounter}, '{$imgs}', '{$optouch}', '{$incolums}', '{$pfv}', '{$allimages}');
     });
     var htmlPlayer = document.getElementsByTagName('video');
-    function pausePlayer(){ for(var i = 0; i < htmlPlayer.length; i++){ htmlPlayer[i].pause(); }}</script></div>
+    function pausePlayer(){ for(var i = 0; i < htmlPlayer.length; i++){htmlPlayer[i].pause();} }</script></div>
 SWF;
 $output = ob_get_contents();
 ob_end_clean();
 $oqeycounter ++;
-
 return $output;
 }
-
 }//end crawler check
-
 }
-
 }
 ?>

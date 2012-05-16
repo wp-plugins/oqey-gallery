@@ -102,6 +102,13 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Changelog ==
 
+=0.5.3=
+
+* Multilanguage support
+* Responsive feature based on css
+* Few minor bugs fixed
+* Stability improvements
+
 =0.5.2=
 
 * RSS issues fixed
@@ -200,6 +207,20 @@ Just edit css/oqeystyle.css and make all changes that you need.
 * The first stable version.
 
 == Upgrade Notice ==
+
+=0.5.3=
+
+* Multilanguage support
+* Responsive feature based on css
+* Few minor bugs fixed
+* Stability improvements
+
+=0.5.2=
+
+* RSS issues fixed
+* SEO bug fixed
+* Few minor bugs fixed
+* Stability improvements
 
 =0.5.1=
 
