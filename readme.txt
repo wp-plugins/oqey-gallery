@@ -55,6 +55,9 @@ Features:
 * Import from existing slideshows / galleries created by supported plugins without duplicating content
 
 
+If you have created your own language pack you can send gettext PO and MO files to oqeysites.
+
+
 == Installation ==
 
 1. Unzip the plugin archive and put oqey-gallery  folder into your plugins directory (wp-content/plugins/)
