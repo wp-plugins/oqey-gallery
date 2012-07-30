@@ -203,7 +203,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 </tr>
 <tr valign="top">
 <td height="25" align="left" valign="middle" scope="row"><?php _e('Limit the image size on fullscreen', 'oqey-gallery'); ?></td>
-<td height="25" align="left" valign="middle"><input type="checkbox" name="oqey_limitmax" id="oqey_limitmax" <?php if(get_option('oqey_limitmax')=="on"){ echo 'checked="checked"';  } ?>/></td>
+<td height="25" align="left" valign="middle"><input type="checkbox" name="oqey_limitmax" id="oqey_limitmax" <?php if(get_option('oqey_limitmax')=="on"){ echo 'checked="checked"'; } ?>/></td>
 </tr>
 <tr valign="top" style="display:none;" class="maxon">
 <th width="230" height="25" align="left" valign="middle" scope="row"><?php _e('Width:', 'oqey-gallery'); ?></th>
@@ -215,7 +215,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 </tr>
 <tr valign="top">
 <td height="25" align="left" valign="middle" scope="row"><?php _e('Crop images to fit the gallery size', 'oqey-gallery'); ?></td>
-<td height="25" align="left" valign="middle"><input type="checkbox" name="oqey_crop_images" id="oqey_crop_images" <?php if(get_option('oqey_crop_images')=="on"){ echo 'checked="checked"';  } ?>/></td>
+<td height="25" align="left" valign="middle"><input type="checkbox" name="oqey_crop_images" id="oqey_crop_images" <?php if(get_option('oqey_crop_images')=="on"){ echo 'checked="checked"'; } ?>/></td>
 </tr>
 <tr valign="top">
 <th height="25" align="left" valign="middle" scope="row"><div align="left"><?php _e('Background Color', 'oqey-gallery'); ?></div></th>
@@ -259,9 +259,9 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
   <tr>
     <td width="230" height="35"><?php _e('Effect transition type:', 'oqey-gallery'); ?></td>
     <td width="670">
-       <input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type" value="fade" <?php if(get_option('oqey_effect_transition_type')=="fade"){ echo 'checked="checked"'; } ?> style="margin-top:2px;"/>
+       <input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type" value="fade" <?php if(get_option('oqey_effect_transition_type')=="fade"){ echo 'checked="checked"'; } ?> style="margin-top:0px;"/>
     <?php _e('Fade', 'oqey-gallery'); ?>&nbsp;&nbsp;
-       <input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type1" value="slide" <?php if(get_option('oqey_effect_transition_type')=="slide"){ echo 'checked="checked"'; } ?> style="margin-top:2px;"/>
+       <input type="radio" name="oqey_effect_transition_type" id="oqey_effect_transition_type1" value="slide" <?php if(get_option('oqey_effect_transition_type')=="slide"){ echo 'checked="checked"'; } ?> style="margin-top:0px;"/>
     <?php _e('Slide', 'oqey-gallery'); ?>   
     </td>
 </tr>
@@ -324,11 +324,11 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
 <tr valign="top">
 <th align="left" valign="top" scope="row"><?php _e('Display photos using', 'oqey-gallery'); ?></th>
 <td align="left" valign="top">
-<input type="radio" name="oqey_noflash_options" id="oqey_noflash_options1" value="incolums" <?php if(get_option('oqey_noflash_options')=="incolums"){ echo 'checked="checked"'; } ?> style="margin-top:2px;"/> 
+<input type="radio" name="oqey_noflash_options" id="oqey_noflash_options1" value="incolums" <?php if(get_option('oqey_noflash_options')=="incolums"){ echo 'checked="checked"'; } ?> style="margin-top:0px;"/> 
 &nbsp;<?php _e('Column center aligned.', 'oqey-gallery'); ?><br />
-<input type="radio" name="oqey_noflash_options" id="oqey_noflash_options2" value="injsarr" <?php if(get_option('oqey_noflash_options')=="injsarr"){ echo 'checked="checked"'; } ?> style="margin-top:2px;"/> 
+<input type="radio" name="oqey_noflash_options" id="oqey_noflash_options2" value="injsarr" <?php if(get_option('oqey_noflash_options')=="injsarr"){ echo 'checked="checked"'; } ?> style="margin-top:0px;"/> 
 &nbsp;<?php _e('Javascript slideshow with navigation arrows.', 'oqey-gallery'); ?><br />
-<input type="radio" name="oqey_noflash_options" id="oqey_noflash_options3" value="injsarrtouch" <?php if(get_option('oqey_noflash_options')=="injsarrtouch"){ echo 'checked="checked"'; } ?> style="margin-top:2px;"/> 
+<input type="radio" name="oqey_noflash_options" id="oqey_noflash_options3" value="injsarrtouch" <?php if(get_option('oqey_noflash_options')=="injsarrtouch"){ echo 'checked="checked"'; } ?> style="margin-top:0px;"/> 
 &nbsp;<?php _e('Javascript slideshow with &quot;touch and slide&quot; option (for touchscreen devices).', 'oqey-gallery'); ?></td>
 </tr>
 <tr valign="top">
