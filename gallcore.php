@@ -276,7 +276,6 @@ function oqey_top_page(){
 </div>
 
 <div class="metabox-holder has-right-sidebar">
-
 <!--
 <div class="inner-sidebar" style="margin-right:30px;">
  <div id="side-sortables" class="meta-box-sortabless ui-sortable" style="position: relative;">
@@ -296,7 +295,7 @@ function oqey_top_page(){
 	  <div class="meta-box-sortabless">
         
        <div class="postbox" style="width:870px;">
-        <h3 class="hndle"><span>News</span></h3>
+        <h3 class="hndle"><span><?php _e('News', 'oqey-gallery'); ?></span></h3>
 	    <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">        
         <p>
         <?php               
@@ -324,7 +323,7 @@ function oqey_top_page(){
       </div>
 
       <div class="postbox" style="width:870px;">
-				<h3 class="hndle"><span>Donate</span></h3>                
+				<h3 class="hndle"><span><?php _e('Donate', 'oqey-gallery'); ?></span></h3>                
                 <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;"> 
                 <div align="left"><p>If you really like this plugin and find it useful, help to keep this plugin free and constantly updated by clicking the donate button below.</p></div>
                 
@@ -340,7 +339,7 @@ function oqey_top_page(){
       </div>
         
       <div class="postbox" style="width:870px;">
-				<h3 class="hndle"><span>About</span></h3>
+				<h3 class="hndle"><span><?php _e('About', 'oqey-gallery'); ?></span></h3>
 				<div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">
                 <p>oQey Gallery is a premium grade plugin for managing images and video, creating photo slideshows with music, photo &amp; video galleries that works fine under iPhone / iPad and other mobile devices. Flash version of the slideshow is automatically replaced by the HTML5 | Java slideshow on a non-flash device. Flash gallery supports customizable skins, so you can change the way it looks with a few clicks using the skin options tool. Commercial skins are also available as well as custom built photo / video galleries and slideshows for professionals. This plugin uses built-in WP functions and a simple batch upload system. 
                    Check this out on <a href="http://oqeysites.com/" target="_blank">oqeysites.com</a></p>
