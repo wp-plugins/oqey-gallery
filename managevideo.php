@@ -152,7 +152,13 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
     </div>    
     
     </td>
-    <td width="257" valign="middle">&nbsp;</td>
+    <td width="257" valign="middle">
+    <div style="margin-left:10px; margin-top:5px; float:left; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </td>
     <td width="128" valign="middle">&nbsp;</td>
     <td width="64" valign="middle">&nbsp;</td>
     <td width="65" valign="middle"> 
@@ -231,8 +237,8 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
          <td width="502"><span class="dblclick" id="video_title_<?php echo $video->id; ?>"><?php echo $video->title; ?></span></td>
         </tr>
         <tr>
-         <td style="height: 17px; vertical-align: middle;"><?php _e('Shortcode', 'oqey-gallery'); ?>:</td>
-         <td><span style="background-color: rgb(204, 204, 204); width:auto;">[oqeyvideo id=<?php echo $video->id; ?>]</span></td>
+         <td style="height: 17px; vertical-align: middle;"><?php //_e('Shortcode', 'oqey-gallery'); ?></td>
+         <td><!--<span style="background-color: rgb(204, 204, 204); width:auto;">[oqeyvideo id=<?php //echo $video->id; ?>]</span> --></td>
         </tr>
         <tr>
          <td valign="top"><?php _e('Description', 'oqey-gallery'); ?>:</td>

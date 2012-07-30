@@ -18,7 +18,13 @@ echo '<div id="message" style="width:903px; margin-bottom:10px;"><p class="updat
 }
 ?>
 <div class="wrap">
-    <h2><?php _e('oQey Gallery settings', 'oqey-gallery'); ?></h2>
+    <h2 style="width: 930px;"><?php _e('oQey Gallery settings', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
 </div>
 
 <a href="<?php echo admin_url('admin.php?page=oQeySkins&showskins=yes'); ?>"><img src="<?php echo oQeyPluginUrl().'/images/'; ?>settings_banner.png"/></a><br /><br />
