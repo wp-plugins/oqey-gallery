@@ -20,6 +20,7 @@ Links:
 
 *	<a href="http://oqeysites.com/oqey-flash-gallery-plugin/" title="Demo gallery">Demo Gallery</a>
 *	<a href="http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/" title="FAQ">oQey Gallery FAQ</a> 
+*	<a href="http://plugins.svn.wordpress.org/oqey-gallery/languages/oqey-gallery.pot" title="POT">Download latest POT file</a>
  
 For more details, skins and examples and custom flash gallery, please visit <a href="http://oqeysites.com/" title="oQeySites">oqeysites.com</a> 
 
