@@ -95,15 +95,21 @@ function refreshPage(){ window.location = "<?php echo admin_url('admin.php?page=
 </script>
 
 <div class="wrap" style="width:900px;">
-  <h2><?php _e('Manage Skins', 'oqey-gallery'); ?></h2>  
+    <h2 style="width: 930px;"><?php _e('Manage Skins', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
   <div id="save" style="width:903px; margin-bottom:10px;"><?php echo $mesaj; ?></div>
 </div>
 
 <div class="postbox" style="height:50px; width:900px;">
 
-<table width="900" border="0" cellspacing="0" cellpadding="3">
+<table width="900" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="175" height="53" align="right" valign="middle"><?php _e('Upload a new skin', 'oqey-gallery'); ?> (*.zip)</td>
+    <td width="175" height="50" align="center"><?php _e('Upload a new skin', 'oqey-gallery'); ?> (*.zip)</td>
     <td width="123" align="right" valign="middle">
     
 <div id="flashuploader" style="width:100px; height:30px;"><a href="http://www.macromedia.com/go/getflashplayer" target="_blank"><?php _e('GET FLASH', 'oqey-gallery'); ?></a></div>	  
@@ -147,10 +153,6 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
     <td colspan="3">
       <div id="current-theme">
   <h4><?php _e('Default skin', 'oqey-gallery'); ?></h4>
-    <div style="padding-left:0; margin-top:0; float:left; width: 300px; height: 20px;">
-     <div id="fb-root"></div>
-     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
-    </div>
 </td>
     </tr>
   <tr>

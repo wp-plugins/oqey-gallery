@@ -272,7 +272,13 @@ function oqey_add_pages() {
 function oqey_top_page(){
 ?>
 <div class="wrap">
-        	<h2>oQey Gallery plugin</h2>
+    <h2 style="width: 900px;"><?php _e('oQey Gallery plugin', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
 </div>
 
 <div class="metabox-holder has-right-sidebar">
@@ -328,11 +334,6 @@ function oqey_top_page(){
                 <div align="left"><p>If you really like this plugin and find it useful, help to keep this plugin free and constantly updated by clicking the donate button below.</p></div>
                 
                 <div align="right">
-                <div style="margin-left:0px; margin-top:5px; float:left; width: 200px; height: 20px;">
-                   <div id="fb-root"></div>
-                   <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
-                   <div class="fb-send" data-href="http://oqeysites.com"></div>
-                </div>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"><input type="hidden" name="cmd" value="_s-xclick"/><input type="hidden" name="hosted_button_id" value="3ZV8CCFYAUYKJ"/><input alt="PayPal - The safer, easier way to donate online!" name="submit" src="<?php echo oQeyPluginUrl(); ?>/images/btn_donate.gif" type="image"/><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" width="1" border="0" height="1"/></form>
                 </div>
                 </div>

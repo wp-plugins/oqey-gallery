@@ -94,9 +94,15 @@ if(isset($_GET['scaner'])){
 
 <input type="hidden" id="vid" value=""/>
       
-      <div class="wrap">
-        <h2><?php _e('Manage Video', 'oqey-gallery'); ?></h2>
-      </div> 
+   <div class="wrap">
+    <h2 style="width: 930px;"><?php _e('Manage Video', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
+  </div> 
       
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
@@ -152,13 +158,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
     </div>    
     
     </td>
-    <td width="257" valign="middle">
-    <div style="margin-left:10px; margin-top:5px; float:left; width: 200px; height: 20px;">
-     <div id="fb-root"></div>
-     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
-     <div class="fb-send" data-href="http://oqeysites.com"></div>
-    </div>
-    </td>
+    <td width="257" valign="middle"></td>
     <td width="128" valign="middle">&nbsp;</td>
     <td width="64" valign="middle">&nbsp;</td>
     <td width="65" valign="middle"> 

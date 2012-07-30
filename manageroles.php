@@ -19,11 +19,19 @@ if (isset($_POST['update_roles'])){
 	$mesaj = '<div style="width:903px; margin-bottom:10px;" class="updated fade">'.__('Roles updated.', 'oqey-gallery').'</div>';
 }
 ?>
-	<div class="wrap">  
-	<h2><?php _e('Roles', 'oqey-gallery'); ?></h2>
+   <div class="wrap">  
+    <h2 style="width: 830px;"><?php _e('Roles', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
+    
     <?php echo $mesaj; ?>
 	<p><?php _e('Check the lowest level role which you consider should be given access to the following management privileges. Standard WordPress roles are supported.', 'oqey-gallery'); ?> <br />
-</div>
+   </div>
+
 	<form name="oqey_roles" id="oqey_roles" method="POST" accept-charset="utf-8" >
 		<?php wp_nonce_field('oqey_add_roles') ?>
 			<table class="form-table"> 

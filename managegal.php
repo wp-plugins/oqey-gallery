@@ -585,17 +585,18 @@ jQuery("#sortable tr").hover(
 
 <input type="hidden" value="" id="currentGalID" name="currentGalID"  />
 <div class="wrap">
-  <h2><?php _e('Manage galleries', 'oqey-gallery'); ?></h2>
+    <h2 style="width: 930px;"><?php _e('Manage galleries', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
   <div id="error">&nbsp;</div>
 </div>
 
 <!--<img src="<?php //echo oQeyPluginUrl().'/images/'; ?>upperbanddress.jpg" width="950" height="120" /><br /><br />-->
 <div class="postbox" style="height:50px; width:900px;">
-    <div style="margin-left:10px; margin-top:15px; float:left; width: 300px; height: 20px;">
-     <div id="fb-root"></div>
-     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
-     <div class="fb-send" data-href="http://oqeysites.com"></div>
-    </div>
     <div style="margin-right:2px; padding-top:3px; float:right;">
     <a href="<?php echo admin_url('admin.php?page=oQeySkins&showskins=yes'); ?>"><img src="<?php echo oQeyPluginUrl().'/images/'; ?>getmoreskinsbgn.png" width="250" height="48" /></a>    
     </div>

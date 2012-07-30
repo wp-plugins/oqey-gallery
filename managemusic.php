@@ -117,7 +117,13 @@ jQuery(".click").editable(ajaxurl, {
 	function getFlashMovie(movieName){ var isIE = navigator.appName.indexOf("Microsoft") != -1;   return (isIE) ? window[movieName] : document[movieName]; }
 </script> 
 <div class="wrap">
-        <h2><?php _e('Manage Music', 'oqey-gallery'); ?></h2>
+    <h2 style="width: 830px;"><?php _e('Manage Music', 'oqey-gallery'); ?>
+    <div style="margin-left:250px; float:right; width: 200px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+     <div class="fb-send" data-href="http://oqeysites.com"></div>
+    </div>
+    </h2>
 <?php 
   $gal_dir_musica = OQEY_ABSPATH."wp-content/oqey_gallery/music";   
   if(!is_dir($gal_dir_musica)){
@@ -133,10 +139,10 @@ jQuery(".click").editable(ajaxurl, {
 
 <div class="postbox" style="height:50px; width:800px;">
 <?php if(is_dir($gal_dir_musica)){ ?>
-<table width="800" border="0" cellspacing="0" cellpadding="5">
+<table width="800" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="225" height="50" align="right" valign="middle"><?php _e('Upload a new audio file', 'oqey-gallery'); ?> (*.mp3)</td>
-    <td width="125" height="50" align="right" valign="middle">
+    <td width="200" height="50" align="right"><?php _e('Upload a new audio file', 'oqey-gallery'); ?> (*.mp3)</td>
+    <td width="125" height="50" align="right">
     
 <div id="flashuploader" style="width:100px; height:30px;"><?php _e('GET FLASH', 'oqey-gallery'); ?></div>	
 <?php
@@ -154,7 +160,7 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 </script>
 </td>
     <td width="20" height="50">/</td>
-    <td width="430" height="50" align="left"> 
+    <td width="455" height="50" align="left"> 
     <div align="left" style="padding-top:3px;">
     <form id="scaner" name="scaner" method="post" action="<?php echo admin_url('admin.php?page=oQeyMusic&scaner=true'); ?>">     
         <input type="submit" name="scanfolder" id="scanfolder" value="<?php _e('Magic scan', 'oqey-gallery'); ?>" />              
