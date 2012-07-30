@@ -105,7 +105,6 @@ Just edit css/oqeystyle.css and make all changes that you need.
 =0.5.3=
 
 * Multilanguage support
-* Responsive feature based on css
 * Few minor bugs fixed
 * Stability improvements
 
@@ -211,7 +210,6 @@ Just edit css/oqeystyle.css and make all changes that you need.
 =0.5.3=
 
 * Multilanguage support
-* Responsive feature based on css
 * Few minor bugs fixed
 * Stability improvements
 
