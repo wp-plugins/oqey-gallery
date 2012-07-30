@@ -252,7 +252,7 @@ table.tablesorter td { border:1px solid #ccc; }
    
    #flashuploader{ width:170px; float:left; }
    #dodiv{ float:left; height:24px;}
-   #detailsimg{ padding:10px; margin-left:15px; }
+   #detailsimg{ padding-left:15px; /*margin-left:15px;*/ }
    .imgsel{ border:#7A82DE thin solid;}
    
 textarea
@@ -281,9 +281,6 @@ textarea
 #skinpostbox{ width:900px; display:none; }
 
 #muzica, .muzica{ overflow-y:auto; overflow-x:hidden; height:170px; padding:10px; margin:10px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius:3px; border:#dfdfdf 1px solid; }
-
-#currentskin{ padding-left:15px; padding-right:15px; }
-
 #skintable{}
 
 .skindiv{ width:900px; margin-left:-15px;}
@@ -306,3 +303,6 @@ p.updated{background-color:#ffffe0;border-color:#e6db55;}
 p.error{background-color:#ffebe8;border-color:#c00;}
 
 #importlist{ padding-left:20px; padding-right: 20px; margin:5px; line-height:30px;}
+
+#currentskin{ padding: 0; }
+.default-skin{ margin-left: 15px; margin-right:20px; padding: 0;}

@@ -486,7 +486,8 @@ if ( is_ssl() ){
 
 $datele = $gal->id.'--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.$_POST['wpnonce'];
 
-$resp["response"] .= '<table width="900" border="1" cellspacing="0" cellpadding="0">
+$resp["response"] .= '
+<table width="900" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td width="32" align="right" valign="middle">
         <a href="#back_to_all_galleries" id="view_all_galleries"><img src="'.oQeyPluginUrl().'/images/back_to_list.png" title="'.__('back to all galleries', 'oqey-gallery').'" width="28" height="28" class="imgp"/></a>
@@ -1434,7 +1435,7 @@ function oQeySaveSkinKey(){
    
    if ( !current_user_can('oQeySkins') ) die(__('You do not have sufficient permissions to do this.'));
   
-   $upd = $wpdb->query( $wpdb->prepare("UPDATE $oqey_skins SET comkey = %s WHERE id = %d ", esc_sql($_POST['comkey']), esc_sql($_POST['savekey']) )); 
+   $upd = $wpdb->query( $wpdb->prepare("UPDATE $oqey_skins SET comkey = %s WHERE id = %d ", esc_sql(trim($_POST['comkey'])), esc_sql($_POST['savekey']) )); 
    
    if($upd){
       _e('Skin key was saved.', 'oqey-gallery');

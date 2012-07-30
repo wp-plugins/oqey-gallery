@@ -338,23 +338,24 @@ function oqey_init_method() {
    wp_enqueue_script('swfobject'); 
    wp_enqueue_script('jquery');  
    
-   //wp_enqueue_script('applejs', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-js-drag-iphone.js', array('jquery')); 
-   //wp_enqueue_script('oqeyjs', WP_PLUGIN_URL . '/oqey-gallery/js/oqey.js', array('jquery')); 
+   wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-social.js', array('jquery')); 
+   //wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey.js', array('jquery')); 
    
    //wp_enqueue_script('oqeygalleryjs', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-gallery.js');   
    wp_register_style('oQey-front-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeystyle.css');
    wp_enqueue_style('oQey-front-css');
    
-if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries' || $_GET['page']=='oQeySkins' || $_GET['page']=='oQeyMusic' || $_GET['page']=='oQeyTrash' || $_GET['page']=='oQeyVideo' ) ){
-   wp_register_style('oQey-admin-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeyadmin.css');
-   wp_enqueue_style('oQey-admin-css');
-   wp_register_style('oQey-admin-pop-css', WP_PLUGIN_URL . '/oqey-gallery/css/jquery-ui.css');
-   wp_enqueue_style('oQey-admin-pop-css');
-   wp_enqueue_script('jquerysimplemodal', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.loadimages.min.js', array('jquery'));
-   wp_enqueue_script('jqueryeditable', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.jeditable.js', array('jquery'));   
-   wp_enqueue_script('jqueryfarbtastic', WP_PLUGIN_URL . '/oqey-gallery/js/farbtastic.js', array('jquery'));   
+   if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries' || $_GET['page']=='oQeySkins' || $_GET['page']=='oQeyMusic' || $_GET['page']=='oQeyTrash' || $_GET['page']=='oQeyVideo' ) ){
+      
+      wp_register_style('oQey-admin-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeyadmin.css');
+      wp_enqueue_style('oQey-admin-css');
+      wp_register_style('oQey-admin-pop-css', WP_PLUGIN_URL . '/oqey-gallery/css/jquery-ui.css');
+      wp_enqueue_style('oQey-admin-pop-css');
+      wp_enqueue_script('jquerysimplemodal', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.loadimages.min.js', array('jquery'));
+      wp_enqueue_script('jqueryeditable', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.jeditable.js', array('jquery'));   
+      wp_enqueue_script('jqueryfarbtastic', WP_PLUGIN_URL . '/oqey-gallery/js/farbtastic.js', array('jquery'));   
    
-   if($_GET['page']=='oQeyGalleries'){
+    if($_GET['page']=='oQeyGalleries'){
      
      wp_enqueue_script('jqueryajaxupload', WP_PLUGIN_URL . '/oqey-gallery/js/ajaxupload.js', array('jquery')); 
    
@@ -363,9 +364,9 @@ if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries
       $oqey_skins = $wpdb->prefix . "oqey_skins";
       $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins WHERE status !='2'"); 
       if(empty($r)){ add_action( 'admin_notices', 'oqey_no_skins_installed'); } 
-    /*END*/
+     /*END*/
    
-   }
+    }
     
     wp_enqueue_script('jquery-ui-core ');
     wp_enqueue_script('jquery-ui-sortable');  

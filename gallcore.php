@@ -293,30 +293,11 @@ function oqey_top_page(){
 										
 <div class="has-sidebar sm-padded">
 	<div id="post-body-content" class="has-sidebar-content">
-		<div class="meta-box-sortabless">
+	  <div class="meta-box-sortabless">
         
-<div class="postbox" style="width:870px;">
-				<h3 class="hndle"><span>About</span></h3>
-				<div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">
-                <p>oQey Gallery is a premium grade plugin for managing images and video, creating photo slideshows with music, photo &amp; video galleries that works fine under iPhone / iPad and other mobile devices. Flash version of the slideshow is automatically replaced by the HTML5 | Java slideshow on a non-flash device. Flash gallery supports customizable skins, so you can change the way it looks with a few clicks using the skin options tool. Commercial skins are also available as well as custom built photo / video galleries and slideshows for professionals. This plugin uses built-in WP functions and a simple batch upload system. 
-Check this out on <a href="http://oqeysites.com/" target="_blank">oqeysites.com</a></p>
-<p><a href="http://oqeysites.com"><img style="border: none;" src="<?php echo WP_PLUGIN_URL; ?>/oqey-gallery/images/oqeybanner.jpg" /></a></p>
-                </div>
-
-</div>
-
-<div class="postbox" style="width:870px;">
-				<h3 class="hndle"><span>oQey Themes</span></h3>                
-                <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;"> 
-	            <p>Premium Themes for WordPress from the oQey Gallery Plugin authors! Photo Galleries, Video and Music manager integrated, template-based pages, Flash driven Fullscreen capable & HTML5 compatible, iPhone / iPad friendly Themes starting from $99 only! You can test them before buying, just download, install and activate any theme you like...</p>
-                <p><div align="right"><a href="http://oqeythemes.com/" target="_blank"><img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/banner850x65.png" width="850" /></a>
-                </div></p>
-                </div>
-</div>
-
-<div class="postbox" style="width:870px;">
-	<h3 class="hndle"><span>News</span></h3>
-	<div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">        
+       <div class="postbox" style="width:870px;">
+        <h3 class="hndle"><span>News</span></h3>
+	    <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">        
         <p>
         <?php               
         $url = "http://oqeysites.com/updater/get-oqey-gallery-news.php";         	
@@ -340,19 +321,44 @@ Check this out on <a href="http://oqeysites.com/" target="_blank">oqeysites.com<
         ?>
         </p>
        </div>
-</div>
+      </div>
 
-<div class="postbox" style="width:870px;">
+      <div class="postbox" style="width:870px;">
 				<h3 class="hndle"><span>Donate</span></h3>                
                 <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;"> 
                 <div align="left"><p>If you really like this plugin and find it useful, help to keep this plugin free and constantly updated by clicking the donate button below.</p></div>
+                
                 <div align="right">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="3ZV8CCFYAUYKJ"><input alt="PayPal - The safer, easier way to donate online!" name="submit" src="<?php echo oQeyPluginUrl(); ?>/images/btn_donate.gif" type="image"/><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" width="1" border="0" height="1"/></form>
+                <div style="margin-left:0px; margin-top:5px; float:left; width: 200px; height: 20px;">
+                   <div id="fb-root"></div>
+                   <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+                   <div class="fb-send" data-href="http://oqeysites.com"></div>
+                </div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"><input type="hidden" name="cmd" value="_s-xclick"/><input type="hidden" name="hosted_button_id" value="3ZV8CCFYAUYKJ"/><input alt="PayPal - The safer, easier way to donate online!" name="submit" src="<?php echo oQeyPluginUrl(); ?>/images/btn_donate.gif" type="image"/><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" width="1" border="0" height="1"/></form>
                 </div>
                 </div>
-</div>
+      </div>
+        
+      <div class="postbox" style="width:870px;">
+				<h3 class="hndle"><span>About</span></h3>
+				<div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;">
+                <p>oQey Gallery is a premium grade plugin for managing images and video, creating photo slideshows with music, photo &amp; video galleries that works fine under iPhone / iPad and other mobile devices. Flash version of the slideshow is automatically replaced by the HTML5 | Java slideshow on a non-flash device. Flash gallery supports customizable skins, so you can change the way it looks with a few clicks using the skin options tool. Commercial skins are also available as well as custom built photo / video galleries and slideshows for professionals. This plugin uses built-in WP functions and a simple batch upload system. 
+                   Check this out on <a href="http://oqeysites.com/" target="_blank">oqeysites.com</a></p>
+                <p><a href="http://oqeysites.com"><img style="border: none;" src="<?php echo WP_PLUGIN_URL; ?>/oqey-gallery/images/oqeybanner.jpg" /></a></p>
+                </div>
 
-		</div>
+      </div>
+
+      <div class="postbox" style="width:870px;">
+				<h3 class="hndle"><span>oQey Themes</span></h3>                
+                <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;"> 
+	            <p>Premium Themes for WordPress from the oQey Gallery Plugin authors! Photo Galleries, Video and Music manager integrated, template-based pages, Flash driven Fullscreen capable &amp; HTML5 compatible, iPhone / iPad friendly Themes starting from $99 only! You can test them before buying, just download, install and activate any theme you like...</p>
+                <p><div align="right"><a href="http://oqeythemes.com/" target="_blank"><img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/banner850x65.png" width="850" /></a>
+                </div></p>
+                </div>
+      </div>
+
+	 </div>
 	</div>
  </div>
 </div>

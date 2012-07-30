@@ -142,15 +142,19 @@ $datele = '7--'.$cookies.'--'.$_COOKIE[LOGGED_IN_COOKIE].'--'.wp_create_nonce('o
 
 <div class="postbox" style="width:900px;">
 <div id="currentskin">
-<table width="900" border="0" cellspacing="0" cellpadding="0">
+<table width="870" border="0" cellspacing="0" cellpadding="0" class="default-skin">
   <tr>
     <td colspan="3">
       <div id="current-theme">
   <h4><?php _e('Default skin', 'oqey-gallery'); ?></h4>
+    <div style="padding-left:0; margin-top:0; float:left; width: 300px; height: 20px;">
+     <div id="fb-root"></div>
+     <div class="fb-like" data-href="http://www.facebook.com/oqeysites" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="tahoma"></div>
+    </div>
 </td>
     </tr>
   <tr>
-    <td width="161" height="120" align="left" valign="middle" style="margin-left:10px;">
+    <td width="161" height="120" align="left" valign="middle" style="margin-left:0;">
   <?php
    global $wpdb; 
    $r = $wpdb->get_row("SELECT * FROM $oqey_skins WHERE status ='1' LIMIT 0,1");
