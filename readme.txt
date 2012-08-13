@@ -18,7 +18,7 @@ oQey Gallery is a Photo Slideshow Plugin for WordPress with Video and Music capa
 Links:
 
 
-*	<a href="http://oqeysites.com/oqey-flash-gallery-plugin/" title="Demo gallery">Demo Gallery</a>
+*	<a href="http://oqeysites.com/category/wp-photo-gallery-skins/" title="Demo gallery">Demo Gallery</a>
 *	<a href="http://oqeysites.com/oqey-flash-gallery-plugin/oqey-gallery-faq/" title="FAQ">oQey Gallery FAQ</a> 
 *	<a href="http://plugins.svn.wordpress.org/oqey-gallery/languages/oqey-gallery.pot" title="POT">Download latest POT file</a>
  
