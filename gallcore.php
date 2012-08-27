@@ -331,7 +331,7 @@ function oqey_top_page(){
       <div class="postbox" style="width:870px;">
 				<h3 class="hndle"><span>WP Themes and Site templates</span></h3>                
                   <div class="inside" style="padding:10px auto; text-align:justify; margin: 0 auto;"> 
-	                <img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/tf_728x90_v5.gif" width="728" height="90" />
+	               <a href="http://themeforest.net/?ref=oqeysites" target="_blank"><img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/tf_728x90_v5.gif" width="728" height="90" /></a>
                   </div>
                 </div>
       </div>
