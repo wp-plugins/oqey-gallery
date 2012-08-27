@@ -330,7 +330,8 @@ function oqey_top_page(){
       
       <div class="postbox" style="width:870px;">
 				<h3 class="hndle"><span>WP Themes and Site templates</span></h3>                
-                  <div class="inside" style="padding:10px auto; text-align:justify; margin: 0 auto;"> 
+                  <div class="inside" style="font-size:13px; padding:10px; text-align:justify;"> 
+	               <p>If you are interested to buy an original WP theme, oQey Sites recommends the following themes. Check it out!</p>
 	               <a href="http://themeforest.net/?ref=oqeysites" target="_blank"><img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/tf_728x90_v5.gif" width="728" height="90" /></a>
                   </div>
       </div>
