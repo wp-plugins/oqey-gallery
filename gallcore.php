@@ -327,10 +327,18 @@ function oqey_top_page(){
         </p>
        </div>
       </div>
+      
+      <div class="postbox" style="width:870px;">
+				<h3 class="hndle"><span>WP Themes and Site templates</span></h3>                
+                  <div class="inside" style="padding:10px auto; text-align:justify; margin: 0 auto;"> 
+	                <img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/tf_728x90_v5.gif" width="728" height="90" />
+                  </div>
+                </div>
+      </div>
 
       <div class="postbox" style="width:870px;">
 				<h3 class="hndle"><span><?php _e('Donate', 'oqey-gallery'); ?></span></h3>                
-                <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;"> 
+                <div class="inside" style="font-size:13px;padding:10px auto;text-align:justify;"> 
                 <div align="left"><p>If you really like this plugin and find it useful, help to keep this plugin free and constantly updated by clicking the donate button below.</p></div>
                 
                 <div align="right">
@@ -347,15 +355,6 @@ function oqey_top_page(){
                 <p><a href="http://oqeysites.com"><img style="border: none;" src="<?php echo WP_PLUGIN_URL; ?>/oqey-gallery/images/oqeybanner.jpg" /></a></p>
                 </div>
 
-      </div>
-
-      <div class="postbox" style="width:870px;">
-				<h3 class="hndle"><span>oQey Themes</span></h3>                
-                <div class="inside" style="font-size:13px; padding:10px auto; text-align:justify;"> 
-	            <p>Premium Themes for WordPress from the oQey Gallery Plugin authors! Photo Galleries, Video and Music manager integrated, template-based pages, Flash driven Fullscreen capable &amp; HTML5 compatible, iPhone / iPad friendly Themes starting from $99 only! You can test them before buying, just download, install and activate any theme you like...</p>
-                <p><div align="right"><a href="http://oqeythemes.com/" target="_blank"><img style="border:none;" src="<?php echo oQeyPluginUrl(); ?>/images/banner850x65.png" width="850" /></a>
-                </div></p>
-                </div>
       </div>
 
 	 </div>
