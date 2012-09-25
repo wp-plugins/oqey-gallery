@@ -739,7 +739,7 @@ function AddoQeyGallery($atts){
     
 	if(get_option("oqey_backlinks")=="on"){ 
 	
-       $oqeybacklink = '<div style="font-size:11px;margin-left:auto;margin-right:auto;width:100%;text-align:center;font-family:Arial,Helvetica,sans-serif">powered by <a href="http://oqeysites.com" target="_blank">oQeySites</a></div>'; 
+       $oqeybacklink = '<div style="font-size:11px;margin-left:auto;margin-right:auto;width:100%;text-align:center;font-family:Arial,Helvetica,sans-serif">Made by <a href="http://oqeysites.com" target="_blank">oQeySites</a></div>'; 
 	
     }
     
