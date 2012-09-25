@@ -520,7 +520,7 @@ $resp["response"] .= '
     <td width="30" align="center" valign="middle">';
     
     if ( current_user_can('oQeyWatermark') ){ 
-     if(is_plugin_active('oqey-addons/oqeyaddons.php')){
+     if(is_plugin_active('oqey-add-ons/oqeyaddons.php')){
         
        $resp["response"] .='<a href="#watermark_settings" id="watermark-settings">
                                <img src="'.oQeyPluginUrl().'/images/watermark.png" title="'.__('watermark settings', 'oqey-gallery').'" class="imgp" width="28" height="28" />
@@ -640,7 +640,7 @@ function oQeyGetAllImages(){
     }
     
    
-   if ( current_user_can('oQeyCropperRoles') && ( is_plugin_active('oqey-photo-cropper/oqeycropper.php') || is_plugin_active('oqey-addons/oqeyaddons.php') ) ){
+   if ( current_user_can('oQeyCropperRoles') && ( is_plugin_active('oqey-photo-cropper/oqeycropper.php') || is_plugin_active('oqey-add-ons/oqeyaddons.php') ) ){
    
    if($img->img_type=="nextgen"){
     

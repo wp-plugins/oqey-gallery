@@ -44,7 +44,7 @@ function oqey_img_process($from, $to, $name, $height, $width, $wt, $id){
     $thumb->size($width,$height);
     $thumb->quality=100;                      //default 75 , only for JPG format
         
-    if(is_plugin_active('oqey-addons/oqeyaddons.php') && $wt){
+    if(is_plugin_active('oqey-add-ons/oqeyaddons.php') && $wt){
         
       global $wpdb;
       $oqey_galls = $wpdb->prefix . "oqey_gallery";
@@ -171,7 +171,7 @@ if($_FILES['Filedata']['size']>0){
                    
                     oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespaththumb, $name, "100", "150", false, $gal_id);	
                     
-                    if( is_plugin_active('oqey-addons/oqeyaddons.php') ){
+                    if( is_plugin_active('oqey-add-ons/oqeyaddons.php') ){
                         
                         oqey_img_process( $_FILES["Filedata"]["tmp_name"], $filespath, $name, "1200", "1800", true, $gal_id);                         
                     

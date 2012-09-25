@@ -339,9 +339,6 @@ function oqey_init_method() {
    wp_enqueue_script('jquery');  
    
    wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-social.js', array('jquery')); 
-   //wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey.js', array('jquery')); 
-   
-   //wp_enqueue_script('oqeygalleryjs', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-gallery.js');   
    wp_register_style('oQey-front-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeystyle.css');
    wp_enqueue_style('oQey-front-css');
    
@@ -376,14 +373,12 @@ function oqey_init_method() {
    
    if (is_plugin_active('oqey-photo-cropper/oqeycropper.php') && $_GET['page']=='oQeyGalleries'){
     wp_enqueue_script('jqueryoqeyjCrop', WP_PLUGIN_URL . '/oqey-photo-cropper/js/jquery.jcrop.js', array('jquery')); 
-    //wp_enqueue_script('jqueryoqeycropper', WP_PLUGIN_URL . '/oqey-photo-cropper/js/oqey.cropper.js', array('jquery'));
     wp_register_style('oQey-admin-jCrop', WP_PLUGIN_URL . '/oqey-photo-cropper/css/jquery.jcrop.css');
     wp_enqueue_style('oQey-admin-jCrop');
-   }elseif(is_plugin_active('oqey-addons/oqeyaddons.php')){
+   }elseif(is_plugin_active('oqey-add-ons/oqeyaddons.php')){
     
-    wp_enqueue_script('jqueryoqeyjCrop', WP_PLUGIN_URL . '/oqey-addons/js/jquery.jcrop.js', array('jquery')); 
-    //wp_enqueue_script('jqueryoqeycropper', WP_PLUGIN_URL . '/oqey-photo-cropper/js/oqey.cropper.js', array('jquery'));
-    wp_register_style('oQey-admin-jCrop', WP_PLUGIN_URL . '/oqey-addons/css/jquery.jcrop.css');
+    wp_enqueue_script('jqueryoqeyjCrop', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.jcrop.js', array('jquery')); 
+    wp_register_style('oQey-admin-jCrop', WP_PLUGIN_URL . '/oqey-gallery/css/jquery.jcrop.css');
     wp_enqueue_style('oQey-admin-jCrop');
     
    }
