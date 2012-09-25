@@ -20,6 +20,7 @@ function createoQeyNewThumb() {
         $iphoneimgthmb = OQEY_ABSPATH.'wp-content/oqey_gallery/galleries/'.oqey_getBlogFolder($wpdb->blogid).oqey_get_gallery_folder($simage->gal_id)."/galthmb/".trim($simage->title);       
     }
     
+    @unlink($iphoneimgthmb); 
     $multiplicator = $_POST['multiplicator'];    
     wp_crop_image($iphoneimg, ($_POST['x']*$multiplicator), ($_POST['y']*$multiplicator), ($_POST['w']*$multiplicator), ($_POST['h']*$multiplicator), $_POST['Qttw'], $_POST['Qtth'], "",$iphoneimgthmb );   
     }

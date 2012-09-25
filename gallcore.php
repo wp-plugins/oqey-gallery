@@ -729,10 +729,6 @@ function AddoQeyGallery($atts){
  	   $img_full_root = get_option('siteurl').'/wp-content/plugins/oqey-gallery/oqeyimgresize.php?width='.$d[0].'&amp;new_height='.$d[1].'&amp;folder='.$gal->folder.'&amp;img='.trim($i->title).'&amp;img_type='.$img_type.'&amp;img_f_path='.$img_f_path.$process;
        $imgs .= '[div class="oqeyimgdiv" style="background: url('.$img_full_root.') center top no-repeat;width:'.$oqey_width_n.'px;height:'.$img_holder_h.'px;'.$top_margin.'"]'.$customlink.'[/div]';
        
-       //$bgimages[] = $img_full_root;
-       //$imgs .= '[div class="oqeyimgdiv" id="oqeyimgdiv0" style="background: center top no-repeat;width:'.$oqey_width_n.'px;height:'.$img_holder_h.'px;'.$top_margin.'"]'.$customlink.'[/div]';
-       //$imgs .= '[img src="'.$img_full_root.'"/]';
-       
        if(get_option('oqey_show_captions_under_photos')=="on" && get_option('oqey_noflash_options')=="incolums" ){
                 
                 $imgs .= '[p class="oqey_p_comments"]'.trim($i->comments)."[/p]";
@@ -798,7 +794,20 @@ function AddoQeyGallery($atts){
     
 	$margleft = $oqey_width - 44;
         
-    if(get_option('oqey_flash_gallery_true')){ $pfv = "on"; }else{ $pfv = "off"; }
+    if(get_option('oqey_flash_gallery_true')){ 
+        
+        $pfv = "on"; 
+        
+    }else{ 
+        
+        $oqey_skins = $wpdb->prefix . "oqey_skins";
+        $r = $wpdb->get_results( "SELECT skinid FROM $oqey_skins WHERE status !='2'");  
+        if(empty($r)){
+            $pfv = "on"; 
+        }else{            
+           $pfv = "off"; 
+        }
+    }
     
     $custom_margin_top = "";
     
@@ -833,7 +842,6 @@ function AddoQeyGallery($atts){
                         <img class="rarrowjs" src="'.$plugin_url_qu.'/images/arrow-right.png" style="width:44px; height:94px; border:none;cursor:pointer;cursor:hand"/>
                      </a>
                    </div>';
-    
    }
    
    if($custom_height_n!="auto"){
