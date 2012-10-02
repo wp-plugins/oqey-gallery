@@ -4,7 +4,7 @@ Plugin Name: oQey Gallery
 Version: 0.5.4
 Contributors: oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
-Tags: gallery, photo,  slideshow, widget, photographs, portfolio, album, flash, image, music, fullscreen, captions, picture, images, photos, iphone, ipad
+Tags: gallery, photo, slideshow, widget, photographs, portfolio, flash, image, music, fullscreen, picture, images, photos, iphone, ipad
 Requires at least: 3.0.0
 Tested up to: 3.4.1
 Stable tag: 0.5.4
@@ -27,7 +27,7 @@ For more details, skins and examples and custom flash gallery, please visit <a h
 
 Features:
 
-* NEW: oQey Add-ons support
+* NEW: OQEY ADD-ons support
 * Language support 
 * Video support added
 * Music scanner / locator
