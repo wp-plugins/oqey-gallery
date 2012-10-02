@@ -338,12 +338,12 @@ function oqey_init_method() {
    wp_enqueue_script('swfobject'); 
    wp_enqueue_script('jquery');  
    
-   wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-social.js', array('jquery')); 
    wp_register_style('oQey-front-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeystyle.css');
    wp_enqueue_style('oQey-front-css');
    
    if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries' || $_GET['page']=='oQeySkins' || $_GET['page']=='oQeyMusic' || $_GET['page']=='oQeyTrash' || $_GET['page']=='oQeyVideo' ) ){
       
+      wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-social.js', array('jquery')); 
       wp_register_style('oQey-admin-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeyadmin.css');
       wp_enqueue_style('oQey-admin-css');
       wp_register_style('oQey-admin-pop-css', WP_PLUGIN_URL . '/oqey-gallery/css/jquery-ui.css');
