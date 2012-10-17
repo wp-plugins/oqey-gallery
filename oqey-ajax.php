@@ -224,7 +224,7 @@ function oQeyCheckForOthersGalleries(){
                                                                $folder                                                               
                                            )
                                            );
-        $lastid = mysql_insert_id();
+        $lastid = $wpdb->insert_id; 
         
         $resp["galid"] = $lastid;
         
