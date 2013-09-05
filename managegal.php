@@ -281,7 +281,7 @@ function getGalleryDetails(id){
 			var data = eval('(' + data + ')');
 
             jQuery('#gallery_content').hide().html(decodeURIComponent(data.allimages)).fadeIn("slow");
- 		    jQuery("#sortablegalls").selectable("disable");
+ 		    //jQuery("#sortablegalls").selectable("disable");
     
     /*
     jQuery(function() {

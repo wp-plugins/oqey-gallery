@@ -336,9 +336,9 @@ function oqey_init_method() {
    oqey_check_upgrade();//make update if need to do
 
    wp_enqueue_script('swfobject'); 
-   if(!is_admin()){
+   //if(!is_admin()){
      wp_enqueue_script('jquery');  
-   }
+   //}
    
    wp_register_style('oQey-front-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeystyle.css');
    wp_enqueue_style('oQey-front-css');
@@ -346,8 +346,8 @@ function oqey_init_method() {
    if(is_admin() && ($_GET['page']=='oQeysettings' || $_GET['page']=='oQeyGalleries' || $_GET['page']=='oQeySkins' || $_GET['page']=='oQeyMusic' || $_GET['page']=='oQeyTrash' || $_GET['page']=='oQeyVideo' ) ){
 
      
-      wp_deregister_script( 'jquery' );
-      wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' );
+      //wp_deregister_script( 'jquery' );
+     // wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' );
       
       wp_enqueue_script('oqey-social', WP_PLUGIN_URL . '/oqey-gallery/js/oqey-social.js', array('jquery'), "", true); 
       wp_register_style('oQey-admin-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeyadmin.css');
@@ -372,12 +372,12 @@ function oqey_init_method() {
     }
     
 
-    wp_enqueue_script('jqueryallui', 'http://code.jquery.com/ui/1.8.2/jquery-ui.js', array('jquery'), "", true);
-   // wp_enqueue_script('jquery-ui-core ');
-   // wp_enqueue_script('jquery-ui-sortable');  
-   // wp_enqueue_script('jquery-ui-draggable');
-   // wp_enqueue_script('jquery-ui-selectable');
-   // wp_enqueue_script('jquery-ui-dialog');
+    //wp_enqueue_script('jqueryallui', 'http://code.jquery.com/ui/1.8.2/jquery-ui.js', array('jquery'), "", true);
+   wp_enqueue_script('jquery-ui-core ');
+   wp_enqueue_script('jquery-ui-sortable');  
+   wp_enqueue_script('jquery-ui-draggable');
+   wp_enqueue_script('jquery-ui-selectable');
+   wp_enqueue_script('jquery-ui-dialog');
    
    if (is_plugin_active('oqey-photo-cropper/oqeycropper.php') && $_GET['page']=='oQeyGalleries'){
     wp_enqueue_script('jqueryoqeyjCrop', WP_PLUGIN_URL . '/oqey-photo-cropper/js/jquery.jcrop.js', array('jquery'), "", true); 
