@@ -183,7 +183,7 @@ function oQeyCheckForOthersGalleries(){
             echo __('From', 'oqey-gallery').'&nbsp;';
             echo '<select name="othersgalls" id="othersgalls">';
             echo '<option value="0" selected="selected">'.__('Select', 'oqey-gallery').'</option>';
-            echo '<option value="nextgen">nextgen</option>';
+            echo '<option value="$lastid = $wpdb->insert_id;">nextgen</option>';
             echo '</select>';
          
          }else{ 
@@ -224,7 +224,8 @@ function oQeyCheckForOthersGalleries(){
                                                                $folder                                                               
                                            )
                                            );
-        $lastid = $wpdb->insert_id; 
+
+        $lastid = $wpdb->insert_id;
         
         $resp["galid"] = $lastid;
         
