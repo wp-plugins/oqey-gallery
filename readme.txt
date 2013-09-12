@@ -8,6 +8,7 @@ Tags: gallery, photo, slideshow, widget, photographs, portfolio, flash, image, m
 Requires at least: 3.6.1
 Tested up to: 3.6.1
 Stable tag: 1.0
+License: GPLv2
 
 
 == Description ==
