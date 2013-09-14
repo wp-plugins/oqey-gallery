@@ -201,7 +201,7 @@ if (function_exists('register_activation_hook')){
 function oqey_check_upgrade(){
     global $wpdb, $oqey_db_version;
     
-    $oqey_db_version = "1.0";
+    $oqey_db_version = "1.0.1";
     
     $oqey_images = $wpdb->prefix . "oqey_images";
     $oqey_galls  = $wpdb->prefix . "oqey_gallery";
