@@ -278,15 +278,12 @@ function oqey_check_upgrade(){
     if (version_compare($installed_oqey_ver, '1.0', '<')){
        
         $perm->add_cap('oqey-gallery');
-    
-    }
-    
-    if (version_compare($installed_oqey_ver, '1.0.1', '<')){
         add_option("oqey_upload_width", "1920" ,'', 'no');
         add_option("oqey_upload_height", "1280" ,'', 'no');
         add_option("oqey_upload_quality", "90" ,'', 'no');
-    }
     
+    }
+   
   /*Scan server fo the mp3 files*/ 
   $ext        = array('mp3' );
   $root       = rtrim(OQEY_ABSPATH, '/');
