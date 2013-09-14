@@ -384,6 +384,7 @@ function oQeyPluginRepoPath() {
 oqeygall_tab_content(); // start tab content
 
 function oqeygall_tab_content(){
+    global $post_ID, $temp_ID, $wpdb;
     if(isset($_GET['type'])){
 	if($_GET['type'] == "oqeygallery"){ include ("insert_in_post.php"); }
     }
