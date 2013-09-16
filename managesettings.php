@@ -438,10 +438,7 @@ if(parseFloat(x)>26){ jQuery("#oqey_pause_between_tran").val("26"); }
             <th height="25" colspan="2" align="left" valign="middle" scope="row">&nbsp;</th>
         </tr>
     </table>
-    
-    <table width="900" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td valign="top" align="left">
+
                 <table width="450" border="0" cellpadding="1" cellspacing="0">
                     <tr valign="top">
                         <th width="230" height="25" align="left" valign="middle" scope="row">
