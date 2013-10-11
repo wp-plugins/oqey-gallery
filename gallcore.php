@@ -189,7 +189,7 @@ class oQey_Gallery_Widget extends WP_Widget {
     if($incolums!="on"){
       
       $nobject .='data-cycle-loader=true
-                  data-cycle-progressive="#slides"
+                  data-cycle-progressive="#slides'.$oqeycounter.'"
                   '.$autostart.'
                   '.$optouch.'
                   '.$arrowleftright.'
@@ -237,7 +237,7 @@ class oQey_Gallery_Widget extends WP_Widget {
     $nobject  .= '</div>';
     
     if(get_option('oqey_noflash_options')!="incolums"){
-    $nobject .='<script id="slides" type="text/cycle" data-cycle-split="---">'."\n";
+    $nobject .='<script id="slides'.$oqeycounter.'" type="text/cycle" data-cycle-split="---">'."\n";
     $nobject .= $nobject2; 
     $nobject .='</script>'."\n";
     }
@@ -888,8 +888,7 @@ function AddoQeyGallery($atts){
     
     if($incolums!="on"){
       //data-cycle-loader="wait
-      $nobject .='data-cycle-loader=true
-                  data-cycle-progressive="#slides"
+      $nobject .='data-cycle-loader=true data-cycle-progressive="#slides'.$oqeycounter.'"
                   '.$autostart.'
                   '.$optouch.'
                   '.$arrowleftright.'
@@ -940,7 +939,7 @@ function AddoQeyGallery($atts){
     $nobject  .= '</div>';
     
     if(get_option('oqey_noflash_options')!="incolums"){
-    $nobject .='<script id="slides" type="text/cycle" data-cycle-split="---">'."\n";
+    $nobject .='<script id="slides'.$oqeycounter.'" type="text/cycle" data-cycle-split="---">'."\n";
     $nobject .= $nobject2; 
     $nobject .='</script>'."\n";
     }
