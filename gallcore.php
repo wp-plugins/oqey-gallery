@@ -117,8 +117,7 @@ class oQey_Gallery_Widget extends WP_Widget {
     
     }else{
         
-        $arrowleftright = 'data-cycle-prev=".prevControl'.$oqeycounter.'"
-                           data-cycle-next=".nextControl'.$oqeycounter.'"'; 
+        $arrowleftright = 'data-cycle-prev=".prevControl'.$oqeycounter.'" data-cycle-next=".nextControl'.$oqeycounter.'"'; 
         $arrowshtml    .= '<span class=center><span class="prevControl prevControl'.$oqeycounter.'"></span><span class="nextControl nextControl'.$oqeycounter.'"></span></span>';
     } 
     
@@ -172,13 +171,11 @@ class oQey_Gallery_Widget extends WP_Widget {
             
     if($instance['autostart']==1){
 
-        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'"
-                      data-cycle-timeout='.(get_option('oqey_pause_between_tran')*1000);
+        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'" data-cycle-timeout='.(get_option('oqey_pause_between_tran')*1000);
         $oqey_autoplay = "true";
     }else{
         
-        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'"
-                      data-cycle-timeout=0';
+        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'" data-cycle-timeout=0';
         $oqey_autoplay = "false"; 
     }  
     /*END autostart*/
@@ -188,12 +185,7 @@ class oQey_Gallery_Widget extends WP_Widget {
     
     if($incolums!="on"){
       
-      $nobject .='data-cycle-loader=true
-                  data-cycle-progressive="#slides'.$oqeycounter.'"
-                  '.$autostart.'
-                  '.$optouch.'
-                  '.$arrowleftright.'
-                  data-cycle-slides=">div,>img"';
+      $nobject .='data-cycle-loader=true data-cycle-progressive="#slides'.$oqeycounter.'" '.$autostart.' '.$optouch.' '.$arrowleftright.' data-cycle-slides=">div,>img"';
     }
     
     $nobject .= '>';
@@ -304,11 +296,11 @@ if($incolums!="on"){
 	function update( $new_instance, $old_instance ) {
 		$instance                   = $old_instance;		
 		$instance['title']          = strip_tags($new_instance['title']);
-                $instance['oqeygalleryid']  = (int) $new_instance['oqeygalleryid'];
+        $instance['oqeygalleryid']  = (int) $new_instance['oqeygalleryid'];
 		$instance['height']         = (int) $new_instance['height'];
 		$instance['width']          = (int) $new_instance['width'];
-                $instance['autostart']      = (bool) $new_instance['autostart'];
-                $instance['oqeywidgettext'] = $new_instance['oqeywidgettext'];        
+        $instance['autostart']      = (bool) $new_instance['autostart'];
+        $instance['oqeywidgettext'] = $new_instance['oqeywidgettext'];        
 		return $instance;        
 	}
 
@@ -587,11 +579,11 @@ function getUserNow($userAgent) {
 
 function custom_shortcode_scripts() {
 	global $post;
-	if( has_shortcode( $post->post_content, 'oqeygallery') ) {
+	//if( has_shortcode( $post->post_content, 'oqeygallery') ) {
             wp_enqueue_script('cycle2', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.cycle2.min.js', array('jquery'),'', true);
             wp_enqueue_script('cycle2.swipe', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.cycle2.swipe.min.js', array('cycle2'),'', true);
             wp_enqueue_script('oqeyjs', WP_PLUGIN_URL . '/oqey-gallery/js/oqey.js', array('jquery'),'', true);
-	}
+	//}
 }
 add_action( 'wp_enqueue_scripts', 'custom_shortcode_scripts');
 
@@ -808,8 +800,7 @@ function AddoQeyGallery($atts){
     
     }else{
         
-        $arrowleftright = 'data-cycle-prev=".prevControl'.$oqeycounter.'"
-                           data-cycle-next=".nextControl'.$oqeycounter.'"'; 
+        $arrowleftright = 'data-cycle-prev=".prevControl'.$oqeycounter.'" data-cycle-next=".nextControl'.$oqeycounter.'"'; 
         $arrowshtml    .= '<span class=center><span class="prevControl prevControl'.$oqeycounter.'"></span><span class="nextControl nextControl'.$oqeycounter.'"></span></span>';
     } 
     
@@ -864,13 +855,11 @@ function AddoQeyGallery($atts){
     
     if(get_option('oqey_AutostartOption')){
 
-        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'"
-                      data-cycle-timeout='.(get_option('oqey_pause_between_tran')*1000);
+        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'" data-cycle-timeout='.(get_option('oqey_pause_between_tran')*1000);
         
     }else{
         
-        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'"
-                      data-cycle-timeout=0';
+        $autostart = 'data-cycle-manual-speed="'.(get_option('oqey_effects_trans_time')*1000).'" data-cycle-timeout=0';
     }  
     /*END autostart*/
     
@@ -888,12 +877,7 @@ function AddoQeyGallery($atts){
     
     if($incolums!="on"){
       //data-cycle-loader="wait
-      $nobject .='data-cycle-loader=true data-cycle-progressive="#slides'.$oqeycounter.'"
-                  '.$autostart.'
-                  '.$optouch.'
-                  '.$arrowleftright.'
-                  '.$effecttr.'
-                  data-cycle-slides=">div,>img"';
+      $nobject .='data-cycle-loader=true data-cycle-progressive="#slides'.$oqeycounter.'" '.$autostart.' '.$optouch.' '.$arrowleftright.' '.$effecttr.' data-cycle-slides=">div,>img"';
     }
     
     $nobject .= '>';
