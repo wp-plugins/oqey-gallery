@@ -109,6 +109,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Changelog ==
 
+
 =1.0.2=
 
 * Stability improvements
