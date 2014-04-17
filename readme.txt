@@ -6,7 +6,7 @@ Contributors: oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
 Tags: gallery, photo, slideshow, widget, photographs, portfolio, flash, image, music, fullscreen, picture, images, photos, iphone, ipad
 Requires at least: 3.8.1
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 1.0.2
 License: GPLv2
 
