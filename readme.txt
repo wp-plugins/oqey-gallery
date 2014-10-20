@@ -1,13 +1,13 @@
 === Plugin Name ===
 
 Plugin Name: oQey Gallery
-Version: 1.0.5
+Version: 1.0.4.1
 Contributors: oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
 Tags: gallery, photo, slideshow, widget, photographs, portfolio, flash, image, music, fullscreen, picture, images, photos, iphone, ipad
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 1.0.5
+Stable tag: 1.0.4.1
 License: GPLv2
 
 
@@ -112,7 +112,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Changelog ==
 
-=1.0.5=
+=1.0.4.1=
 * Stability improvements
 
 =1.0.4=
@@ -265,7 +265,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Upgrade Notice ==
 
-=1.0.5=
+=1.0.4.1=
 * Stability improvements
 
 =1.0.4=
