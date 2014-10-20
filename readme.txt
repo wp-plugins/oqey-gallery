@@ -31,6 +31,7 @@ Features:
 
 * NEW: Wordpress uploader is native now for oQey Gallery
 * NEW: Wordpress media files support
+* NEW: Free 100% Html 5 skin is available - Veronika's skin
 * OQEY skins for wordpress galleries
 * Language support 
 * Video support added

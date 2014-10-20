@@ -1,5 +1,5 @@
 /* 
- * Gallery page functions
+ * oQey Gallery page functions
  */
 
 function refreshPage(){
@@ -226,14 +226,33 @@ function getGalleryDetails(id){
                 jQuery("#sortablegalls").sortable({
                     create: function(event, ui) { 
                         var allimgs = jQuery('#sortablegalls').sortable('serialize');
-                        //alert(allimgs);
-                        jQuery.post( ajaxurl, { action: "oQeyOrderAllImages", orderallimgs: allimgs, galleryid: id }, function(data){});
+                        jQuery.post( ajaxurl, { action: "oQeyOrderAllImages", orderallimgs: allimgs, galleryid: id }, function(data){
+                            
+                         jQuery( '.swipebox' ).swipebox({
+             afterOpen: function(){
+                 if (jQuery.browser.msie  && parseInt(jQuery.browser.version, 10) === 8){
+                      jQuery('#swipebox-bottom-bar').css('bottom','0px');
+                      jQuery('#swipebox-top-bar').css('top','0px');
+                     }
+             }
+         });
+                            
+                        });
                     },
                     update: function(){	//onupdate update the image order
                         var allimgs = jQuery('#sortablegalls').sortable('serialize');
-                        //alert (allimgs);
                         jQuery.post( ajaxurl, { action: "oQeyOrderAllImages", orderallimgs: allimgs, galleryid: id },
-                        function(data){});
+                        function(data){ 
+                        
+                         jQuery( '.swipebox' ).swipebox({
+             afterOpen: function(){
+                 if (jQuery.browser.msie  && parseInt(jQuery.browser.version, 10) === 8){
+                      jQuery('#swipebox-bottom-bar').css('bottom','0px');
+                      jQuery('#swipebox-top-bar').css('top','0px');
+                     }
+             }
+         });
+                     });
                     }   
                 });
                 
@@ -344,8 +363,17 @@ function getGalleryDetails(id){
 
  });
                 
-    jQuery( '.swipebox' ).swipebox();
-    jQuery( '.swipebox-video' ).swipebox();
+    jQuery( '.swipebox' ).swipebox({
+             afterOpen: function(){
+                 if (jQuery.browser.msie  && parseInt(jQuery.browser.version, 10) === 8){
+                      jQuery('#swipebox-bottom-bar').css('bottom','0px');
+                      jQuery('#swipebox-top-bar').css('top','0px');
+                     }
+             }
+         });
+    
+    
+    //jQuery( '.swipebox-video' ).swipebox();
     
     jQuery("#add_pps_gallery_button").fadeIn(500);
  

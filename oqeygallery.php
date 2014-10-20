@@ -220,7 +220,7 @@ function oqey_init_method() {
    wp_enqueue_script('swfobject'); 
    wp_enqueue_script('jquery');  
    
-   wp_register_style('oQey-front-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeystyle.css');
+   wp_register_style('oQey-front-css', oQeyPluginUrl() . '/css/oqeystyle.css');
    wp_enqueue_style('oQey-front-css');
    
    if(isset($_GET['page'])){
@@ -233,12 +233,12 @@ function oqey_init_method() {
             $_GET['page']=='oQeyTrash' || 
             $_GET['page']=='oQeyVideo' ) ){
 
-      wp_register_style('oQey-admin-css', WP_PLUGIN_URL . '/oqey-gallery/css/oqeyadmin.css');
+      wp_register_style('oQey-admin-css', oQeyPluginUrl() . '/css/oqeyadmin.css');
       wp_enqueue_style('oQey-admin-css');
-      wp_register_style('oQey-admin-pop-css', WP_PLUGIN_URL . '/oqey-gallery/css/jquery-ui.css');
+      wp_register_style('oQey-admin-pop-css', oQeyPluginUrl() . '/css/jquery-ui.css');
       wp_enqueue_style('oQey-admin-pop-css');
-      wp_enqueue_script('jquerysimplemodal', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.loadimages.min.js', array('jquery'),"", true);
-      wp_enqueue_script('jqueryeditable', WP_PLUGIN_URL . '/oqey-gallery/js/jquery.jeditable.js', array('jquery') ,"", true);   
+      wp_enqueue_script('jquerysimplemodal', oQeyPluginUrl() . '/js/jquery.loadimages.min.js', array('jquery'),"", true);
+      wp_enqueue_script('jqueryeditable', oQeyPluginUrl() . '/js/jquery.jeditable.js', array('jquery') ,"", true);   
      
     if($_GET['page']=='oQeyGalleries'){
      
@@ -252,9 +252,9 @@ function oqey_init_method() {
       
       
       
-      wp_register_style('swipebox', WP_PLUGIN_URL . '/oqey-gallery/css/swipebox.css');
+      wp_register_style('swipebox', oQeyPluginUrl() . '/css/swipebox.css');
       wp_enqueue_style('swipebox');
-      wp_enqueue_script('swipebox', WP_PLUGIN_URL . '/oqey-gallery/js/swipebox.js', array('jquery') ,"", true);
+      wp_enqueue_script('swipebox', oQeyPluginUrl() . '/js/swipebox.js', array('jquery') ,"", true);
    
     }
     

@@ -139,13 +139,8 @@ jQuery(document).ready(function($){
 			var settings = wp.media.view.settings,
 			selection = this.get( 'selection' );
 			jQuery( '.added' ).remove();
-                        //dotest(selection);
-                        //alert(selection.serialize());
 			selection.map( media.showAttachmentDetails );
-                        
-                        jQuery( '.swipebox' ).swipebox();
-                        
-                        jQuery("#updatetheimagesorder").trigger( "click" );
+                        jQuery("#updatetheimagesorder").trigger( "click" );//UPDATE THE IMAGES ORDER
                         
 		},
 		showAttachmentDetails: function( attachment ) {
@@ -174,10 +169,6 @@ jQuery(document).ready(function($){
                       
                     
                     jQuery('#sortablegalls').prepend(gElement);
-                    //jQuery( '.swipebox' ).swipebox();
-                    //jQuery( '.swipebox-video' ).swipebox();
-                    
-                    //dotest(imgId);
             
 		},
 		close: function() { //onclose	
@@ -428,19 +419,17 @@ jQuery("#updatedetails").click(function(){
     
     jQuery("#updatetheimagesorder").click(function(){ 
     
-    var allimgs = jQuery('#sortablegalls').sortable('serialize');
-                       
-                        var galid   = jQuery('#currentGalID').val();
-                        jQuery.post( ajaxurl, { action: "oQeyOrderAllImages", orderallimgs: allimgs, galleryid: galid },
-                        function(data){
-                           
-                           jQuery('#gallery_content').html("Updating gallery elements...");
-                           getGalleryDetails(galid);
-                           jQuery( '.swipebox' ).swipebox();
-                            
-                        });
-    
-      });
+        var allimgs = jQuery('#sortablegalls').sortable('serialize');
+        var galid   = jQuery('#currentGalID').val();
+        
+        jQuery.post( ajaxurl, { action: "oQeyOrderAllImages", orderallimgs: allimgs, galleryid: galid },
+                function(data){
+                    
+                      jQuery('#gallery_content').html("Updating gallery elements...");
+                      getGalleryDetails(galid);
+                      
+                });
+       });
 });
 	
 

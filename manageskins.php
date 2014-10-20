@@ -182,27 +182,33 @@ function refreshPage(){ window.location = "<?php echo admin_url('admin.php?page=
     if(!empty($skin)){ ?>
 
     <h4><?php echo urldecode($skin->name).$comm; ?></h4>
-     <p><?php echo urldecode($skin->description); ?><br />
+    <p><?php echo urldecode($skin->description); ?><br />
        <?php _e('Skin files location', 'oqey-gallery'); ?>: <code>/skins/<?php echo oqey_getBlogFolder($wpdb->blogid).$skin->folder; ?></code>.</p>
        
        <?php
-       $type = explode("_", trim($skin->skinid)); // let's check if skin is flash or Html5
+       $skinpath = oQeyPluginRepoPath().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$skin->folder;
+       $sfpath   = $skinpath.'/settings.swf';            
+       $type     = explode("_", trim($skin->skinid)); // let's check if skin is flash or Html5
+       $skinType = isset($type[0]) ? $type[0]:'';
+       $skinPro = isset($type[2]) ? $type[2]:'';
        
-                if($type[0]=='html' && $type[2]=="pro"){
+       if($skinType=='html' && $skinPro=="pro"){
                     
-                    $Tname = $type[1];
-                    
-                    $skoptions = '<a href="#options" class="'.$type[1].'" id="skopt'.$skin->id.'" rel="'.$skin->folder.'">'.__('Skin Options', 'oqey-gallery').'</a>';
-                    include(oQeyPluginRepoPath().'/skins/'.$oqeyblogid.trim($skin->folder).'/settings.php');
+          $Tname     = $type[1];
+          $skoptions = '<a href="#options" class="'.$type[1].'" id="skopt'.$skin->id.'" rel="'.$skin->folder.'">'.__('Skin Options', 'oqey-gallery').'</a>';
+          include(oQeyPluginRepoPath().'/skins/'.$oqeyblogid.trim($skin->folder).'/settings.php');
+                   
+       }elseif(is_file($sfpath)){
+           
+          $skoptions = '<a href="#set_skin_options" class="set_skin_options" id="skopt'.$skin->id.'" rel="'.$skin->folder.'">'.__('Skin Options', 'oqey-gallery').'</a>'; 
+           
+       }else{
           
-            
-                }else{
-                    
-                    $skoptions = '<a href="#options" class="set_skin_options" id="skopt'.$skin->id.'" rel="'.$skin->folder.'">'.__('Skin Options', 'oqey-gallery').'</a>';
-            
-                }
+          $skoptions = '';
+ 
+       }
                 
-                $comm = " - Commercial skin";
+          $comm = " - Commercial skin";
         ?>
     <p><?php echo $skoptions; ?></p>
 
