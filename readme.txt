@@ -5,9 +5,9 @@ Version: 0.4.8.5
 Contributors: oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
 Tags: photo, gallery, slideshow, widget, photographs, portfolio, album, flash, image, music, fullscreen, captions, picture, images, photos, iphone, ipad
-Requires at least: 3.0.0
-Tested up to: 3.9.1
-Stable tag: 1.0.4.1
+Requires at least: 4.0.0
+Tested up to: 4.0
+Stable tag: 1.0.5
 
 == Description ==
 
