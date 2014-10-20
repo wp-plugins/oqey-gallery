@@ -561,7 +561,7 @@ $resp["response"] .= '<table width="900" border="0" cellspacing="0" cellpadding=
     </td>
     <td width="30" align="center" valign="middle">';
     
-    if ( current_user_can('oQeyWatermark') ){ 
+    /*if ( current_user_can('oQeyWatermark') ){ 
      if(is_plugin_active('oqey-add-ons/oqeyaddons.php')){
         
        $resp["response"] .='<a href="#watermark_settings" id="watermark-settings">
@@ -569,7 +569,7 @@ $resp["response"] .= '<table width="900" border="0" cellspacing="0" cellpadding=
                             </a>';
     
      }
-    }
+    }*/
     
     if(absint(get_option('oqey_upload_width'))!=""){
         $upload_width_limit = absint(get_option('oqey_upload_width'));
