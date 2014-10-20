@@ -858,6 +858,7 @@ function AddoQeyGallery($atts){
            
           include(oQeyPluginRepoPath().'/skins/'.$oqeyblogid.trim($skin->folder).'/template.php');
           
+          return $object;
           
       }else{
        
