@@ -12,7 +12,7 @@
 
 /*
 Plugin Name: oQey Gallery
-Version: 1.0.4
+Version: 1.0.5
 Description: oQey Gallery is a plugin for managing images and video, creating photo slideshows with music, photo & video galleries that works fine under iPhone / iPad and other mobile devices. Flash version of the slideshow is automatically replaced by the HTML5 | Java slideshow on a non-flash device. Flash gallery supports customizable skins, so you can change the way it looks with a few clicks using the skin options tool. Commercial skins are also available as well as custom built photo / video galleries and slideshows for professionals. This plugin uses built-in WP functions and a simple batch upload system.
 Author: oqeysites.com
 Author URI: http://oqeysites.com/
