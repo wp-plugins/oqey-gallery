@@ -99,7 +99,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 =0.4.8.5=
 
-* GPL compatibility fixed.
+* GPL compatibility  fixed.
 
 =0.4.8.4=
 
