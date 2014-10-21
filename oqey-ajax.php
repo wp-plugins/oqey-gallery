@@ -1464,12 +1464,16 @@ if(!empty($skins)){
             
             if($skin->commercial=="yes"){ 
                 
+               $skinpath = oQeyPluginRepoPath().'/skins/'.oqey_getBlogFolder($wpdb->blogid).$skin->folder.'/';
+               $sfpath   = $skinpath.'settings.swf';
+            
+                
                 if($type[0]=='html' && $type[2]=="pro"){
                     
                     $skoptions = '<a href="#set_skin_options" class="'.$type[1].'" id="skopt'.$skin->id.'" rel="'.$skin->folder.'">'.__('Skin Options', 'oqey-gallery').'</a> | ';
                     //include(OQEY_ABSPATH . 'wp-content/oqey_gallery/skins/'.$oqeyblogid.trim($skin->folder).'/settings.php');
           
-                }else{
+                }elseif(is_file($sfpath)){
                     
                     $skoptions = '<a href="#set_skin_options" class="set_skin_options" id="skopt'.$skin->id.'" rel="'.$skin->folder.'">'.__('Skin Options', 'oqey-gallery').'</a> | ';
             
