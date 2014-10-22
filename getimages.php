@@ -95,8 +95,9 @@ if(isset($_POST['gal_id'])){
          $bg_image = trim($bg->title);   
      
      }else{
-     
-         $bg_image = $gimg.trim($bg->title);
+         
+         $image = oQeyGetImageLink($bg, $gal);
+         $bg_image = $image['img'];
      
      }  
    
