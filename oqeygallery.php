@@ -28,7 +28,7 @@ if (!defined('OQEY_ABSPATH')) {
 require("oqey-gallery-functions.php");
 require_once(OQEY_ABSPATH . 'wp-admin/includes/plugin.php');
 global $oqey_db_version;	
-       $oqey_db_version = "1.0.4";
+       $oqey_db_version = "1.0.6";
 
 function oqey_db_install(){
    global $wpdb, $oqey_db_version;
