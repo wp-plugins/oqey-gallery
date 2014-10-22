@@ -86,13 +86,14 @@ Just edit css/oqeystyle.css and make all changes that you need.
 
 == Screenshots ==
 
-1. oQey Gallery Edit
-2. oQey Gallery Settings
-3. oQey Gallery Music management
-4. oQey Gallery Flash Preview
-5. oQey Gallery Skin management
-6. oQey Gallery Insert Button
-7. oQey Gallery Gallery List
+1. oQey Gallery - Flash Skin Demo
+2. oQey Gallery - Management Screenshot
+3. oQey Gallery - Music Manager Screenshot
+4. oQey Gallery - Insert gallery in content
+5. oQey Gallery - Roles Manager Screenshot
+6. oQey Gallery - Skin Options Manager Screenshot
+7. oQey Gallery - Skins Management Tab Screenshot
+8. oQey Gallery - Video Management Screenshot
 
 
 == Changelog ==
