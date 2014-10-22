@@ -104,7 +104,7 @@ Just edit css/oqeystyle.css and make all changes that you need.
 1. oQey Gallery - Flash Skin Demo
 2. oQey Gallery - Management Screenshot
 3. oQey Gallery - Music Manager Screenshot
-4. oQey Gallery - Plugin Screenshot
+4. oQey Gallery - Insert gallery in content
 5. oQey Gallery - Roles Manager Screenshot
 6. oQey Gallery - Skin Options Manager Screenshot
 7. oQey Gallery - Skins Management Tab Screenshot
