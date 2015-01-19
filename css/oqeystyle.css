@@ -1,0 +1,70 @@
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.oqeyslider{ width: 100%; height: auto; }
+.oqey-slideshow, .oqey-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+.oqey-slideshow { width: 100%; min-width: 200px; margin: 10px auto; padding: 0; position: relative; height: auto;
+    background: url(../images/spinner.gif) 50% 50% no-repeat;
+ }
+
+/* slideshow images (for most of the demos, these are the actual "slides") */
+.oqey-slideshow div{ margin: 0 auto; display: block; width: 100%; text-align: center; }
+
+.oqey-slideshow img { 
+    /* 
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+   height: auto;
+   margin: 0 auto;
+}
+
+/* in case script does not load */
+.oqey-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+
+/* pager */
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #D69746;}
+.cycle-pager > * { cursor: pointer;}
+
+
+/* caption */
+.cycle-caption { position: absolute; color: white; bottom: 15px; right: 15px; z-index: 700; }
+
+
+/* overlay */
+.cycle-overlay { 
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 100%; z-index: 600;
+    background: black; color: white; padding: 15px; opacity: .5;
+}
+
+/* prev / next links */
+.cycle-prev, .cycle-next, .prevControl, .nextControl { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
+.cycle-prev, .prevControl{ left: 0;  background: url(../images/left.png) 50% 50% no-repeat;}
+.cycle-next, .nextControl { right: 0; background: url(../images/right.png) 50% 50% no-repeat;}
+.cycle-prev:hover, .cycle-next:hover, .nextControl:hover, .prevControl:hover  { opacity: .7; filter: alpha(opacity=70) }
+
+.disabled { opacity: .5; filter:alpha(opacity=50); }
+
+/* display paused text on top of paused slideshow */
+.cycle-paused:after {
+    content: 'Paused'; color: white; background: black; padding: 10px;
+    z-index: 500; position: absolute; top: 10px; right: 10px;
+    border-radius: 10px;
+    opacity: .5; filter: alpha(opacity=50);
+}
+
+
+/*title, images*/
+.oqeytitle{ margin:0 auto;width:100%;text-align:center; }
+.oqey-slideshow div.oqeyincolumn{ margin:0 auto 5px auto; }
+.oqeysitesbacklink{ text-align:center;margin:0 auto;width:50%; }
