@@ -6,8 +6,8 @@ Contributors: oQeySites.com
 Donate link: http://oqeysites.com/donations-page/
 Tags: photo, gallery, slideshow, widget, photographs, portfolio, album, flash, image, music, fullscreen, captions, picture, images, photos, iphone, ipad
 Requires at least: 4.0.0
-Tested up to: 4.1
-Stable tag: 1.0.7
+Tested up to: 4.1.1
+Stable tag: 1.0.8
 
 == Description ==
 
